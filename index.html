@@ -21,22 +21,21 @@
 </head>
 <body>
 
-<nav class="navbar navbar-fixed-top navbar--light" id="myNavbar">
+<nav class="navbar navbar-fixed-top" >
     <div class="navbar__inner">
         <div class="navbar__items">
-            <a href="#" class="logo navbar__brand active">Brandi</a>
+            <a href="#" class="navbar__brand active">Brandi</a>
             <a href="#" class="line">|</a>
             <a href="#" class="tag__line">I'm your tag line</a>
         </div>
-        <div class="navbar__items navbar__items--right">
+        <button class="icon" onclick="hamburgerFunction()"><i class="fa fa-bars"></i></button>
+        <div class="navbar__items navbar__items--right"  id="myNavbar">
             <a href="#">Home</a>
             <a href="#">Features</a>
             <a href="#">Work</a>
             <a href="#">Team</a>
             <a href="#">Contact</a>
-            <a href="javascript:void(0);" class="icon" onclick="hamburgerFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
+
         </div>
     </div>
 </nav>
