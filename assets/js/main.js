@@ -1,8 +1,8 @@
 function hamburgerFunction(){
     var x = document.getElementById("myNavbar");
-    if (x.className === "navbar__items navbar__items--right") {
-        x.className += " responsive";
+    if (x.className === "inner__collapse") {
+        x.className += " show";
     } else {
-        x.className = "navbar__items navbar__items--right";
+        x.className = "inner__collapse";
     }
 }

@@ -1,118 +1,122 @@
-* {box-sizing: border-box;}
+* { box-sizing: border-box; }
 
-nav {
+.navbar {
+  //border: 1px solid red;
   background-color: $color-background;
-  width: 100%;
+  position: relative;
+  min-height: 70px;
+  margin-bottom: 0;
 
-  .navbar {
-      overflow: hidden;
-  }
-  .navbar__inner{
+  .navbar__inner {
     max-width: 1170px;
     margin: 0 auto;
-    border: 1px solid red;
-  }
-  .navbar__items {
-     align-items: center;
-     display: flex;
-     float: left;
-     color: $white;
-     text-align: center;
-     font-size: 16px;
-     a {
-       padding: 12px;
-       text-decoration: none;
-       line-height: 45px;
-       color: $white;
-       font-family: 'Open Sans', sans-serif;
+    //border: 1px solid yellowgreen;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    min-height: 70px;
+    text-align: center;
+    font-size: 13px;
+    flex-wrap: wrap;
 
-       &.icon{
-         float: right;
-       }
+    .inner__brand {
+      display: flex;
+      align-items: center;
+      a {
+        padding: 12px;
+        text-decoration: none;
+        color: $white;
+        font-family: 'Open Sans', sans-serif;
 
-       &.navbar__brand{
-         font-weight: bold;
-         font-size: 28px;
-         font-family: 'Pacifico', cursive;
-       }
 
-       &.line {
-         font-size: 16px;
-       }
-       &.tag__line{
-         font-size: 16px;
-         opacity: 0.5;
-       }
-     }
-
-   }
-
-  .navbar__items--right {
-    float: right;
-  }
-
-  @media #{$info-phone} {
-  }
-
-  @media screen and (max-width: 767px){
-    .navbar__items--right {
-      &.responsive {
-        position: relative;
-        display: block;
-        z-index: 1;
-
-        &:hover {
-          padding: 16px;
-          font-size: 16px;
-          border: none;
-          cursor: pointer;
+        &.brand__logo {
+          font-weight: bold;
+          font-size: 28px;
+          font-family: 'Pacifico', cursive;
         }
 
-        a {
-          float: none;
-          display: block;
-          text-align: left;
+        &.brand__line {
+          font-size: 20px;
         }
 
-        .icon {
-          position: absolute;
-          right: 0;
-          top: 0;
+        &.brand__tagline {
+          font-size: 13px;
+          opacity: 0.5;
         }
       }
     }
+    .inner__toggle {
+      display: none;
+    }
+
+    .inner__collapse {
+      margin-top: 33px;
+      a {
+        padding: 12px;
+        text-decoration: none;
+        color: $white;
+        font-family: 'Open Sans', sans-serif;
+      }
+    }
   }
-
-  @media screen and (max-width: 767px) {
-    .navbar__items a {
-      text-align: right;
-
-      &.navbar__brand{
-        font-size: 24px;
-      }
-
-      &.tag__line{
-        font-size: 12px;
-      }
-    }
-
-    .navbar__items--right {
-      float: none;
-      a:not(:first-child) {
-        display: none;
-      }
-    }
-    .icon {
-        display: block;
-        float: right;
-        opacity: 0.5;
-        margin: 10px;
-    }
 }
 
-  @media screen and (min-width: 767px) {
-    .icon{
-       display: none;
+@media screen and (max-width: 767px){
+  .navbar {
+    .navbar__inner {
+      min-height: 50px;
+      .inner__brand {
+        a {
+
+          &.brand__logo {
+            font-size: 24px;
+            margin-left: 20px;
+          }
+
+          &.brand__line {
+            display: none;
+          }
+
+          &.brand__tagline {
+            display: none;
+          }
+        }
+      }
+
+      .inner__toggle {
+        display: block;
+        opacity: 0.5;
+        margin: 20px 20px;
+        font-size: 15px;
+      }
+
+      .inner__collapse {
+        padding: 0;
+        display: none;
+        position: relative;
+        width: 100%;
+
+        &.show {
+          display: flex;
+          z-index: 1;
+          max-width: 1170px;
+
+          &:hover {
+            border: none;
+            cursor: pointer;
+          }
+
+          a {
+            display: flex;
+            width: 100%;
+            border-radius: 1px solid $color-default-darker;
+
+            &:hover {
+              background-color: $color-default-darker;
+            }
+          }
+        }
+      }
     }
   }
 }

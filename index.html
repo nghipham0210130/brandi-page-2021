@@ -21,21 +21,29 @@
 </head>
 <body>
 
-<nav class="navbar navbar-fixed-top" >
+<!-- Navigation -->
+<nav class="navbar" >
+    <!-- Container -->
     <div class="navbar__inner">
-        <div class="navbar__items">
-            <a href="#" class="navbar__brand active">Brandi</a>
-            <a href="#" class="line">|</a>
-            <a href="#" class="tag__line">I'm your tag line</a>
+        <!-- Logo -->
+        <div class="inner__brand">
+            <a href="#" class="brand__logo">Brandi</a>
+            <a href="#" class="brand__line">|</a>
+            <a href="#" class="brand__tagline">I'm your tag line</a>
         </div>
-        <button class="icon" onclick="hamburgerFunction()"><i class="fa fa-bars"></i></button>
-        <div class="navbar__items navbar__items--right"  id="myNavbar">
+
+        <!-- Hamburger -->
+        <button class="inner__toggle" onclick="hamburgerFunction()">
+            <i class="fa fa-bars"></i>
+        </button>
+
+        <!-- Links -->
+        <div class="inner__collapse"  id="myNavbar">
             <a href="#">Home</a>
             <a href="#">Features</a>
             <a href="#">Work</a>
             <a href="#">Team</a>
             <a href="#">Contact</a>
-
         </div>
     </div>
 </nav>
