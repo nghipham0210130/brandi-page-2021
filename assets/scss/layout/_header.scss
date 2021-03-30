@@ -5,16 +5,16 @@
 }
 
 .navbar {
-    border: 1px solid red;
     background-color: $color-background;
     position: relative;
     height: 70px;
     border: 0;
     border-radius: 0;
-    .navbar__inner {
+    .container {
+        padding: 0;
         height: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content:space-between;
         position: relative;
         text-align: center;
         font-size: 13px;
@@ -25,11 +25,10 @@
             align-items: center;
             z-index: 1;
             a {
-                padding: 12px;
+                padding: 2px 12px 12px 12px;
                 text-decoration: none;
                 font-family: 'Open Sans', sans-serif;
-                padding-top: 2px;
-                margin-right: 50px;
+                margin-right: 38px;
                 img {
                     padding: 0;
                 }
@@ -44,7 +43,7 @@
                 content: "";
                 height: 18px;
                 width: 1px;
-                background: $lightblue;
+                background: $darkblue;
                 position: absolute;
                 left: -21px;
                 bottom: 1px;
@@ -73,6 +72,9 @@
                 margin-left: 26px;
                 position: relative;
                 transition: all 0.5s ease-in-out;
+                &:hover{
+                    color: $white;
+                }
                 &.active::before {
                     text-decoration: none;
                     height: 1px;
@@ -98,7 +100,7 @@
 @media screen and (max-width: 767px) {
     .navbar {
         height: 50px;
-        .navbar__inner {
+        .container {
             justify-content: center;
             .inner__brand {
                 a {
@@ -140,12 +142,6 @@
                         &.active:hover{
                             background-color: $grey;
                         }
-
-                        &:focus, &:active{
-                            outline: 0;
-                            color: $white;
-                            text-decoration: none;
-                        }
                     }
                 }
 
@@ -155,9 +151,6 @@
 
 @media screen and (min-width: 768px) {
     .nav__bar {
-        border-radius: 0;
-        .navbar__inner {
-        }
     }
 }
 

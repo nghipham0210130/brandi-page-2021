@@ -7255,7 +7255,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #4694d8;
+  color: #32b0ee;
   text-decoration: none;
   border: none;
 }
@@ -7290,14 +7290,14 @@ img {
 }
 
 .navbar {
-  border: 1px solid red;
   background-color: #0e2c29;
   position: relative;
   height: 70px;
   border: 0;
   border-radius: 0;
 }
-.navbar .navbar__inner {
+.navbar .container {
+  padding: 0;
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -7306,38 +7306,37 @@ img {
   font-size: 13px;
   flex-wrap: wrap;
 }
-.navbar .navbar__inner .inner__brand {
+.navbar .container .inner__brand {
   display: flex;
   -webkit-box-align: center;
   align-items: center;
   z-index: 1;
 }
-.navbar .navbar__inner .inner__brand a {
-  padding: 12px;
+.navbar .container .inner__brand a {
+  padding: 2px 12px 12px 12px;
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
-  padding-top: 2px;
-  margin-right: 50px;
+  margin-right: 38px;
 }
-.navbar .navbar__inner .inner__brand a img {
+.navbar .container .inner__brand a img {
   padding: 0;
 }
-.navbar .navbar__inner .inner__brand p {
+.navbar .container .inner__brand p {
   font-family: "Open Sans", sans-serif;
   color: rgba(255, 255, 255, 0.604);
   position: relative;
   font-weight: 300;
 }
-.navbar .navbar__inner .inner__brand p::before {
+.navbar .container .inner__brand p::before {
   content: "";
   height: 18px;
   width: 1px;
-  background: #4694d8;
+  background: #154458;
   position: absolute;
   left: -21px;
   bottom: 1px;
 }
-.navbar .navbar__inner .inner__toggle {
+.navbar .container .inner__toggle {
   position: absolute;
   padding: 0;
   top: 10px;
@@ -7353,16 +7352,19 @@ img {
   display: none;
   color: #f2f2f2;
 }
-.navbar .navbar__inner .inner__collapse {
+.navbar .container .inner__collapse {
   margin-top: 33px;
 }
-.navbar .navbar__inner .inner__collapse a {
+.navbar .container .inner__collapse a {
   padding: 33px 4px 0 4px;
   margin-left: 26px;
   position: relative;
   transition: all 0.5s ease-in-out;
 }
-.navbar .navbar__inner .inner__collapse a.active::before {
+.navbar .container .inner__collapse a:hover {
+  color: #f2f2f2;
+}
+.navbar .container .inner__collapse a.active::before {
   text-decoration: none;
   height: 1px;
   content: "";
@@ -7370,10 +7372,10 @@ img {
   width: 100%;
   top: 0;
   left: 0;
-  background: #4694d8;
+  background: #32b0ee;
   transition: all 0.3s ease-in-out;
 }
-.navbar .navbar__inner .inner__collapse a:focus, .navbar .navbar__inner .inner__collapse a:active {
+.navbar .container .inner__collapse a:focus, .navbar .container .inner__collapse a:active {
   outline: 0;
   color: #f2f2f2;
   text-decoration: none;
@@ -7383,16 +7385,16 @@ img {
   .navbar {
     height: 50px;
   }
-  .navbar .navbar__inner {
+  .navbar .container {
     justify-content: center;
   }
-  .navbar .navbar__inner .inner__brand a {
+  .navbar .container .inner__brand a {
     margin: 0;
   }
-  .navbar .navbar__inner .inner__brand p {
+  .navbar .container .inner__brand p {
     display: none;
   }
-  .navbar .navbar__inner .inner__toggle {
+  .navbar .container .inner__toggle {
     display: block;
     opacity: 0.5;
     font-size: 15px;
@@ -7423,16 +7425,6 @@ img {
   }
   .navbar .inner__collapse.show a.active:hover {
     background-color: rgba(255, 255, 255, 0.604);
-  }
-  .navbar .inner__collapse.show a:focus, .navbar .inner__collapse.show a:active {
-    outline: 0;
-    color: #f2f2f2;
-    text-decoration: none;
-  }
-}
-@media screen and (min-width: 768px) {
-  .nav__bar {
-    border-radius: 0;
   }
 }
 .container {
