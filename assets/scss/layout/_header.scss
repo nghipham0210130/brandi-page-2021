@@ -77,14 +77,20 @@
                 transition: all 0.5s ease-in-out;
                 &.active::before {
                     text-decoration: none;
+                    height: 1px;
                     content: "";
                     position: absolute;
                     width: 100%;
-                    height: 1px;
                     top: 0;
                     left: 0;
                     background: $lightblue;
                     transition: all 0.3s ease-in-out;
+                }
+
+                &:focus, &:active{
+                    outline: 0;
+                    color: $white;
+                    text-decoration: none;
                 }
             }
         }
@@ -108,28 +114,52 @@
                 display: block;
                 opacity: 0.5;
                 font-size: 15px;
-                &.show~.inner__collapse {
-                    width: 100%;
                 }
             }
             .inner__collapse {
-                width: 0;
+                display: none;
                 flex-flow: column;
                 position: absolute;
                 align-items: center;
-                padding: 20% 0 200% 0;
                 top: 0;
                 right: 0;
-                -webkit-transition: all 300ms ease-in-out;
-                transition: all 300ms ease-in-out;
-                background: rgba(0, 0, 0, 0.9);
+                background: $color-click-hamburger;
+                &.show{
+                    margin-top: 50px;
+                    display: block;
+                    width: 100%;
+                    a {
+                        width: 100%;
+                        display: flex;
+                        margin: 0;
+                        padding: 20px;
+                        justify-content: center;
+
+                        &.active::before{
+                            height: 0;
+                        }
+
+                        &.active:hover{
+                            background-color: $grey;
+                        }
+
+                        &:focus, &:active{
+                            outline: 0;
+                            color: $white;
+                            text-decoration: none;
+                        }
+                    }
+                }
+
             }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .nav__bar {
+        border-radius: 0;
+        .navbar__inner {
         }
     }
 }
 
-@media screen and (max-width: 768px) {
-    .nav__bar {
-        border-radius: 0px;
-    }
-}

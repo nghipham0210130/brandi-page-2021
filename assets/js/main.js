@@ -1,10 +1,10 @@
 // show inner__collapse when click Hamburger button
 function hamburgerFunction() {
     var x = document.getElementById("my__navbar");
-    if (x.className === "inner__toggle") {
+    if (x.className === "inner__collapse") {
         x.className += " show";
     } else {
-        x.className = "inner__toggle";
+        x.className = "inner__collapse";
     }
 }
 
