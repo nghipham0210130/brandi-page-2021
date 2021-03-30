@@ -11,10 +11,9 @@
     border: 0;
     border-radius: 0;
     .container {
-        padding: 0;
         height: 100%;
         display: flex;
-        justify-content:space-between;
+        justify-content: space-between;
         position: relative;
         text-align: center;
         font-size: 13px;
@@ -74,23 +73,17 @@
                 transition: all 0.5s ease-in-out;
                 &:hover{
                     color: $white;
-                }
-                &.active::before {
-                    text-decoration: none;
-                    height: 1px;
-                    content: "";
-                    position: absolute;
-                    width: 100%;
-                    top: 0;
-                    left: 0;
-                    background: $lightblue;
-                    transition: all 0.3s ease-in-out;
-                }
-
-                &:focus, &:active{
-                    outline: 0;
-                    color: $white;
-                    text-decoration: none;
+                    &::before {
+                        text-decoration: none;
+                        height: 1px;
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        top: 0;
+                        left: 0;
+                        background: $lightblue;
+                        transition: all 0.3s ease-in-out;
+                    }
                 }
             }
         }
@@ -101,10 +94,11 @@
     .navbar {
         height: 50px;
         .container {
-            justify-content: center;
+            align-items: center;
             .inner__brand {
                 a {
                     margin: 0;
+                    padding: 0;
                 }
                 p {
                     display: none;
@@ -127,7 +121,7 @@
                 &.show{
                     margin-top: 50px;
                     display: block;
-                    width: 100%;
+                    width: 70%;
                     a {
                         width: 100%;
                         display: flex;
