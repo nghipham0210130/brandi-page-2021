@@ -6,49 +6,91 @@
 <!--[if IE 8]>
 <html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang=""> <!--<![endif]-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta http-equiv="Content-Language" content="en-us"/>
+    <meta http-equiv="Content-Language" content="en-us" />
     <title>Brandi</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/vendor/bootstrap.css">
+    <!--<link rel="stylesheet" href="assets/css/vendor/bootstrap.css">-->
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/vendor/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/vendor/slick-theme.css"/>
 
 </head>
+
 <body>
 
-<nav class="navbar navbar-fixed-top" >
-    <div class="navbar__inner">
-        <div class="navbar__items">
-            <a href="#" class="navbar__brand active">Brandi</a>
-            <a href="#" class="line">|</a>
-            <a href="#" class="tag__line">I'm your tag line</a>
-        </div>
-        <button class="icon" onclick="hamburgerFunction()"><i class="fa fa-bars"></i></button>
-        <div class="navbar__items navbar__items--right"  id="myNavbar">
-            <a href="#">Home</a>
-            <a href="#">Features</a>
-            <a href="#">Work</a>
-            <a href="#">Team</a>
-            <a href="#">Contact</a>
+    <!-- Navigation -->
+    <nav class="navbar">
 
-        </div>
-    </div>
-</nav>
+        <!-- Container -->
+        <div class="container">
+            <!-- Logo -->
+            <div class="inner__brand">
+                <a href="#"><img src="assets/img/brandi-logo.png" alt="Brandi-logo"></a>
+                <p>I'm your tag line</p>
+            </div>
 
-<!--[if lt IE 8]>
+            <!-- Hamburger -->
+            <button class="inner__toggle" onclick="hamburgerFunction()">
+            <i class="fa fa-bars"></i>
+             </button>
+
+            <!-- Links -->
+            <div class="inner__collapse" id="my__navbar">
+                <a href="#sec1" class="nav__link active">Home</a>
+                <a href="#sec2" class="nav__link">Features</a>
+                <a href="#sec3" class="nav__link">Work</a>
+                <a href="#sec4" class="nav__link">Team</a>
+                <a href="#sec5" class="nav__link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Main -->
+    <main>
+        <div class="banner">
+            <div class="banner__content" style="background-image: url('assets/img/banner1.png')">
+                <h2>Meet <b>Brandi</b>!
+                    <br><span class="content--green">/creative</span> one page template.
+                </h2>
+                <p>We are a team of professionals</p>
+            </div>
+
+            <div class="banner__content" style="background-image: url('assets/img/banner2.png')">
+                <h2>Meet <b>Brandi</b>!
+                    <br><span class="content--green">/creative</span> one page template.
+                </h2>
+                <p>We are a team of professionals</p>
+            </div>
+
+            <div class="banner__content" style="background-image: url('assets/img/banner1.png')">
+                <h2>Meet <b>Brandi</b>!
+                    <br><span class="content--green">/creative</span> one page template.
+                </h2>
+                <p>We are a team of professionals</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
-<script src="assets/js/vendor/bootstrap.min.js"></script>
-<script src="assets/js/main.js"></script>
+    <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <!--<script src="assets/js/vendor/bootstrap.min.js"></script>-->
+    <script type="text/javascript" src="assets/js/vendor/slick/slick.min.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
-</html>
 
+</html>
