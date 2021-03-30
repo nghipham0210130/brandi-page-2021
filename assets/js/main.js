@@ -1,4 +1,4 @@
-// show inner__collapse when click Hamburger button
+// Show inner__collapse when click Hamburger button
 function hamburgerFunction() {
     var x = document.getElementById("my__navbar");
     if (x.className === "inner__collapse") {
@@ -9,7 +9,7 @@ function hamburgerFunction() {
 }
 
 
-// show class active when click 
+// Show class active when click
 var header = document.getElementById("my__navbar");
 var links = header.getElementsByClassName("nav__link");
 for (var i = 0; i < links.length; i++) {
@@ -19,3 +19,13 @@ for (var i = 0; i < links.length; i++) {
         this.className += " active";
     });
 }
+
+// Banner
+$('.banner').slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    arrows: false,
+    cssEase: 'linear'
+});
