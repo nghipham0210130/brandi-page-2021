@@ -1,24 +1,24 @@
 
   main {
-    width: 100%;
-    height: 100%;
-    .banner__content {
-      position: absolute;
-      align-items: center;
-      color: $white;
-      background-size: 100% 100%;
-    }
     .banner {
+      margin-bottom: 0;
       .slick-dots {
         li {
           display: block;
+          margin-bottom: 15px;
+          padding: 0;
           button::before {
-            font-size: 20px;
+            font-size: 0;
             opacity: 0.8;
+            width: 10px;
+            height: 10px;
+            background-color: $black;
+            border: 1px solid $white;
+            border-radius: 50%;
           }
           &.slick-active {
             button::before{
-              color: $white;
+              background-color: $white;
             }
           }
           &.slick-slider {
@@ -26,37 +26,150 @@
           }
         }
       }
-    }
-  }
 
-@media screen and (max-width: 767px) {
-  .main__wrapper {
-    main {
-      .banner {
-        .slick-dots {
-          bottom: -25px;
-          li {
-            display: inline-block;
+      .banner__item {
+        //position: relative;
+        background-size: cover ;
+        height: 800px;
+        background-position: center;
+        .item__content {
+          position: absolute;
+          text-align: center;
+          color: $white;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: 178px;
+          width: 100%;
+          h2 {
+            font-weight: 300;
+            font-size: 62px;
+            margin-bottom: 16px;
+            span {
+              font-weight: 900;
+            }
           }
-          &.slick-active {
-            button::before{
-              color: $black;
+          h3{
+            font-weight: 400;
+            font-size: 48px;
+            margin-bottom: 22px;
+            span{
+              color: $color-creative;
+            }
+          }
+          p {
+            font-weight: 200;
+            font-size: 18px;
+            &::before{
+              @include line($color-creative, 20px);
+              left: 400px;
+              margin: 10px 0 9px 0;
+
+            }
+            &::after {
+              @include line($color-creative, 20px);;
+              right: 400px;
+              margin: 10px 0 9px 0;
+            }
+          }
+        }
+        ul{
+          &.item__contact{
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-flow: row;
+            li {
+              list-style: none;
+              &.contact__item:not(:last-child) {
+                margin-right: 15px;
+              }
+              &.contact__item{
+                a:hover{
+                  color: $white;
+                  opacity: 0.5;
+                  img {
+                    opacity: 0.5;
+                  }
+                }
+              }
             }
           }
         }
       }
     }
   }
+
+@media screen and (max-width: 767px) {
+  main {
+    .banner {
+      .slick-dots {
+        bottom: 40px;
+        li {
+          display: inline-block;
+        }
+        &.slick-active {
+          button::before {
+            background-color: $grey;
+          }
+        }
+      }
+      .banner__item {
+        height: 400px;
+        .item__content {
+          bottom: 100px;
+          h2 {
+            font-weight: 300;
+            font-size: 36px;
+            margin-bottom: 12px;
+            span {
+              font-weight: 900;
+            }
+          }
+          h3 {
+            font-weight: 400;
+            font-size: 22px;
+            margin-bottom: 7px;
+            span {
+              color: $color-creative;
+            }
+          }
+          p {
+            font-size: 14px;
+            &::before{
+              @include line($color-creative, 15px);
+              left: 55px;
+              margin: 8px 0 7px 0;
+
+            }
+            &::after {
+              @include line($color-creative, 15px);
+              right: 55px;
+              margin: 8px 0 7px 0;
+            }
+          }
+        }
+        ul{
+          &.item__contact{
+            bottom: 20px;
+          }
+        }
+
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {
-    main {
-      .banner {
-        .slick-dots {
-          top: 40%;
-          left: 95%;
-          bottom: 0;
-        }
+  main {
+    .banner {
+      .slick-dots {
+        top: 40%;
+        right: 20px;
+        bottom: 0;
+        width: 30px;
       }
     }
+  }
 }

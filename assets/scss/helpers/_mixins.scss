@@ -518,3 +518,11 @@
   display: -webkit-flex;
   display: flex;
 }
+
+@mixin line($color, $width){
+  content: "";
+  width: $width;
+  height: 1px;
+  background-color: $color;
+  position: absolute;
+}
