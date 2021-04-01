@@ -1867,7 +1867,10 @@ img {
 .features .container .title__features h3 {
   color: #0eb493;
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 900;
+}
+.features .container .title__features div {
+  text-align: center;
 }
 .features .container .title__features div::before {
   content: "";
@@ -1890,7 +1893,7 @@ img {
 .features .container .features__grid {
   margin-top: 200px;
   height: 178px;
-  width: 370px;
+  width: 100%;
   display: grid;
   grid-template-columns: auto auto auto;
 }
@@ -1898,10 +1901,88 @@ img {
   padding-right: 30px;
 }
 .features .container .features__grid .grid__items {
-  width: 100%;
+  width: 370px;
   background-color: red;
 }
 
+main .item__content {
+  z-index: 1;
+  position: absolute;
+  text-align: center;
+  color: #f2f2f2;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 460px;
+  width: 100%;
+}
+main .item__content h2 {
+  font-weight: 300;
+  font-size: 62px;
+}
+main .item__content h2 span {
+  font-weight: 900;
+}
+main .item__content h3 {
+  font-weight: 300;
+  font-size: 48px;
+  margin-bottom: 18px;
+}
+main .item__content h3 span {
+  color: #0fda93;
+}
+main .item__content p {
+  position: absolute;
+  font-weight: 300;
+  font-size: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+main .item__content p::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background-color: #0fda93;
+  position: absolute;
+  left: -58px;
+  margin: 10px 0 9px 0;
+}
+main .item__content p::after {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background-color: #0fda93;
+  position: absolute;
+  right: -58px;
+  margin: 10px 0 9px 0;
+}
+main ul {
+  position: absolute;
+  top: 730px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-flow: row;
+  z-index: 1;
+}
+main ul li {
+  list-style: none;
+}
+main ul li.social__icon:not(:last-child) {
+  margin-right: 15px;
+}
+main ul li.social__icon a {
+  color: #f2f2f2;
+  opacity: 0.5;
+}
+main ul li.social__icon a img {
+  opacity: 0.5;
+}
+main ul li.social__icon a:hover {
+  opacity: 1;
+}
+main ul li.social__icon a:hover img {
+  opacity: 1;
+}
 main .banner {
   margin-bottom: 0;
 }
@@ -1933,87 +2014,44 @@ main .banner .banner__item {
   height: 800px;
   background-position: center;
 }
-main .banner .banner__item .item__content {
-  position: absolute;
-  text-align: center;
-  color: #f2f2f2;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 178px;
-  width: 100%;
-}
-main .banner .banner__item .item__content h2 {
-  font-weight: 300;
-  font-size: 62px;
-  margin-bottom: 10px;
-}
-main .banner .banner__item .item__content h2 span {
-  font-weight: 900;
-}
-main .banner .banner__item .item__content h3 {
-  font-weight: 300;
-  font-size: 48px;
-  margin-bottom: 22px;
-}
-main .banner .banner__item .item__content h3 span {
-  color: #0fda93;
-}
-main .banner .banner__item .item__content p {
-  position: absolute;
-  font-weight: 300;
-  font-size: 18px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-main .banner .banner__item .item__content p::before {
-  content: "";
-  width: 28px;
-  height: 1px;
-  background-color: #0fda93;
-  position: absolute;
-  left: -58px;
-  margin: 10px 0 9px 0;
-}
-main .banner .banner__item .item__content p::after {
-  content: "";
-  width: 28px;
-  height: 1px;
-  background-color: #0fda93;
-  position: absolute;
-  right: -58px;
-  margin: 10px 0 9px 0;
-}
-main .banner .banner__item ul.item__contact {
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-flow: row;
-}
-main .banner .banner__item ul.item__contact li {
-  list-style: none;
-}
-main .banner .banner__item ul.item__contact li.contact__item:not(:last-child) {
-  margin-right: 15px;
-}
-main .banner .banner__item ul.item__contact li.contact__item a {
-  color: #f2f2f2;
-  opacity: 0.5;
-}
-main .banner .banner__item ul.item__contact li.contact__item a img {
-  opacity: 0.5;
-}
-main .banner .banner__item ul.item__contact li.contact__item a:hover {
-  opacity: 1;
-}
-main .banner .banner__item ul.item__contact li.contact__item a:hover img {
-  opacity: 1;
-}
 
 @media screen and (max-width: 767px) {
+  main .item__content {
+    top: 220px;
+  }
+  main .item__content h2 {
+    font-size: 36px;
+  }
+  main .item__content h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+  main .item__content p {
+    font-size: 14px;
+  }
+  main .item__content p::before {
+    content: "";
+    width: 15px;
+    height: 1px;
+    background-color: #0fda93;
+    position: absolute;
+    left: -31px;
+    margin: 8px 0 7px 0;
+  }
+  main .item__content p::after {
+    content: "";
+    width: 15px;
+    height: 1px;
+    background-color: #0fda93;
+    position: absolute;
+    right: -31px;
+    margin: 8px 0 7px 0;
+  }
+  main ul {
+    top: 370px;
+  }
   main .banner .slick-dots {
-    bottom: 40px;
+    top: 340px;
   }
   main .banner .slick-dots li {
     display: inline-block;
@@ -2024,54 +2062,12 @@ main .banner .banner__item ul.item__contact li.contact__item a:hover img {
   main .banner .banner__item {
     height: 400px;
   }
-  main .banner .banner__item .item__content {
-    bottom: 100px;
-  }
-  main .banner .banner__item .item__content h2 {
-    font-weight: 300;
-    font-size: 36px;
-    margin-bottom: 12px;
-  }
-  main .banner .banner__item .item__content h2 span {
-    font-weight: 900;
-  }
-  main .banner .banner__item .item__content h3 {
-    font-weight: 400;
-    font-size: 22px;
-    margin-bottom: 7px;
-  }
-  main .banner .banner__item .item__content h3 span {
-    color: #0fda93;
-  }
-  main .banner .banner__item .item__content p {
-    font-size: 14px;
-  }
-  main .banner .banner__item .item__content p::before {
-    content: "";
-    width: 15px;
-    height: 1px;
-    background-color: #0fda93;
-    position: absolute;
-    left: -31px;
-    margin: 8px 0 7px 0;
-  }
-  main .banner .banner__item .item__content p::after {
-    content: "";
-    width: 15px;
-    height: 1px;
-    background-color: #0fda93;
-    position: absolute;
-    right: -31px;
-    margin: 8px 0 7px 0;
-  }
-  main .banner .banner__item ul.item__contact {
-    bottom: 20px;
-  }
 }
 @media screen and (min-width: 768px) {
-  main .banner .slick-dots {
+  main .banner ul.slick-dots {
     top: 40%;
     right: 43px;
+    left: auto;
     bottom: 0;
     width: 53px;
   }

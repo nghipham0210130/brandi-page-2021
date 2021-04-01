@@ -12,9 +12,10 @@
       h3 {
         color: $color-tilte;
         text-transform: uppercase;
-        font-weight: 800;
+        font-weight: 900;
       }
       div{
+        text-align: center;
         &::before{
           @include line($color-heart-item, 90px);
           left: -114px;
@@ -31,14 +32,15 @@
     .features__grid{
       margin-top: 200px;
       height: 178px;
-      width: 370px;
+      width: 100%;
       display: grid;
       grid-template-columns: auto auto auto;
       .grid__items:not(:last-child){
         padding-right: 30px;
       }
       .grid__items {
-        width: 100%;
+        width: 370px;
+
         background-color: red;
       }
     }
