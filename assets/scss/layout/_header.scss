@@ -9,9 +9,12 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 70px;
     border: 0;
     z-index: 3;
+    height: 70px;
+    @media #{$info-phone}{
+        height: 50px;
+    }
 
     .container {
         height: 100%;
@@ -21,6 +24,9 @@
         text-align: center;
         font-size: 13px;
         flex-wrap: wrap;
+        @media #{$info-phone}{
+            align-items: center;
+        }
         .inner__brand {
             display: flex;
             -webkit-box-align: center;
@@ -32,6 +38,12 @@
                 font-family: 'Open Sans', sans-serif;
                 margin-right: 38px;
                 img {
+                    padding: 0;
+                }
+            }
+            @media #{$info-phone}{
+                a {
+                    margin: 0;
                     padding: 0;
                 }
             }
@@ -50,6 +62,11 @@
                 left: -21px;
                 bottom: 1px;
             }
+            @media #{$info-phone}{
+                p {
+                    display: none;
+                }
+            }
         }
         .inner__toggle {
             position: absolute;
@@ -66,10 +83,24 @@
             z-index: 1;
             display: none;
             color: $white;
+            @media #{$info-phone}{
+                display: block;
+                opacity: 0.5;
+                font-size: 15px;
+            }
         }
         .inner__collapse {
             margin-top: 33px;
             z-index: 1;
+            @media #{$info-phone}{
+                display: none;
+                flex-flow: column;
+                position: absolute;
+                align-items: center;
+                top: 0;
+                right: 0;
+                background: $color-click-hamburger;
+            }
             a {
                 padding: 33px 4px 0 4px;
                 margin-left: 26px;
@@ -90,38 +121,8 @@
                     }
                 }
             }
-        }
-    }
-}
 
-@media screen and (max-width: 767px) {
-    .navbar {
-        height: 50px;
-        .container {
-            align-items: center;
-            .inner__brand {
-                a {
-                    margin: 0;
-                    padding: 0;
-                }
-                p {
-                    display: none;
-                }
-            }
-            .inner__toggle {
-                display: block;
-                opacity: 0.5;
-                font-size: 15px;
-                }
-            }
-            .inner__collapse {
-                display: none;
-                flex-flow: column;
-                position: absolute;
-                align-items: center;
-                top: 0;
-                right: 0;
-                background: $color-click-hamburger;
+            @media #{$info-phone}{
                 &.show{
                     margin-top: 50px;
                     display: block;
@@ -142,13 +143,7 @@
                         }
                     }
                 }
-
             }
+        }
     }
 }
-
-@media screen and (min-width: 768px) {
-    .nav__bar {
-    }
-}
-
