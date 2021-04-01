@@ -29,3 +29,13 @@ $('.banner').slick({
     arrows: false,
     cssEase: 'linear'
 });
+
+// Features
+$('.features__slick').slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    arrows: false,
+    cssEase: 'linear'
+});

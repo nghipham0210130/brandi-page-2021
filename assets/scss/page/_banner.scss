@@ -1,5 +1,4 @@
-
-  main {
+main {
     .item__content {
       z-index: 1;
       position: absolute;
@@ -7,12 +6,18 @@
       color: $white;
       left: 50%;
       transform: translateX(-50%);
-      top: 460px;
       width: 100%;
+      top: 460px;
+      @media #{$info-phone}{
+        top: 220px;
+      }
 
       h2 {
         font-weight: 300;
         font-size: 62px;
+        @media #{$info-phone}{
+          font-size: 36px;
+        }
         span {
           font-weight: 900;
         }
@@ -21,6 +26,10 @@
         font-weight: 300;
         font-size: 48px;
         margin-bottom: 18px;
+        @media #{$info-phone}{
+          font-size: 22px;
+          margin-bottom: 5px;
+        }
         span{
           color: $color-creative;
         }
@@ -42,16 +51,34 @@
           right: -58px;
           margin: 10px 0 9px 0;
         }
+
+        @media #{$info-phone}{
+          font-size: 14px;
+          &::before{
+            @include line($color-creative, 15px);
+            left: -31px;
+            margin: 8px 0 7px 0;
+
+          }
+          &::after {
+            @include line($color-creative, 15px);
+            right: -31px;
+            margin: 8px 0 7px 0;
+          }
+        }
       }
     }
     ul{
       position: absolute;
-      top: 730px;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
       flex-flow: row;
       z-index: 1;
+      top: 730px;
+      @media #{$info-phone}{
+        top: 370px;
+      }
       li {
         list-style: none;
         &.social__icon:not(:last-child) {
@@ -77,108 +104,54 @@
     }
     .banner {
       margin-bottom: 0;
-      &.slick-slider {
-        margin-bottom: 0;
-      }
-      .slick-dots {
-        li {
-          display: block;
-          margin-bottom: 15px;
-          padding: 0;
-          width: 10px;
-          height: 10px;
-          button{
-              &::before {
-              font-size: 0;
-              opacity: 0.8;
-              width: 8px;
-              height: 8px;
-              background-color: $black;
-              border: 1px solid $white;
-              border-radius: 50%;
-              margin: 0;
-            }
-          }
-
-          &.slick-active {
-            button::before{
-              background-color: $white;
-            }
-          }
-        }
-      }
-
-      .banner__item {
-        //position: relative;
-        background-size: cover ;
-        height: 800px;
-        background-position: center;
-      }
-    }
-  }
-
-@media screen and (max-width: 767px) {
-  main {
-    .item__content {
-      top: 220px;
-      h2 {
-        font-size: 36px;
-      }
-      h3 {
-        font-size: 22px;
-        margin-bottom: 5px;
-      }
-      p {
-        font-size: 14px;
-        &::before{
-          @include line($color-creative, 15px);
-          left: -31px;
-          margin: 8px 0 7px 0;
-
-        }
-        &::after {
-          @include line($color-creative, 15px);
-          right: -31px;
-          margin: 8px 0 7px 0;
-        }
-      }
-    }
-    ul{
-      top: 370px;
-    }
-    .banner {
-      .slick-dots {
-        top: 340px;
-        li {
-          display: inline-block;
-        }
-        &.slick-active {
-          button::before {
-            background-color: $grey;
-          }
-        }
-      }
-      .banner__item {
-        height: 400px;
-
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 768px) {
-  main {
-    .banner {
       ul{
         &.slick-dots {
           top: 40%;
           right: 43px;
           left: auto;
-          bottom: 0;
           width: 53px;
+          @media #{$info-phone}{
+            top: 340px;
+            right: 0;
+            left: 50%;
+            width: 100%;
+          }
+          li {
+            display: block;
+            @media #{$info-phone}{
+              display: inline-block;
+            }
+            button{
+              &::before {
+                background-color: $black;
+                border: 1px solid $white;
+              }
+            }
+
+            &.slick-active {
+              button::before{
+                background-color: $white;
+              }
+              @media #{$info-phone}{
+                button::before {
+                  background-color: $grey;
+                }
+              }
+            }
+          }
         }
       }
+      &.slick-slider {
+        margin-bottom: 0;
+      }
 
+      .banner__item {
+        background-size: cover ;
+        background-position: center;
+        height: 800px;
+        @media #{$info-phone}{
+          height: 400px;
+        }
+      }
     }
   }
-}

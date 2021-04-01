@@ -1753,12 +1753,6 @@ img {
 .navbar .container .inner__brand a img {
   padding: 0;
 }
-@media only screen and (max-width : 767px) {
-  .navbar .container .inner__brand a {
-    margin: 0;
-    padding: 0;
-  }
-}
 .navbar .container .inner__brand p {
   font-family: "Open Sans", sans-serif;
   color: rgba(255, 255, 255, 0.604);
@@ -1775,6 +1769,10 @@ img {
   bottom: 1px;
 }
 @media only screen and (max-width : 767px) {
+  .navbar .container .inner__brand a {
+    margin: 0;
+    padding: 0;
+  }
   .navbar .container .inner__brand p {
     display: none;
   }
@@ -1864,11 +1862,31 @@ img {
   padding: 0 15px 0 15px;
 }
 
+ul {
+  position: absolute;
+}
+ul.slick-dots {
+  bottom: 0;
+}
+ul.slick-dots li {
+  margin-bottom: 15px;
+  padding: 0;
+  width: 10px;
+  height: 10px;
+}
+ul.slick-dots li button::before {
+  font-size: 0;
+  opacity: 0.8;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin: 0;
+}
+
 .features .container {
   width: 100%;
   height: 100%;
   position: relative;
-  border: 1px solid red;
 }
 .features .container .title__features {
   padding-top: 76px;
@@ -1880,6 +1898,7 @@ img {
   color: #0eb493;
   text-transform: uppercase;
   font-weight: 900;
+  margin-bottom: 22px;
 }
 .features .container .title__features div {
   text-align: center;
@@ -1890,7 +1909,7 @@ img {
   height: 1px;
   background-color: #dce1e5;
   position: absolute;
-  left: -114px;
+  left: -70px;
   margin: 8px 0 7px 0;
 }
 .features .container .title__features div::after {
@@ -1899,22 +1918,55 @@ img {
   height: 1px;
   background-color: #dce1e5;
   position: absolute;
-  right: -114px;
+  right: -70px;
   margin: 8px 0 7px 0;
 }
-.features .container .features__grid {
+.features .container .features__slick ul {
+  top: 400px;
+}
+.features .container .features__slick ul.slick-dots {
+  bottom: 54px;
+}
+.features .container .features__slick ul.slick-dots li button::before {
+  background-color: #000000;
+  border: 1px solid #f2f2f2;
+}
+.features .container .features__slick ul.slick-dots li.slick-active button::before {
+  background-color: #f2f2f2;
+}
+.features .container .features__slick .features__grid {
   margin-top: 200px;
   height: 178px;
   width: 100%;
   display: grid;
   grid-template-columns: auto auto auto;
 }
-.features .container .features__grid .grid__items:not(:last-child) {
+.features .container .features__slick .features__grid .grid__items:not(:last-child) {
   padding-right: 30px;
 }
-.features .container .features__grid .grid__items {
-  width: 370px;
-  background-color: red;
+.features .container .features__slick .features__grid .grid__items {
+  display: flex;
+  flex-flow: row;
+}
+.features .container .features__slick .features__grid .grid__items .items__icon {
+  width: 70px;
+  height: 100%;
+  position: absolute;
+}
+.features .container .features__slick .features__grid .grid__items .items__icon img {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+}
+.features .container .features__slick .features__grid .grid__items .items__content {
+  margin-top: 2px;
+  margin-left: 70px;
+}
+.features .container .features__slick .features__grid .grid__items .items__content h4 {
+  margin-bottom: 20px;
+}
+.features .container .features__slick .features__grid .grid__items .items__content p {
+  opacity: 0.5;
 }
 
 main .item__content {
@@ -1924,12 +1976,22 @@ main .item__content {
   color: #f2f2f2;
   left: 50%;
   transform: translateX(-50%);
-  top: 460px;
   width: 100%;
+  top: 460px;
+}
+@media only screen and (max-width : 767px) {
+  main .item__content {
+    top: 220px;
+  }
 }
 main .item__content h2 {
   font-weight: 300;
   font-size: 62px;
+}
+@media only screen and (max-width : 767px) {
+  main .item__content h2 {
+    font-size: 36px;
+  }
 }
 main .item__content h2 span {
   font-weight: 900;
@@ -1938,6 +2000,12 @@ main .item__content h3 {
   font-weight: 300;
   font-size: 48px;
   margin-bottom: 18px;
+}
+@media only screen and (max-width : 767px) {
+  main .item__content h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
 }
 main .item__content h3 span {
   color: #0fda93;
@@ -1967,14 +2035,42 @@ main .item__content p::after {
   right: -58px;
   margin: 10px 0 9px 0;
 }
+@media only screen and (max-width : 767px) {
+  main .item__content p {
+    font-size: 14px;
+  }
+  main .item__content p::before {
+    content: "";
+    width: 15px;
+    height: 1px;
+    background-color: #0fda93;
+    position: absolute;
+    left: -31px;
+    margin: 8px 0 7px 0;
+  }
+  main .item__content p::after {
+    content: "";
+    width: 15px;
+    height: 1px;
+    background-color: #0fda93;
+    position: absolute;
+    right: -31px;
+    margin: 8px 0 7px 0;
+  }
+}
 main ul {
   position: absolute;
-  top: 730px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   flex-flow: row;
   z-index: 1;
+  top: 730px;
+}
+@media only screen and (max-width : 767px) {
+  main ul {
+    top: 370px;
+  }
 }
 main ul li {
   list-style: none;
@@ -1998,89 +2094,50 @@ main ul li.social__icon a:hover img {
 main .banner {
   margin-bottom: 0;
 }
+main .banner ul.slick-dots {
+  top: 40%;
+  right: 43px;
+  left: auto;
+  width: 53px;
+}
+@media only screen and (max-width : 767px) {
+  main .banner ul.slick-dots {
+    top: 340px;
+    right: 0;
+    left: 50%;
+    width: 100%;
+  }
+}
+main .banner ul.slick-dots li {
+  display: block;
+}
+@media only screen and (max-width : 767px) {
+  main .banner ul.slick-dots li {
+    display: inline-block;
+  }
+}
+main .banner ul.slick-dots li button::before {
+  background-color: #000000;
+  border: 1px solid #f2f2f2;
+}
+main .banner ul.slick-dots li.slick-active button::before {
+  background-color: #f2f2f2;
+}
+@media only screen and (max-width : 767px) {
+  main .banner ul.slick-dots li.slick-active button::before {
+    background-color: rgba(255, 255, 255, 0.604);
+  }
+}
 main .banner.slick-slider {
   margin-bottom: 0;
 }
-main .banner .slick-dots li {
-  display: block;
-  margin-bottom: 15px;
-  padding: 0;
-  width: 10px;
-  height: 10px;
-}
-main .banner .slick-dots li button::before {
-  font-size: 0;
-  opacity: 0.8;
-  width: 8px;
-  height: 8px;
-  background-color: #000000;
-  border: 1px solid #f2f2f2;
-  border-radius: 50%;
-  margin: 0;
-}
-main .banner .slick-dots li.slick-active button::before {
-  background-color: #f2f2f2;
-}
 main .banner .banner__item {
   background-size: cover;
-  height: 800px;
   background-position: center;
+  height: 800px;
 }
-
-@media screen and (max-width: 767px) {
-  main .item__content {
-    top: 220px;
-  }
-  main .item__content h2 {
-    font-size: 36px;
-  }
-  main .item__content h3 {
-    font-size: 22px;
-    margin-bottom: 5px;
-  }
-  main .item__content p {
-    font-size: 14px;
-  }
-  main .item__content p::before {
-    content: "";
-    width: 15px;
-    height: 1px;
-    background-color: #0fda93;
-    position: absolute;
-    left: -31px;
-    margin: 8px 0 7px 0;
-  }
-  main .item__content p::after {
-    content: "";
-    width: 15px;
-    height: 1px;
-    background-color: #0fda93;
-    position: absolute;
-    right: -31px;
-    margin: 8px 0 7px 0;
-  }
-  main ul {
-    top: 370px;
-  }
-  main .banner .slick-dots {
-    top: 340px;
-  }
-  main .banner .slick-dots li {
-    display: inline-block;
-  }
-  main .banner .slick-dots.slick-active button::before {
-    background-color: rgba(255, 255, 255, 0.604);
-  }
+@media only screen and (max-width : 767px) {
   main .banner .banner__item {
     height: 400px;
-  }
-}
-@media screen and (min-width: 768px) {
-  main .banner ul.slick-dots {
-    top: 40%;
-    right: 43px;
-    left: auto;
-    bottom: 0;
-    width: 53px;
   }
 }

@@ -41,12 +41,6 @@
                     padding: 0;
                 }
             }
-            @media #{$info-phone}{
-                a {
-                    margin: 0;
-                    padding: 0;
-                }
-            }
             p {
                 font-family: 'Open Sans', sans-serif;
                 color: $grey;
@@ -63,6 +57,10 @@
                 bottom: 1px;
             }
             @media #{$info-phone}{
+                a {
+                    margin: 0;
+                    padding: 0;
+                }
                 p {
                     display: none;
                 }

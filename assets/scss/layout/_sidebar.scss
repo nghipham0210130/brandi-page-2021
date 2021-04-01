@@ -3,7 +3,6 @@
     width: 100%;
     height: 100%;
     position: relative;
-    border: 1px solid red;
     .title__features {
       padding-top: 76px;
       position: absolute;
@@ -13,37 +12,81 @@
         color: $color-tilte;
         text-transform: uppercase;
         font-weight: 900;
+        margin-bottom: 22px;
       }
       div{
         text-align: center;
         &::before{
           @include line($color-heart-item, 90px);
-          left: -114px;
+          left: -70px;
           margin: 8px 0 7px 0;
         }
         &::after{
           @include line($color-heart-item, 90px);
-          right: -114px;
+          right: -70px;
           margin: 8px 0 7px 0;
         }
       }
     }
+     .features__slick {
+       ul {
+         top: 400px;
+         &.slick-dots {
+           bottom: 54px;
+           li {
+             button{
+               &::before {
+                 background-color: $black;
+                 border: 1px solid $white;
+               }
+             }
+             &.slick-active {
+               button::before{
+                 background-color: $white;
+               }
+             }
+           }
+         }
+       }
 
-    .features__grid{
-      margin-top: 200px;
-      height: 178px;
-      width: 100%;
-      display: grid;
-      grid-template-columns: auto auto auto;
-      .grid__items:not(:last-child){
-        padding-right: 30px;
-      }
-      .grid__items {
-        width: 370px;
+       .features__grid{
+         margin-top: 200px;
+         height: 178px;
+         width: 100%;
+         display: grid;
+         grid-template-columns: auto auto auto;
+         .grid__items:not(:last-child){
+           padding-right: 30px;
+         }
+         .grid__items {
+           display: flex;
+           flex-flow: row;
+           .items__icon {
+             width: 70px;
+             height: 100%;
+             position: absolute;
 
-        background-color: red;
-      }
-    }
+             img {
+               width: 40px;
+               height: 40px;
+               margin: 0 auto;
+             }
+
+           }
+           .items__content {
+             margin-top: 2px;
+             margin-left: 70px;
+             h4 {
+               margin-bottom: 20px;
+             }
+
+             p {
+               opacity: 0.5;
+             }
+           }
+         }
+       }
+     }
+
   }
-
 }

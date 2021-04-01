@@ -3,3 +3,26 @@
   margin: 0 auto;
   padding: 0 15px 0 15px;
 }
+
+ul{
+  position: absolute;
+  &.slick-dots {
+    bottom: 0;
+    li {
+      margin-bottom: 15px;
+      padding: 0;
+      width: 10px;
+      height: 10px;
+      button{
+        &::before {
+          font-size: 0;
+          opacity: 0.8;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
