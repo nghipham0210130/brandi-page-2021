@@ -1707,18 +1707,16 @@ img {
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  box-sizing: border-box;
 }
 
 .navbar {
-  background-color: #0e2c29;
+  background-color: rgba(14, 44, 43, 0.5);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 70px;
   border: 0;
-  border-radius: 0;
   z-index: 3;
 }
 .navbar .container {
@@ -1854,28 +1852,81 @@ img {
   padding: 0 15px 0 15px;
 }
 
+.features .container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border: 1px solid red;
+}
+.features .container .title__features {
+  padding-top: 76px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.features .container .title__features h3 {
+  color: #0eb493;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.features .container .title__features div::before {
+  content: "";
+  width: 90px;
+  height: 1px;
+  background-color: #dce1e5;
+  position: absolute;
+  left: -114px;
+  margin: 8px 0 7px 0;
+}
+.features .container .title__features div::after {
+  content: "";
+  width: 90px;
+  height: 1px;
+  background-color: #dce1e5;
+  position: absolute;
+  right: -114px;
+  margin: 8px 0 7px 0;
+}
+.features .container .features__grid {
+  margin-top: 200px;
+  height: 178px;
+  width: 370px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.features .container .features__grid .grid__items:not(:last-child) {
+  padding-right: 30px;
+}
+.features .container .features__grid .grid__items {
+  width: 100%;
+  background-color: red;
+}
+
 main .banner {
+  margin-bottom: 0;
+}
+main .banner.slick-slider {
   margin-bottom: 0;
 }
 main .banner .slick-dots li {
   display: block;
   margin-bottom: 15px;
   padding: 0;
+  width: 10px;
+  height: 10px;
 }
 main .banner .slick-dots li button::before {
   font-size: 0;
   opacity: 0.8;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   background-color: #000000;
   border: 1px solid #f2f2f2;
   border-radius: 50%;
+  margin: 0;
 }
 main .banner .slick-dots li.slick-active button::before {
   background-color: #f2f2f2;
-}
-main .banner .slick-dots li.slick-slider {
-  bottom: 0;
 }
 main .banner .banner__item {
   background-size: cover;
@@ -1894,13 +1945,13 @@ main .banner .banner__item .item__content {
 main .banner .banner__item .item__content h2 {
   font-weight: 300;
   font-size: 62px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 main .banner .banner__item .item__content h2 span {
   font-weight: 900;
 }
 main .banner .banner__item .item__content h3 {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 48px;
   margin-bottom: 22px;
 }
@@ -1908,25 +1959,28 @@ main .banner .banner__item .item__content h3 span {
   color: #0fda93;
 }
 main .banner .banner__item .item__content p {
-  font-weight: 200;
+  position: absolute;
+  font-weight: 300;
   font-size: 18px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 main .banner .banner__item .item__content p::before {
   content: "";
-  width: 20px;
+  width: 28px;
   height: 1px;
   background-color: #0fda93;
   position: absolute;
-  left: 400px;
+  left: -58px;
   margin: 10px 0 9px 0;
 }
 main .banner .banner__item .item__content p::after {
   content: "";
-  width: 20px;
+  width: 28px;
   height: 1px;
   background-color: #0fda93;
   position: absolute;
-  right: 400px;
+  right: -58px;
   margin: 10px 0 9px 0;
 }
 main .banner .banner__item ul.item__contact {
@@ -1943,12 +1997,18 @@ main .banner .banner__item ul.item__contact li {
 main .banner .banner__item ul.item__contact li.contact__item:not(:last-child) {
   margin-right: 15px;
 }
-main .banner .banner__item ul.item__contact li.contact__item a:hover {
+main .banner .banner__item ul.item__contact li.contact__item a {
   color: #f2f2f2;
   opacity: 0.5;
 }
-main .banner .banner__item ul.item__contact li.contact__item a:hover img {
+main .banner .banner__item ul.item__contact li.contact__item a img {
   opacity: 0.5;
+}
+main .banner .banner__item ul.item__contact li.contact__item a:hover {
+  opacity: 1;
+}
+main .banner .banner__item ul.item__contact li.contact__item a:hover img {
+  opacity: 1;
 }
 
 @media screen and (max-width: 767px) {
@@ -1992,7 +2052,7 @@ main .banner .banner__item ul.item__contact li.contact__item a:hover img {
     height: 1px;
     background-color: #0fda93;
     position: absolute;
-    left: 55px;
+    left: -31px;
     margin: 8px 0 7px 0;
   }
   main .banner .banner__item .item__content p::after {
@@ -2001,7 +2061,7 @@ main .banner .banner__item ul.item__contact li.contact__item a:hover img {
     height: 1px;
     background-color: #0fda93;
     position: absolute;
-    right: 55px;
+    right: -31px;
     margin: 8px 0 7px 0;
   }
   main .banner .banner__item ul.item__contact {
@@ -2011,8 +2071,8 @@ main .banner .banner__item ul.item__contact li.contact__item a:hover img {
 @media screen and (min-width: 768px) {
   main .banner .slick-dots {
     top: 40%;
-    right: 20px;
+    right: 43px;
     bottom: 0;
-    width: 30px;
+    width: 53px;
   }
 }
