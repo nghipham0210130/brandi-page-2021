@@ -1652,7 +1652,7 @@
 
 html, body {
   font-size: 16px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 @media only screen and (max-width : 1160px) {
@@ -1725,7 +1725,6 @@ img {
   }
 }
 .navbar .container {
-  height: 100%;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -1747,14 +1746,12 @@ img {
 .navbar .container .inner__brand a {
   padding: 2px 12px 12px 12px;
   text-decoration: none;
-  font-family: "Open Sans", sans-serif;
   margin-right: 38px;
 }
 .navbar .container .inner__brand a img {
   padding: 0;
 }
 .navbar .container .inner__brand p {
-  font-family: "Open Sans", sans-serif;
   color: rgba(255, 255, 255, 0.604);
   position: relative;
   font-weight: 300;
@@ -1860,6 +1857,9 @@ img {
   max-width: 1170px;
   margin: 0 auto;
   padding: 0 15px 0 15px;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 ul {
@@ -1883,43 +1883,44 @@ ul.slick-dots li button::before {
   margin: 0;
 }
 
-.title__features {
-  padding-top: 76px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+.title {
+  text-align: center;
 }
-@media only screen and (max-width : 767px) {
-  .title__features {
-    padding-top: 50px;
-  }
-}
-.title__features h3 {
+.title h3 {
   color: #0eb493;
   text-transform: uppercase;
   font-weight: 900;
   margin-bottom: 22px;
+  font-size: 28px;
 }
-.title__features div {
-  text-align: center;
+.title div {
+  max-width: 230px;
+  margin: 0 auto;
+  position: relative;
 }
-.title__features div::before {
+.title div::before {
   content: "";
   width: 90px;
   height: 1px;
   background-color: #dce1e5;
   position: absolute;
-  left: -70px;
   margin: 8px 0 7px 0;
+  left: 0;
 }
-.title__features div::after {
+.title div::after {
   content: "";
   width: 90px;
   height: 1px;
   background-color: #dce1e5;
   position: absolute;
-  right: -70px;
   margin: 8px 0 7px 0;
+  right: 0;
+}
+.title h5 {
+  max-width: 970px;
+  margin: 35px auto 0 auto;
+  opacity: 0.5;
+  font-size: 18px;
 }
 
 .features {
@@ -1932,17 +1933,17 @@ ul.slick-dots li button::before {
   }
 }
 .features .container {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-.features .container .features__slick ul {
-  top: 398px;
+  padding-top: 76px;
+  padding-bottom: 76px;
 }
 @media only screen and (max-width : 767px) {
-  .features .container .features__slick ul {
-    top: 580px;
+  .features .container {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
+}
+.features .container .features__slick ul {
+  bottom: -120px;
 }
 .features .container .features__slick ul.slick-dots li button::before {
   border: 1px solid #c7ced3;
@@ -1951,29 +1952,22 @@ ul.slick-dots li button::before {
   background-color: #000000;
 }
 .features .container .features__slick .features__grid {
-  margin-top: 200px;
-  height: 178px;
+  margin-top: 35px;
   width: 100%;
   display: grid;
-  grid-template-columns: 370px 370px 370px;
-  grid-template-rows: 200px;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 30px;
 }
 @media only screen and (max-width : 767px) {
   .features .container .features__slick .features__grid {
-    margin-top: 130px;
-  }
-}
-@media only screen and (max-width : 767px) {
-  .features .container .features__slick .features__grid {
-    height: 440px;
+    margin-top: 10px;
   }
 }
 @media only screen and (max-width : 767px) {
   .features .container .features__slick .features__grid {
     grid-template-columns: auto;
-    grid-template-rows: 140px 140px 140px;
-    grid-gap: 10px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 30px;
   }
 }
 .features .container .features__slick .features__grid .grid__items {
@@ -2000,12 +1994,69 @@ ul.slick-dots li button::before {
 }
 .features .container .features__slick .features__grid .grid__items .items__content h4 {
   margin-bottom: 20px;
+  font-size: 20px;
+}
+@media only screen and (max-width : 767px) {
+  .features .container .features__slick .features__grid .grid__items .items__content h4 {
+    font-size: 15px;
+  }
 }
 .features .container .features__slick .features__grid .grid__items .items__content p {
+  font-size: 13px;
   opacity: 0.5;
 }
+@media only screen and (max-width : 767px) {
+  .features .container .features__slick .features__grid .grid__items .items__content p {
+    font-size: 10px;
+  }
+}
 
-main .item__content {
+.work .container {
+  padding-top: 76px;
+  padding-bottom: 76px;
+}
+@media only screen and (max-width : 767px) {
+  .work .container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+.work .container .work__link {
+  text-align: center;
+  margin-top: 55px;
+}
+.work .container .work__link a {
+  color: #000000;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.work .container .work__link a:hover {
+  color: #f2f2f2;
+  background-color: #0eb493;
+  border-radius: 10px;
+}
+.work .container .work__link a:not(:last-child) {
+  margin-right: 20px;
+}
+.work .work__images--space {
+  width: 100%;
+  display: grid;
+  grid-gap: 0;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.work .work__images--space .work__image {
+  width: 100%;
+}
+@media only screen and (max-width : 767px) {
+  .work .work__images--space {
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+main .banner__wrapper .item__content {
   z-index: 1;
   position: absolute;
   text-align: center;
@@ -2016,44 +2067,44 @@ main .item__content {
   top: 460px;
 }
 @media only screen and (max-width : 767px) {
-  main .item__content {
+  main .banner__wrapper .item__content {
     top: 220px;
   }
 }
-main .item__content h2 {
+main .banner__wrapper .item__content h2 {
   font-weight: 300;
   font-size: 62px;
 }
 @media only screen and (max-width : 767px) {
-  main .item__content h2 {
+  main .banner__wrapper .item__content h2 {
     font-size: 36px;
   }
 }
-main .item__content h2 span {
+main .banner__wrapper .item__content h2 span {
   font-weight: 900;
 }
-main .item__content h3 {
+main .banner__wrapper .item__content h3 {
   font-weight: 300;
   font-size: 48px;
   margin-bottom: 18px;
 }
 @media only screen and (max-width : 767px) {
-  main .item__content h3 {
+  main .banner__wrapper .item__content h3 {
     font-size: 22px;
     margin-bottom: 5px;
   }
 }
-main .item__content h3 span {
+main .banner__wrapper .item__content h3 span {
   color: #0fda93;
 }
-main .item__content p {
+main .banner__wrapper .item__content p {
   position: absolute;
   font-weight: 300;
   font-size: 18px;
   left: 50%;
   transform: translateX(-50%);
 }
-main .item__content p::before {
+main .banner__wrapper .item__content p::before {
   content: "";
   width: 28px;
   height: 1px;
@@ -2062,7 +2113,7 @@ main .item__content p::before {
   left: -58px;
   margin: 10px 0 9px 0;
 }
-main .item__content p::after {
+main .banner__wrapper .item__content p::after {
   content: "";
   width: 28px;
   height: 1px;
@@ -2072,10 +2123,10 @@ main .item__content p::after {
   margin: 10px 0 9px 0;
 }
 @media only screen and (max-width : 767px) {
-  main .item__content p {
-    font-size: 14px;
+  main .banner__wrapper .item__content p {
+    font-size: 12px;
   }
-  main .item__content p::before {
+  main .banner__wrapper .item__content p::before {
     content: "";
     width: 15px;
     height: 1px;
@@ -2084,7 +2135,7 @@ main .item__content p::after {
     left: -31px;
     margin: 8px 0 7px 0;
   }
-  main .item__content p::after {
+  main .banner__wrapper .item__content p::after {
     content: "";
     width: 15px;
     height: 1px;
@@ -2094,7 +2145,7 @@ main .item__content p::after {
     margin: 8px 0 7px 0;
   }
 }
-main ul {
+main .banner__wrapper ul {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -2104,76 +2155,83 @@ main ul {
   top: 730px;
 }
 @media only screen and (max-width : 767px) {
-  main ul {
+  main .banner__wrapper ul {
     top: 370px;
   }
 }
-main ul li {
+main .banner__wrapper ul li {
   list-style: none;
 }
-main ul li.social__icon:not(:last-child) {
+main .banner__wrapper ul li.social__icon:not(:last-child) {
   margin-right: 15px;
 }
-main ul li.social__icon a {
+main .banner__wrapper ul li.social__icon a {
   color: #f2f2f2;
   opacity: 0.5;
 }
-main ul li.social__icon a img {
+main .banner__wrapper ul li.social__icon a img {
   opacity: 0.5;
 }
-main ul li.social__icon a:hover {
+main .banner__wrapper ul li.social__icon a:hover {
   opacity: 1;
 }
-main ul li.social__icon a:hover img {
+main .banner__wrapper ul li.social__icon a:hover img {
   opacity: 1;
 }
-main .banner {
+main .banner__wrapper .banner {
   margin-bottom: 0;
 }
-main .banner ul.slick-dots {
+main .banner__wrapper .banner ul {
+  flex-flow: column;
+}
+@media only screen and (max-width : 767px) {
+  main .banner__wrapper .banner ul {
+    flex-flow: row;
+  }
+}
+main .banner__wrapper .banner ul.slick-dots {
   top: 40%;
   right: 43px;
   left: auto;
   width: 53px;
 }
 @media only screen and (max-width : 767px) {
-  main .banner ul.slick-dots {
+  main .banner__wrapper .banner ul.slick-dots {
     top: 340px;
     right: 0;
     left: 50%;
-    width: 100%;
   }
 }
-main .banner ul.slick-dots li {
+main .banner__wrapper .banner ul.slick-dots li {
   display: block;
 }
 @media only screen and (max-width : 767px) {
-  main .banner ul.slick-dots li {
+  main .banner__wrapper .banner ul.slick-dots li {
     display: inline-block;
   }
 }
-main .banner ul.slick-dots li button::before {
+main .banner__wrapper .banner ul.slick-dots li button::before {
   background-color: #000000;
   border: 1px solid #f2f2f2;
 }
-main .banner ul.slick-dots li.slick-active button::before {
+main .banner__wrapper .banner ul.slick-dots li.slick-active button::before {
   background-color: #f2f2f2;
 }
 @media only screen and (max-width : 767px) {
-  main .banner ul.slick-dots li.slick-active button::before {
+  main .banner__wrapper .banner ul.slick-dots li.slick-active button::before {
     background-color: rgba(255, 255, 255, 0.604);
   }
 }
-main .banner.slick-slider {
+main .banner__wrapper .banner.slick-slider {
   margin-bottom: 0;
 }
-main .banner .banner__item {
+main .banner__wrapper .banner .banner__item {
   background-size: cover;
   background-position: center;
   height: 800px;
 }
 @media only screen and (max-width : 767px) {
-  main .banner .banner__item {
+  main .banner__wrapper .banner .banner__item {
     height: 400px;
   }
 }

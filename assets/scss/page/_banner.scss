@@ -1,4 +1,5 @@
 main {
+  .banner__wrapper {
     .item__content {
       z-index: 1;
       position: absolute;
@@ -53,7 +54,7 @@ main {
         }
 
         @media #{$info-phone}{
-          font-size: 14px;
+          font-size: 12px;
           &::before{
             @include line($color-creative, 15px);
             left: -31px;
@@ -105,6 +106,10 @@ main {
     .banner {
       margin-bottom: 0;
       ul{
+        flex-flow: column;
+        @media #{$info-phone}{
+          flex-flow: row;
+        }
         &.slick-dots {
           top: 40%;
           right: 43px;
@@ -114,7 +119,6 @@ main {
             top: 340px;
             right: 0;
             left: 50%;
-            width: 100%;
           }
           li {
             display: block;
@@ -155,3 +159,4 @@ main {
       }
     }
   }
+}
