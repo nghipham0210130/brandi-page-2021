@@ -26,3 +26,32 @@ ul{
     }
   }
 }
+
+.title__features {
+  padding-top: 76px;
+  @media #{$info-phone}{
+  padding-top: 50px;
+}
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  h3 {
+    color: $color-tilte;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 22px;
+  }
+  div{
+    text-align: center;
+    &::before{
+      @include line($color-heart-item, 90px);
+      left: -70px;
+      margin: 8px 0 7px 0;
+    }
+    &::after{
+      @include line($color-heart-item, 90px);
+      right: -70px;
+      margin: 8px 0 7px 0;
+    }
+  }
+}

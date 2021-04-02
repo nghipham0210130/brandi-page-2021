@@ -57,14 +57,14 @@
                 bottom: 1px;
             }
             @media #{$info-phone}{
-                a {
-                    margin: 0;
-                    padding: 0;
-                }
-                p {
-                    display: none;
-                }
+            a {
+                margin: 0;
+                padding: 0;
             }
+            p {
+                display: none;
+            }
+        }
         }
         .inner__toggle {
             position: absolute;

@@ -20,7 +20,7 @@ for (var i = 0; i < links.length; i++) {
     });
 }
 
-// Banner
+// Slick for Banner
 $('.banner').slick({
     dots: true,
     infinite: true,
@@ -30,7 +30,7 @@ $('.banner').slick({
     cssEase: 'linear'
 });
 
-// Features
+// Slick for Features
 $('.features__slick').slick({
     dots: true,
     infinite: true,
