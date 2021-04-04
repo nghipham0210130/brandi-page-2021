@@ -39,3 +39,14 @@ $('.features__slick').slick({
     arrows: false,
     cssEase: 'linear'
 });
+
+//Slick for Team
+
+$('.team__slick').slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    arrows: false,
+    cssEase: 'linear'
+});
