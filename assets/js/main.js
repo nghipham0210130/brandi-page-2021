@@ -48,5 +48,7 @@ $('.team__slick').slick({
     speed: 500,
     fade: true,
     arrows: false,
-    cssEase: 'linear'
+    cssEase: 'linear',
 });
+
+
