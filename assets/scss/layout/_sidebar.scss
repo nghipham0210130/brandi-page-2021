@@ -6,6 +6,12 @@
     }
     .container {
         padding-bottom: 76px;
+        .title {
+            margin-bottom: 35px;
+            @media #{$info-phone} {
+                margin-bottom: 10px;
+            }
+        }
         .features__slick {
             ul {
                 bottom: -120px;
@@ -28,10 +34,7 @@
                 }
             }
             .features__grid {
-                margin-top: 35px;
-                @media #{$info-phone} {
-                    margin-top: 10px;
-                }
+
                 width: 100%;
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
@@ -45,6 +48,7 @@
                     display: flex;
                     flex-flow: row;
                     .items__icon {
+                        margin-bottom: 2px;
                         width: 70px;
                         position: absolute;
                         img {
@@ -57,7 +61,6 @@
                         }
                     }
                     .items__content {
-                        margin-top: 2px;
                         margin-left: 70px;
                         h4 {
                             margin-bottom: 20px;
@@ -82,13 +85,12 @@
 
 .works {
     .title {
-        padding-left: 15px;
-        padding-right: 15px;
+        margin-bottom: 55px;
     }
     .works__content {
         .works__link {
+            margin-bottom: 40px;
             text-align: center;
-            margin-top: 55px;
             padding: 0 15px;
             .works__link--item {
                 color: $black;
@@ -111,7 +113,6 @@
             }
         }
         .works__images--space {
-            margin-top: 40px;
             width: 100%;
             display: grid;
             grid-gap: 0;
@@ -132,15 +133,17 @@
                 position: relative;
                 overflow: hidden;
                 .image__hover {
+                    img {
+                        margin-bottom: 25px;
+                    }
                     h5 {
-                        margin-top: 25px;
+                        margin-bottom: 6px;
                         font-size: 20px;
                         @media #{$info-phone} {
                             font-size: 16px;
                         }
                     }
                     p {
-                        margin-top: 6px;
                         font-size: 20px;
                         @media #{$info-phone} {
                             font-size: 16px;
@@ -209,6 +212,7 @@
                     overflow: hidden;
                     img {
                         height: 300px;
+                        margin-bottom: 19px;
                         display: block;
                         @media #{$info-phone} {
                             height: 200px;
@@ -217,14 +221,14 @@
                         }
                     }
                     .team__member--info {
-                        margin-top: 19px;
                         h4 {
                             font-size: 18px;
+
+                            margin-bottom: 13px;
                         }
                         p {
                             font-size: 14px;
                             opacity: 0.5;
-                            margin-top: 13px;
                         }
                     }
                     .team__member--hover {
@@ -239,18 +243,18 @@
                             width: 180px;
                         }
                         h5 {
-                            margin-top: 20px;
+                            padding-top: 20px;
                             font-size: 16px;
+                            margin-bottom: 14px;
                             @media #{$info-phone} {
-                                margin-top: 100px;
+                                padding-top: 100px;
                                 font-size: 12px;
+                                margin-bottom: 6px;
                             }
                         }
                         p {
-                            margin-top: 14px;
                             font-size: 16px;
                             @media #{$info-phone} {
-                                margin-top: 6px;
                                 font-size: 12px;
                             }
                         }
@@ -316,8 +320,10 @@
         @media #{$info-phone}{
             padding-bottom: 50px;
         }
+        .title{
+            margin-bottom: 23px;
+        }
         .funfact__grid {
-            margin-top: 23px;
             text-align: center;
             display: grid;
             gap: 30px;
@@ -333,23 +339,23 @@
                     margin: 0 auto;
                     width: 130px;
                     height: 130px;
+                    margin-bottom: 38px;
                     @media #{$info-phone} {
                         width: 80px;
                         height: 80px;
                     }
                 }
                 .item__info {
-                    margin-top: 38px;
                     h2 {
                         font-weight: 900;
                         font-size: 60px;
+                        margin-bottom: 6px;
                         @media #{$info-phone} {
                             font-size: 40px;
                         }
                     }
                     p {
                         text-transform: uppercase;
-                        margin-top: 6px;
                         font-size: 18px;
                         @media #{$info-phone} {
                             font-size: 14px;
@@ -363,57 +369,126 @@
 
 .discuss {
     .container {
+        .title {
+            margin-bottom: 80px;
+        }
         .discuss__grid {
-            margin-top: 80px;
+            margin-bottom: 107px;
             display: grid;
             gap: 30px;
             width: 100%;
             grid-template-columns: 270px 770px 70px;
-            .discuss__grid--info {
-                h4 {
-                    font-weight: 600;
-                    font-size: 24px;
-                }
-                display: grid;
-                gap: 30px;
-                width: 100%;
-                grid-template-columns: 1fr 1fr;
-                .discuss__grid--title {
-                    grid-column: 1/3;
-                }
-                .discuss__grid--name {
-                    opacity: 0.8;
-                }
-                .discuss__grid--email {
-                    @extend .discuss__grid--name;
-                }
-                .discuss__grid--message {
-                    @extend .discuss__grid--title;
-                    @extend .discuss__grid--name;
-                }
-
+            @media #{$info-phone} {
+                grid-template-columns: 1fr;
+                grid-template-rows: 200px 240px 30px;
             }
-
-            .discuss__grid--info:not(:first-child) {
-                opacity: 0.5;
-                hr {
-                    margin-top: 20px;
-                }
-            }
-
             .discuss__grid--address {
                 h4 {
                     font-size: 24px;
                     font-weight: 100;
+                    margin-bottom: 38px;
                 }
                 p {
                     font-size: 13px;
                     opacity: 0.8;
                     max-width: 170px;
-                    margin-top: 38px;
+                }
+            }
+            .discuss__grid--form {
+                h4 {
+                    color: $color-title-form;
+                    margin-bottom: 50px;
+                }
+                form {
+                    display: grid;
+                    gap: 30px;
+                    width: 100%;
+                    grid-template-columns: 1fr 1fr;
+
+                    input[type=text] {
+                        width: 100%;
+                        padding: 8px 20px;
+                        margin: 2px 0;
+                        box-sizing: border-box;
+                        border: none;
+                        border-bottom: 1px solid $color-text-form;
+                    }
+
+                    label {
+                        color: $color-text-form;
+                    }
+
+                    .discuss__grid--title {
+                        grid-column: 1/3;
+                        font-weight: 600;
+                        font-size: 24px;
+                    }
+                    .discuss__grid--name {
+                        grid-column: 1/2;
+                    }
+                    .discuss__grid--email {
+                        grid-column: 2/3;
+                    }
+                    .discuss__grid--message {
+                        grid-column: 1/3;
+                    }
+                    .discuss__grid--send {
+                        grid-column: 2/3;
+                        a {
+                            .social__icon{
+                                padding-top: 17px;
+                            }
+                            float: right;
+                            display: flex;
+                            align-items: center;
+                            color: $black;
+                            svg {
+                                color: $color-send-icon;
+                                margin-right: 12px;
+                                width: 23px;
+                            }
+                        }
+                    }
+                }
+            }
+            .socials__item {
+                display: grid;
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+                @media #{$info-phone} {
+                    text-align: center;
+                    grid-template-rows: 1fr;
+                    grid-template-columns: 50px 50px 50px 50px 50px;
+                    margin: 0 auto;
+                }
+                a {
+                    height: 24px;
+                    @media #{$info-phone} {
+                        height: 20px;
+                    }
+                    text-align: center;
+                    padding: 0;
+                    margin-bottom: auto;
+                    margin-top: auto;
+                    svg {
+                        width: 26px;
+                        height: 100%;
+                        padding: 0;
+                        color: $color-icon;
+                    }
+                    img {
+                        height: 100%;
+                    }
+                    &:hover {
+                        opacity: 0.5;
+                    }
                 }
             }
         }
     }
-
+    iframe {
+        width: 100%;
+        height: 215px;
+    }
+    border-bottom: 5px solid $color-title-form;
 }
+
