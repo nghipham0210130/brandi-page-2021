@@ -68,7 +68,7 @@
         }
       }
     }
-    ul{
+    nav {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
@@ -79,8 +79,12 @@
       @media #{$info-phone}{
         top: 370px;
       }
-      li {
-        list-style: none;
+      a {
+        opacity: 0.5;
+        &:hover {
+          opacity: 1;
+          color: $white;
+        }
         &.social__icon:not(:last-child) {
           margin-right: 15px;
         }
@@ -89,15 +93,16 @@
     .banner {
       margin-bottom: 0;
       ul{
+        padding-right: 63px;
         flex-flow: column;
         @media #{$info-phone}{
           flex-flow: row;
         }
         &.slick-dots {
           top: 40%;
-          right: 43px;
+          right: 0;
           left: auto;
-          width: 53px;
+          width: 0;
           @media #{$info-phone}{
             top: 340px;
             right: 0;
@@ -105,13 +110,16 @@
           }
           li {
             display: block;
+            margin-bottom: 15px;
             @media #{$info-phone}{
               display: inline-block;
             }
             button{
+              width: 0;
+              height: 0;
               &::before {
-                background-color: $black;
-                border: 1px solid $white;
+                //background-color: $black;
+                border: 1px solid $grey;
               }
             }
 

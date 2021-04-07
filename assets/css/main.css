@@ -1704,6 +1704,134 @@ img {
   max-width: 100%;
 }
 
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+@media only screen and (max-width : 767px) {
+  .container {
+    padding: 0 15px 0 15px;
+  }
+}
+
+.social__icon a {
+  color: #f2f2f2;
+  opacity: 0.5;
+}
+.social__icon a img {
+  opacity: 0.5;
+}
+.social__icon a:hover {
+  opacity: 1;
+}
+.social__icon a:hover img {
+  opacity: 1;
+}
+
+.slick-slider ul {
+  position: absolute;
+}
+.slick-slider ul.slick-dots {
+  bottom: 0;
+}
+.slick-slider ul.slick-dots li {
+  margin-bottom: 15px;
+  padding: 0;
+  width: 10px;
+  height: 10px;
+}
+.slick-slider ul.slick-dots li button::before {
+  font-size: 0;
+  opacity: 0.8;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin: 0;
+}
+
+.title {
+  text-align: center;
+}
+.title h3 {
+  color: #0eb493;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 17px;
+  display: flex;
+  flex-flow: column;
+  font-size: 28px;
+}
+@media only screen and (max-width : 767px) {
+  .title h3 {
+    font-size: 20px;
+  }
+}
+.title h3 span {
+  max-width: 230px;
+  margin: 0 auto;
+  position: relative;
+}
+.title h3 span::before {
+  content: "";
+  width: 90px;
+  height: 1px;
+  background-color: #dce1e5;
+  position: absolute;
+  left: 28px;
+  margin: 18px 0 7px 0;
+}
+@media only screen and (max-width : 767px) {
+  .title h3 span::before {
+    margin-top: 10px;
+  }
+}
+.title h3 span::after {
+  content: "";
+  width: 90px;
+  height: 1px;
+  background-color: #dce1e5;
+  position: absolute;
+  right: 28px;
+  margin: 18px 0 7px 0;
+}
+@media only screen and (max-width : 767px) {
+  .title h3 span::after {
+    margin-top: 10px;
+  }
+}
+.title p {
+  max-width: 970px;
+  margin: 35px auto 0 auto;
+  opacity: 0.5;
+  font-size: 18px;
+}
+@media only screen and (max-width : 767px) {
+  .title p {
+    font-size: 13px;
+  }
+}
+
+.image__hover {
+  width: 100%;
+  opacity: 0.8;
+  color: #f2f2f2;
+  text-align: center;
+  background-color: #0eb493;
+  position: absolute;
+  transition: bottom 400ms ease-in-out;
+  bottom: 100%;
+}
+@media only screen and (max-width : 767px) {
+  .image__hover {
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1853,128 +1981,6 @@ img {
   }
 }
 
-.container {
-  max-width: 1170px;
-  margin: 0 auto;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-@media only screen and (max-width : 767px) {
-  .container {
-    padding: 0 15px 0 15px;
-  }
-}
-
-.social__icon a {
-  color: #f2f2f2;
-  opacity: 0.5;
-}
-.social__icon a img {
-  opacity: 0.5;
-}
-.social__icon a:hover {
-  opacity: 1;
-}
-.social__icon a:hover img {
-  opacity: 1;
-}
-
-.slick-slider ul {
-  position: absolute;
-}
-.slick-slider ul.slick-dots {
-  bottom: 0;
-}
-.slick-slider ul.slick-dots li {
-  margin-bottom: 15px;
-  padding: 0;
-  width: 10px;
-  height: 10px;
-}
-.slick-slider ul.slick-dots li button::before {
-  font-size: 0;
-  opacity: 0.8;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  margin: 0;
-}
-
-.title {
-  padding-top: 94px;
-  text-align: center;
-}
-@media only screen and (max-width : 767px) {
-  .title {
-    padding-top: 50px;
-  }
-}
-.title h3 {
-  color: #0eb493;
-  text-transform: uppercase;
-  font-weight: 900;
-  margin-bottom: 17px;
-  font-size: 28px;
-}
-@media only screen and (max-width : 767px) {
-  .title h3 {
-    font-size: 20px;
-  }
-}
-.title div {
-  max-width: 230px;
-  margin: 0 auto;
-  position: relative;
-}
-.title div::before {
-  content: "";
-  width: 90px;
-  height: 1px;
-  background-color: #dce1e5;
-  position: absolute;
-  margin: 8px 0 7px 0;
-  left: 0;
-}
-.title div::after {
-  content: "";
-  width: 90px;
-  height: 1px;
-  background-color: #dce1e5;
-  position: absolute;
-  margin: 8px 0 7px 0;
-  right: 0;
-}
-.title h5 {
-  max-width: 970px;
-  margin: 35px auto 0 auto;
-  opacity: 0.5;
-  font-size: 18px;
-}
-@media only screen and (max-width : 767px) {
-  .title h5 {
-    font-size: 13px;
-  }
-}
-
-.image__hover {
-  width: 100%;
-  opacity: 0.8;
-  color: #f2f2f2;
-  text-align: center;
-  background-color: #0eb493;
-  position: absolute;
-  transition: bottom 400ms ease-in-out;
-  bottom: 100%;
-}
-@media only screen and (max-width : 767px) {
-  .image__hover {
-    left: 50%;
-    transform: translate(-50%);
-    width: 100%;
-  }
-}
-
 .features {
   background-color: rgba(235, 235, 235, 0.8);
   height: 460px;
@@ -1985,7 +1991,13 @@ img {
   }
 }
 .features .container {
-  padding-bottom: 76px;
+  padding-bottom: 54px;
+  padding-top: 94px;
+}
+@media only screen and (max-width : 767px) {
+  .features .container {
+    padding-top: 50px;
+  }
 }
 .features .container .title {
   margin-bottom: 35px;
@@ -1996,7 +2008,7 @@ img {
   }
 }
 .features .container .features__slick ul {
-  bottom: -120px;
+  bottom: -110px;
 }
 @media only screen and (max-width : 767px) {
   .features .container .features__slick ul {
@@ -2032,7 +2044,6 @@ img {
   position: absolute;
 }
 .features .container .features__slick .features__grid .grid__items .items__icon img {
-  width: 40px;
   height: 40px;
   margin: 0 auto;
 }
@@ -2063,6 +2074,14 @@ img {
   }
 }
 
+.works {
+  padding-top: 94px;
+}
+@media only screen and (max-width : 767px) {
+  .works {
+    padding-top: 50px;
+  }
+}
 .works .title {
   margin-bottom: 55px;
 }
@@ -2151,10 +2170,12 @@ img {
 
 .team .container {
   padding-bottom: 215px;
+  padding-top: 94px;
 }
 @media only screen and (max-width : 767px) {
   .team .container {
     padding-bottom: 50px;
+    padding-top: 50px;
   }
 }
 .team .container .title {
@@ -2179,118 +2200,117 @@ img {
 .team .container .team__slick ul.slick-dots li.slick-active button::before {
   background-color: #000000;
 }
-.team .container .team__slick .team__member--grid {
+.team .container .team__slick .teammember__grid {
   text-align: center;
   display: grid;
   gap: 30px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 @media only screen and (max-width : 767px) {
-  .team .container .team__slick .team__member--grid {
+  .team .container .team__slick .teammember__grid {
     grid-template-columns: 1fr;
   }
 }
-.team .container .team__slick .team__member--grid .team__member--card {
+.team .container .team__slick .teammember__grid .teammember__card {
   background-position: center;
   position: relative;
   overflow: hidden;
 }
-.team .container .team__slick .team__member--grid .team__member--card img {
+.team .container .team__slick .teammember__grid .teammember__card img {
   height: 300px;
   margin-bottom: 19px;
   display: block;
 }
 @media only screen and (max-width : 767px) {
-  .team .container .team__slick .team__member--grid .team__member--card img {
+  .team .container .team__slick .teammember__grid .teammember__card img {
     height: 200px;
     margin-left: auto;
     margin-right: auto;
   }
 }
-.team .container .team__slick .team__member--grid .team__member--card .team__member--info h4 {
+.team .container .team__slick .teammember__grid .teammember__card .teammember__info h4 {
   font-size: 18px;
   margin-bottom: 13px;
 }
-.team .container .team__slick .team__member--grid .team__member--card .team__member--info p {
+.team .container .team__slick .teammember__grid .teammember__card .teammember__info p {
   font-size: 14px;
   opacity: 0.5;
 }
-.team .container .team__slick .team__member--grid .team__member--card .team__member--hover {
+.team .container .team__slick .teammember__grid .teammember__card .teammember__hover {
   height: 300px;
   padding: 20px;
 }
 @media only screen and (max-width : 767px) {
-  .team .container .team__slick .team__member--grid .team__member--card .team__member--hover {
+  .team .container .team__slick .teammember__grid .teammember__card .teammember__hover {
     padding-top: 16px;
   }
 }
 @media only screen and (max-width : 767px) {
-  .team .container .team__slick .team__member--grid .team__member--card .image__hover {
+  .team .container .team__slick .teammember__grid .teammember__card .image__hover {
     width: 180px;
   }
 }
-.team .container .team__slick .team__member--grid .team__member--card .image__hover h5 {
+.team .container .team__slick .teammember__grid .teammember__card .image__hover h5 {
   padding-top: 20px;
   font-size: 16px;
   margin-bottom: 14px;
 }
 @media only screen and (max-width : 767px) {
-  .team .container .team__slick .team__member--grid .team__member--card .image__hover h5 {
+  .team .container .team__slick .teammember__grid .teammember__card .image__hover h5 {
     padding-top: 100px;
     font-size: 12px;
     margin-bottom: 6px;
   }
 }
-.team .container .team__slick .team__member--grid .team__member--card .image__hover p {
+.team .container .team__slick .teammember__grid .teammember__card .image__hover p {
   font-size: 16px;
 }
 @media only screen and (max-width : 767px) {
-  .team .container .team__slick .team__member--grid .team__member--card .image__hover p {
+  .team .container .team__slick .teammember__grid .teammember__card .image__hover p {
     font-size: 12px;
   }
 }
-.team .container .team__slick .team__member--grid .team__member--card .image__hover nav {
+.team .container .team__slick .teammember__grid .teammember__card .image__hover nav {
   display: flex;
   justify-content: space-between;
   width: 134px;
   margin: 45px auto 23px;
 }
 @media only screen and (max-width : 767px) {
-  .team .container .team__slick .team__member--grid .team__member--card .image__hover nav {
+  .team .container .team__slick .teammember__grid .teammember__card .image__hover nav {
     margin: 10px auto 0;
   }
 }
-.team .container .team__slick .team__member--grid .team__member--card .image__hover nav a {
+.team .container .team__slick .teammember__grid .teammember__card .image__hover nav a {
   width: 42px;
-  height: 42px;
   display: block;
   text-align: center;
   line-height: 42px;
   background: #0a7e67;
 }
-.team .container .team__slick .team__member--grid .team__member--card .image__hover nav a img {
+.team .container .team__slick .teammember__grid .teammember__card .image__hover nav a img {
   height: 20px;
   width: 20px;
   margin: 11px auto;
 }
 @media only screen and (max-width : 767px) {
-  .team .container .team__slick .team__member--grid .team__member--card .image__hover nav a img {
+  .team .container .team__slick .teammember__grid .teammember__card .image__hover nav a img {
     height: 15px;
     width: 15px;
     margin: 14px auto;
   }
 }
-.team .container .team__slick .team__member--grid .team__member--card .image__hover nav a:hover {
+.team .container .team__slick .teammember__grid .teammember__card .image__hover nav a:hover {
   color: #f2f2f2;
   opacity: 0.5;
 }
-.team .container .team__slick .team__member--grid .team__member--card .image__hover nav a:hover img {
+.team .container .team__slick .teammember__grid .teammember__card .image__hover nav a:hover img {
   opacity: 0.5;
 }
-.team .container .team__slick .team__member--grid .team__member--card:hover .image__hover {
+.team .container .team__slick .teammember__grid .teammember__card:hover .image__hover {
   bottom: 69px;
 }
-.team .container .team__slick .team__member--grid .team__member--card:hover .team__member--info h4 {
+.team .container .team__slick .teammember__grid .teammember__card:hover .teammember__info h4 {
   color: #0eb493;
 }
 
@@ -2303,10 +2323,12 @@ img {
 .funfact .container {
   z-index: 1;
   padding-bottom: 157px;
+  padding-top: 94px;
 }
 @media only screen and (max-width : 767px) {
   .funfact .container {
     padding-bottom: 50px;
+    padding-top: 50px;
   }
 }
 .funfact .container .title {
@@ -2331,19 +2353,17 @@ img {
   display: block;
   margin: 0 auto;
   width: 130px;
-  height: 130px;
-  margin-bottom: 38px;
+  margin-bottom: 40px;
 }
 @media only screen and (max-width : 767px) {
   .funfact .container .funfact__grid .funfact__grid--item img {
     width: 80px;
-    height: 80px;
   }
 }
 .funfact .container .funfact__grid .funfact__grid--item .item__info h2 {
-  font-weight: 900;
-  font-size: 60px;
-  margin-bottom: 6px;
+  font-weight: 400;
+  font-size: 54px;
+  margin-bottom: 8px;
 }
 @media only screen and (max-width : 767px) {
   .funfact .container .funfact__grid .funfact__grid--item .item__info h2 {
@@ -2363,18 +2383,27 @@ img {
 .discuss {
   border-bottom: 5px solid #062033;
 }
+.discuss .container {
+  padding-top: 94px;
+}
+@media only screen and (max-width : 767px) {
+  .discuss .container {
+    padding-top: 50px;
+  }
+}
 .discuss .container .title {
   margin-bottom: 80px;
 }
 .discuss .container .discuss__grid {
-  margin-bottom: 107px;
   display: grid;
   gap: 30px;
   width: 100%;
+  margin-bottom: 107px;
   grid-template-columns: 270px 770px 70px;
 }
 @media only screen and (max-width : 767px) {
   .discuss .container .discuss__grid {
+    margin-bottom: 50px;
     grid-template-columns: 1fr;
     grid-template-rows: 200px 240px 30px;
   }
@@ -2392,6 +2421,7 @@ img {
 .discuss .container .discuss__grid .discuss__grid--form h4 {
   color: #062033;
   margin-bottom: 50px;
+  font-size: 24px;
 }
 .discuss .container .discuss__grid .discuss__grid--form form {
   display: grid;
@@ -2401,14 +2431,11 @@ img {
 }
 .discuss .container .discuss__grid .discuss__grid--form form input[type=text] {
   width: 100%;
-  padding: 8px 20px;
+  padding: 8px 20px 20px 20px;
   margin: 2px 0;
   box-sizing: border-box;
   border: none;
   border-bottom: 1px solid #cccccc;
-}
-.discuss .container .discuss__grid .discuss__grid--form form label {
-  color: #cccccc;
 }
 .discuss .container .discuss__grid .discuss__grid--form form .discuss__grid--title {
   grid-column: 1/3;
@@ -2571,7 +2598,7 @@ img {
     margin: 8px 0 7px 0;
   }
 }
-.banner__wrapper ul {
+.banner__wrapper nav {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -2581,20 +2608,25 @@ img {
   top: 730px;
 }
 @media only screen and (max-width : 767px) {
-  .banner__wrapper ul {
+  .banner__wrapper nav {
     top: 370px;
   }
 }
-.banner__wrapper ul li {
-  list-style: none;
+.banner__wrapper nav a {
+  opacity: 0.5;
 }
-.banner__wrapper ul li.social__icon:not(:last-child) {
+.banner__wrapper nav a:hover {
+  opacity: 1;
+  color: #f2f2f2;
+}
+.banner__wrapper nav a.social__icon:not(:last-child) {
   margin-right: 15px;
 }
 .banner__wrapper .banner {
   margin-bottom: 0;
 }
 .banner__wrapper .banner ul {
+  padding-right: 63px;
   flex-flow: column;
 }
 @media only screen and (max-width : 767px) {
@@ -2604,9 +2636,9 @@ img {
 }
 .banner__wrapper .banner ul.slick-dots {
   top: 40%;
-  right: 43px;
+  right: 0;
   left: auto;
-  width: 53px;
+  width: 0;
 }
 @media only screen and (max-width : 767px) {
   .banner__wrapper .banner ul.slick-dots {
@@ -2617,15 +2649,19 @@ img {
 }
 .banner__wrapper .banner ul.slick-dots li {
   display: block;
+  margin-bottom: 15px;
 }
 @media only screen and (max-width : 767px) {
   .banner__wrapper .banner ul.slick-dots li {
     display: inline-block;
   }
 }
+.banner__wrapper .banner ul.slick-dots li button {
+  width: 0;
+  height: 0;
+}
 .banner__wrapper .banner ul.slick-dots li button::before {
-  background-color: #000000;
-  border: 1px solid #f2f2f2;
+  border: 1px solid rgba(255, 255, 255, 0.604);
 }
 .banner__wrapper .banner ul.slick-dots li.slick-active button::before {
   background-color: #f2f2f2;
