@@ -1,5 +1,5 @@
 .navbar {
-    background-color: $color-background;
+    background-color: rgba(14, 44, 43, 0.5);
     position: fixed;
     top: 0;
     left: 0;
@@ -10,7 +10,9 @@
     @media #{$info-phone}{
         height: 50px;
     }
-
+    &.background__navbar__banner {
+        background-color: rgba(14, 44, 43, 0.5);
+    }
     .container {
         display: flex;
         justify-content:space-between;

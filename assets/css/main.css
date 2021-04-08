@@ -1719,6 +1719,9 @@ img {
     height: 50px;
   }
 }
+.navbar.background__navbar__banner {
+  background-color: rgba(14, 44, 43, 0.5);
+}
 .navbar .container {
   display: flex;
   justify-content: space-between;
@@ -1846,6 +1849,10 @@ img {
   .navbar .container .inner__collapse.show a.active:hover {
     background-color: rgba(255, 255, 255, 0.604);
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .container {
