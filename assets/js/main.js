@@ -1,4 +1,6 @@
-// Show inner__collapse when click Hamburger button
+/**
+ * Show inner__collapse when click Hamburger button
+ */
 function hamburgerFunction() {
     var x = document.getElementById("my__navbar");
     if (x.className === "inner__collapse") {
@@ -13,37 +15,47 @@ function hamburgerFunction() {
     });
 }
 
-// Slick for Banner
-$('.banner').slick({
-    dots: true,
-    infinite: true,
-    speed: 500,
-    fade: true,
-    arrows: false,
-    cssEase: 'linear'
+$(function() {
+    /**
+     * Add smooth scrolling to all links
+     */
+    $(".nav__link").on('click', function(event) {
+        console.log(this);
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+            var navHeight = $(".navbar").height();
+            console.log('this.hash', this.hash);
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (500) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top - navHeight
+            }, 500);
+        } // End if
+    });
+
+    /**
+     * Slick for Banner
+     */
+    $('.banner, .features__slick, .team__slick').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        arrows: false,
+        cssEase: 'linear'
+    });
 });
 
-// Slick for Features
-$('.features__slick').slick({
-    dots: true,
-    infinite: true,
-    speed: 500,
-    fade: true,
-    arrows: false,
-    cssEase: 'linear'
-});
-
-//Slick for Team
-$('.team__slick').slick({
-    dots: true,
-    infinite: true,
-    speed: 500,
-    fade: true,
-    arrows: false,
-    cssEase: 'linear',
-});
-
-//Count to for Fun Fact
+/**
+ * Count to for Fun Fact
+ */
 $(window).on("load resize",function() {
 
     var counters = $(".timer");
@@ -69,41 +81,22 @@ $(window).on("load resize",function() {
     }
 });
 
-var distanceTop;
-if ($(document).resize > 767) {
-    distanceTop = 70;
-}
-else {
-    distanceTop = 50;
-}
+/**
+ * Change color navigation when scroll down
+ */
+$(window).on("scroll", function() {
+    if($(window).scrollTop() > 730)
+    {
+        $("#nav").removeClass('color__index');
+        $("#nav").addClass('change__color');
+    }
+    else {
+        //remove the background property so it comes transparent again (defined in your css)
+        $("#nav").removeClass('change__color');
+        $("#nav").addClass('color__index');
+    }
+});
 
-// Add/delete class active when scroll screen
-$(document).ready(function () {
-    $(document).on("scroll", onScroll);
-
-    //smoothscroll
-    $("a[href^='#']").on('click', function (e) {
-        e.preventDefault();
-
-        $(document).off("scroll");
-
-        $("a").each(function () {
-            $(this).removeClass('active');
-        });
-        $(this).addClass('active');
-
-        var target = this.hash;
-        $target = $(target);
-
-
-        $("html, body").stop().animate({
-            "scrollTop": $target.offset().top - distanceTop
-        }, 10, "swing", function () {
-            window.location.hash = target;
-            $(document).on("scroll", onScroll);
-        });
-    });
-})
 
 function onScroll(event){
     var scrollPos = $(document).scrollTop();
@@ -113,13 +106,6 @@ function onScroll(event){
         if ((refElement.position().top - distanceTop) <= scrollPos && (refElement.position().top - distanceTop + refElement.height()) > scrollPos) {
             $("#my__navbar a").removeClass("active");
             currLink.addClass("active");
-            if (refElement.selector !== "#sec1") {
-                $("#nav").removeClass('color__index');
-                $("#nav").addClass('change__color');
-            } else {
-                $("#nav").removeClass('change__color');
-                $("#nav").addClass('color__index');
-            }
         }
         else{
             currLink.removeClass("active");
