@@ -1705,7 +1705,6 @@ img {
 }
 
 .navbar {
-  background-color: rgba(14, 44, 43, 0.5);
   position: fixed;
   top: 0;
   left: 0;
@@ -1713,6 +1712,12 @@ img {
   border: 0;
   z-index: 3;
   height: 70px;
+}
+.navbar.color__index {
+  background-color: rgba(14, 44, 43, 0.5);
+}
+.navbar.change__color {
+  background-color: #1ea78d;
 }
 @media only screen and (max-width : 767px) {
   .navbar {

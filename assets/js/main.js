@@ -7,19 +7,11 @@ function hamburgerFunction() {
     else {
         x.className = "inner__collapse";
     }
+    $("a[href^='#']").on('click', function (e) {
+        e.preventDefault();
+        $('#my__navbar').removeClass("show");
+    });
 }
-
-//
-// // Add/delete class active when click on header
-// var header = document.getElementById("my__navbar");
-// var links = header.getElementsByClassName("nav__link");
-// for (var i = 0; i < links.length; i++) {
-//     links[i].addEventListener("click", function() {
-//         var current = document.getElementsByClassName("active");
-//         current[0].className = current[0].className.replace(" active", "");
-//         this.className += " active";
-//     });
-// }
 
 // Slick for Banner
 $('.banner').slick({
@@ -58,7 +50,7 @@ $(window).on("load resize",function() {
     var countersQuantity = counters.length;
     var counter = [];
 
-    for (i = 0; i < countersQuantity; i++) {
+    for (var i = 0; i < countersQuantity; i++) {
         counter[i] = parseInt(counters[i].innerHTML);
     }
 
@@ -72,51 +64,62 @@ $(window).on("load resize",function() {
         }, 4);
     }
 
-    for (j = 0; j < countersQuantity; j++) {
+    for (var j = 0; j < countersQuantity; j++) {
         count(0, counter[j], j);
     }
 });
+
+var distanceTop;
+if ($(document).resize > 767) {
+    distanceTop = 70;
+}
+else {
+    distanceTop = 50;
+}
 
 // Add/delete class active when scroll screen
 $(document).ready(function () {
     $(document).on("scroll", onScroll);
 
     //smoothscroll
-    $('a[href^="#"]').on('click', function (e) {
+    $("a[href^='#']").on('click', function (e) {
         e.preventDefault();
+
         $(document).off("scroll");
 
-        $('a').each(function () {
+        $("a").each(function () {
             $(this).removeClass('active');
-        })
+        });
         $(this).addClass('active');
 
         var target = this.hash;
         $target = $(target);
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top
-        }, 10, 'swing', function () {
+
+
+        $("html, body").stop().animate({
+            "scrollTop": $target.offset().top - distanceTop
+        }, 10, "swing", function () {
             window.location.hash = target;
             $(document).on("scroll", onScroll);
-
-            //change background color for nav when scroll
-            var nav = document.getElementById("nav");
-            if (e.target.innerHTML !== "Home") {
-                console.log(e.target.innerHTML);
-                nav.setAttribute('style', 'background-color: $color-background-header');
-            }
         });
     });
-});
+})
 
 function onScroll(event){
     var scrollPos = $(document).scrollTop();
-    $('#my__navbar a').each(function () {
+    $("#my__navbar a").each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
-        if ((refElement.position().top - 70) <= scrollPos && (refElement.position().top - 70 + refElement.height()) > scrollPos) {
-            $('#my__navbar a').removeClass("active");
+        if ((refElement.position().top - distanceTop) <= scrollPos && (refElement.position().top - distanceTop + refElement.height()) > scrollPos) {
+            $("#my__navbar a").removeClass("active");
             currLink.addClass("active");
+            if (refElement.selector !== "#sec1") {
+                $("#nav").removeClass('color__index');
+                $("#nav").addClass('change__color');
+            } else {
+                $("#nav").removeClass('change__color');
+                $("#nav").addClass('color__index');
+            }
         }
         else{
             currLink.removeClass("active");
