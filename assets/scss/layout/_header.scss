@@ -1,7 +1,11 @@
 .navbar {
+
+    // Color background index for home page (banner section)
     &.color__index {
         background-color: rgba(14, 44, 43, 0.5);
     }
+
+    // Color background for sections without banner section
     &.change__color {
         background-color: $color-background-header;
     }
@@ -15,12 +19,11 @@
     @media #{$info-phone}{
         height: 50px;
     }
-    &.background__navbar__banner {
-        background-color: rgba(14, 44, 43, 0.5);
-    }
+
+    // Container begin
     .container {
         display: flex;
-        justify-content:space-between;
+        justify-content: space-between;
         position: relative;
         text-align: center;
         font-size: 13px;
@@ -28,6 +31,8 @@
         @media #{$info-phone}{
             align-items: center;
         }
+
+        // Logo
         .inner__brand {
             display: flex;
             -webkit-box-align: center;
@@ -65,6 +70,8 @@
             }
         }
         }
+
+        // Hamburger button show/hidden when change size device/desktop
         .inner__toggle {
             position: absolute;
             padding: 0;
@@ -86,6 +93,8 @@
                 font-size: 15px;
             }
         }
+
+        // Navigation direct show and indirect show by hamburger button
         .inner__collapse {
             margin-top: 33px;
             z-index: 1;
@@ -142,5 +151,5 @@
                 }
             }
         }
-    }
+    } // Container end
 }

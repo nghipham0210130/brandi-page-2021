@@ -16,29 +16,61 @@ function hamburgerFunction() {
 }
 
 $(function() {
+    var navHeight = $(".navbar").height();
+
     /**
      * Add smooth scrolling to all links
      */
     $(".nav__link").on('click', function(event) {
-        console.log(this);
 
         // Make sure this.hash has a value before overriding default behavior
         if (this.hash !== "") {
             // Prevent default anchor click behavior
+
+            var refElement = $($(this).attr("href"));
             event.preventDefault();
+            console.log("this.hash", this.hash);
 
             // Store hash
             var hash = this.hash;
-            var navHeight = $(".navbar").height();
-            console.log('this.hash', this.hash);
+
+            $("a").each(function () {
+                $(this).removeClass('active');
+            });
+
+            $(this).addClass('active');
+
+
 
             // Using jQuery's animate() method to add smooth page scroll
             // The optional number (500) specifies the number of milliseconds it takes to scroll to the specified area
             $('html, body').animate({
                 scrollTop: $(hash).offset().top - navHeight
-            }, 500);
-        } // End if
+            }, 500, 'swing', function () {
+                $(document).on("scroll", onScroll);
+            });
+        }
+        //End if
     });
+
+    /**
+     * Event move to new section
+     */
+    function onScroll(event){
+        var scrollPos = $(document).scrollTop();
+        $("#my__navbar a").each(function () {
+            var currLink = $(this);
+            console.log(currLink);
+            var refElement = $(currLink.attr("href"));
+            if ((refElement.position().top - navHeight) <= scrollPos && (refElement.position().top - navHeight + refElement.height()) > scrollPos) {
+                $("#my__navbar a").removeClass("active");
+                currLink.addClass("active");
+            }
+            else{
+                currLink.removeClass("active");
+            }
+        });
+    }
 
     /**
      * Slick for Banner
@@ -82,36 +114,17 @@ $(window).on("load resize",function() {
 });
 
 /**
- * Change color navigation when scroll down
+ * Change color navigation,Add/remove class active when scroll down
  */
 $(window).on("scroll", function() {
-    if($(window).scrollTop() > 730)
+    if($(window).scrollTop() >= 730)
     {
         $("#nav").removeClass('color__index');
         $("#nav").addClass('change__color');
     }
     else {
-        //remove the background property so it comes transparent again (defined in your css)
+        // Remove the background property so it comes transparent again (defined in your css)
         $("#nav").removeClass('change__color');
         $("#nav").addClass('color__index');
     }
 });
-
-
-function onScroll(event){
-    var scrollPos = $(document).scrollTop();
-    $("#my__navbar a").each(function () {
-        var currLink = $(this);
-        var refElement = $(currLink.attr("href"));
-        if ((refElement.position().top - distanceTop) <= scrollPos && (refElement.position().top - distanceTop + refElement.height()) > scrollPos) {
-            $("#my__navbar a").removeClass("active");
-            currLink.addClass("active");
-        }
-        else{
-            currLink.removeClass("active");
-        }
-    });
-}
-
-
-

@@ -1,73 +1,76 @@
 .banner__wrapper {
+    // Content of banner section
     .item__content {
-      z-index: 1;
+    z-index: 1;
+    position: absolute;
+    text-align: center;
+    color: $white;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    top: 460px;
+    @media #{$info-phone}{
+      top: 220px;
+    }
+
+    h2 {
+      font-weight: 300;
+      font-size: 62px;
+      @media #{$info-phone}{
+        font-size: 36px;
+      }
+      span {
+        font-weight: 900;
+      }
+    }
+    h3{
+      font-weight: 300;
+      font-size: 48px;
+      margin-bottom: 18px;
+      @media #{$info-phone}{
+        font-size: 22px;
+        margin-bottom: 5px;
+      }
+      span{
+        color: $color-creative;
+      }
+    }
+    p {
       position: absolute;
-      text-align: center;
-      color: $white;
+      font-weight: 300;
+      font-size: 18px;
       left: 50%;
       transform: translateX(-50%);
-      width: 100%;
-      top: 460px;
-      @media #{$info-phone}{
-        top: 220px;
+      &::before{
+        @include line($color-creative, 28px);
+        left: -58px;
+        margin: 10px 0 9px 0;
+
+      }
+      &::after {
+        @include line($color-creative, 28px);;
+        right: -58px;
+        margin: 10px 0 9px 0;
       }
 
-      h2 {
-        font-weight: 300;
-        font-size: 62px;
-        @media #{$info-phone}{
-          font-size: 36px;
-        }
-        span {
-          font-weight: 900;
-        }
-      }
-      h3{
-        font-weight: 300;
-        font-size: 48px;
-        margin-bottom: 18px;
-        @media #{$info-phone}{
-          font-size: 22px;
-          margin-bottom: 5px;
-        }
-        span{
-          color: $color-creative;
-        }
-      }
-      p {
-        position: absolute;
-        font-weight: 300;
-        font-size: 18px;
-        left: 50%;
-        transform: translateX(-50%);
+      @media #{$info-phone}{
+        font-size: 12px;
         &::before{
-          @include line($color-creative, 28px);
-          left: -58px;
-          margin: 10px 0 9px 0;
+          @include line($color-creative, 15px);
+          left: -31px;
+          margin: 8px 0 7px 0;
 
         }
         &::after {
-          @include line($color-creative, 28px);;
-          right: -58px;
-          margin: 10px 0 9px 0;
-        }
-
-        @media #{$info-phone}{
-          font-size: 12px;
-          &::before{
-            @include line($color-creative, 15px);
-            left: -31px;
-            margin: 8px 0 7px 0;
-
-          }
-          &::after {
-            @include line($color-creative, 15px);
-            right: -31px;
-            margin: 8px 0 7px 0;
-          }
+          @include line($color-creative, 15px);
+          right: -31px;
+          margin: 8px 0 7px 0;
         }
       }
     }
+  } // End resolve
+
+    // Social icons
     nav {
       position: absolute;
       left: 50%;
@@ -89,7 +92,9 @@
           margin-right: 15px;
         }
       }
-    }
+    } // End resolve
+
+    // Resolve background for banner section by slick
     .banner {
       margin-bottom: 0;
       ul{
@@ -150,5 +155,5 @@
           height: 400px;
         }
       }
-    }
+    } // End resolve
   }
