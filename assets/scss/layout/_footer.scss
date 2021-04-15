@@ -1,7 +1,10 @@
+// Footer
 .footer {
-  background-size: cover;
+  background-color: $color-background-header;
+  // Container begin
+  // Div elements follow row in desktop
+  // Div elements follow column in device
   .container {
-    //width: 100%;
     padding-top: 98px;
     padding-bottom: 125px;
     display: grid;
@@ -11,6 +14,7 @@
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr;
     }
+    // Resolve content footer item (color for text)
     .footer__item {
       color: $white;
       position: relative;
@@ -36,22 +40,23 @@
           margin-bottom: 38px;
         }
       }
+      // Resolve subscribe with title and form
       &.subscribe {
         h4 {
           margin-bottom: 45px;
         }
         form {
           margin-bottom: 22px;
-          position: relative;
-          input[type=text] {
-            width: 100%;
-            height: 46px;
-            padding: 20px 40px 20px 20px;
-            margin: 2px 0;
-            box-sizing: border-box;
-            border: 2px solid $white;
-            background-color: inherit;
-            border-radius: 5px;
+            position: relative;
+            input[type=text] {
+              width: 100%;
+              height: 46px;
+              padding: 20px 40px 20px 20px;
+              margin: 2px 0;
+              box-sizing: border-box;
+              border: 2px solid $white;
+              background-color: inherit;
+              border-radius: 5px;
           }
           a {
             position: absolute;
@@ -64,13 +69,15 @@
           }
         }
 
-      }
+      } // End resolve
+      // Div explore elements follow two column
       .explore {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 10px;
-        //vertical-align: top;
-      }
+      } // End resolve
+
+      // Resolve coppy right
       &.coppyright {
         padding-top: 68px;
         .coppyright__heart {
@@ -88,7 +95,7 @@
         .coppyright__brandi {
           color: $black;
         }
-      }
-    }
-  }
+      } // End resolve
+    } // End resolve
+  } // Container end
 }
