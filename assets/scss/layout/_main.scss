@@ -4,14 +4,12 @@ html {
 
 // Container begin
 .container {
-  max-width: 1170px;
+  max-width: 1200px;
   margin: 0 auto;
-  //width: 100%;
   height: 100%;
   position: relative;
-  @media #{$info-phone} {
-    padding: 0 15px 0 15px;
-  }
+  padding-left: 15px;
+  padding-right: 15px;
 
 }  // Container end
 
@@ -110,7 +108,6 @@ html {
 
 // Resolve image when hover
 .image__hover {
-  width: 100%;
   opacity: 0.8;
   color: $white;
   text-align: center;

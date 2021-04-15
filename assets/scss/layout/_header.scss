@@ -30,6 +30,8 @@
         flex-wrap: wrap;
         @media #{$info-phone}{
             align-items: center;
+            padding-top: 0;
+            padding-bottom: 0;
         }
 
         // Logo

@@ -88,7 +88,7 @@ $(function() {
 /**
  * Count to for Fun Fact
  */
-$(window).on("load resize",function() {
+$(window).on("load resize sroll",function() {
 
     var counters = $(".timer");
     var countersQuantity = counters.length;
@@ -105,7 +105,7 @@ $(window).on("load resize",function() {
                 localStart += 2;
                 counters[id].innerHTML = localStart;
             }
-        }, 4);
+        }, 5);
     }
 
     for (var j = 0; j < countersQuantity; j++) {

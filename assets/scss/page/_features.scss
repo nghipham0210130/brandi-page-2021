@@ -11,6 +11,7 @@
     padding-bottom: 54px;
     padding-top: 94px;
     @media #{$info-phone} {
+      padding-bottom: 50px;
       padding-top: 50px;
     }
     .title {
@@ -22,9 +23,6 @@
     .features__slick {
       ul {
         bottom: -110px;
-        @media #{$info-phone} {
-          bottom: -130px;
-        }
         &.slick-dots {
           li {
             button {

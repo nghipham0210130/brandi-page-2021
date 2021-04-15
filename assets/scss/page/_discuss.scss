@@ -5,6 +5,7 @@
     padding-top: 94px;
     @media #{$info-phone} {
       padding-top: 50px;
+      padding-bottom: 50px;
     }
     .title {
       margin-bottom: 80px;
@@ -48,11 +49,14 @@
 
           input[type=text] {
             width: 100%;
-            padding: 8px 20px 20px 20px;
+            padding: 14px 15px 14px 0;
             margin: 2px 0;
-            box-sizing: border-box;
             border: none;
             border-bottom: 1px solid $color-text-form;
+            &:focus {
+              outline: none;
+              border-bottom: 1px solid $color-background-header;
+            }
           }
           .discuss__grid--title {
             grid-column: 1/3;
