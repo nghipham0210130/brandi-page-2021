@@ -104,7 +104,8 @@
           flex-flow: row;
         }
         &.slick-dots {
-          top: 40%;
+          top: 50%;
+          transform: translateY(-30px);
           right: 0;
           left: auto;
           width: 0;
