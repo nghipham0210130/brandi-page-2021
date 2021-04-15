@@ -1,539 +1,135 @@
-// Feature begin
-.features {
-    background-color: $color-background-features;
-    height: 460px;
+html {
+  scroll-behavior: smooth;
+}
+
+// Container begin
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  //width: 100%;
+  height: 100%;
+  position: relative;
+  @media #{$info-phone} {
+    padding: 0 15px 0 15px;
+  }
+
+}  // Container end
+
+// Resolve social icon
+.social__icon {
+  a {
+    color: $white;
+    opacity: 0.5;
+
+    img {
+      opacity: 0.5;
+    }
+
+    &:hover {
+      opacity: 1.0;
+
+      img {
+        opacity: 1.0;
+      }
+    }
+  }
+}  // End resolve
+
+// Resolve slick slider
+.slick-slider {
+  ul {
+    position: absolute;
+    &.slick-dots {
+      bottom: 0;
+      li {
+        margin-bottom: 15px;
+        padding: 0;
+        width: 10px;
+        height: 10px;
+        button {
+          &::before {
+            font-size: 0;
+            opacity: 0.8;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}  // End resolve
+
+// Resolve title contain title, line, describe
+.title {
+  text-align: center;
+  h3 {
+    color: $color-tilte;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 17px;
+    display: flex;
+    flex-flow: column;
+    font-size: 28px;
     @media #{$info-phone} {
-        height: 600px;
+      font-size: 20px;
     }
-
-    // Container begin
-    .container {
-        padding-bottom: 54px;
-        padding-top: 94px;
+    span {
+      max-width: 230px;
+      margin: 0 auto;
+      position: relative;
+      &::before {
+        @include line($color-heart-item, 90px);
+        left: 28px;
+        margin: 18px 0 7px 0;
         @media #{$info-phone} {
-            padding-top: 50px;
+          margin-top: 10px;
         }
-        .title {
-            margin-bottom: 35px;
-            @media #{$info-phone} {
-                margin-bottom: 10px;
-            }
+      }
+      &::after {
+        @include line($color-heart-item, 90px);
+        right: 28px;
+        margin: 18px 0 7px 0;
+        @media #{$info-phone} {
+          margin-top: 10px;
         }
-        .features__slick {
-            ul {
-                bottom: -110px;
-                @media #{$info-phone} {
-                    bottom: -130px;
-                }
-                &.slick-dots {
-                    li {
-                        button {
-                            &::before {
-                                border: 1px solid $color-border-dots;
-                            }
-                        }
-                        &.slick-active {
-                            button::before {
-                                background-color: $black;
-                            }
-                        }
-                    }
-                }
-            }
-            // Grid
-            .features__grid {
-                width: 100%;
-                display: grid;
-                // Show feature follow column (desktop)
-                grid-template-columns: 1fr 1fr 1fr;
-                grid-gap: 30px;
-                // Show feature follow row (device)
-                @media #{$info-phone} {
-                    grid-template-columns: auto;
-                    grid-template-rows: 1fr 1fr 1fr;
-                    grid-gap: 30px;
-                }
-
-                // Resolve feature element
-                .grid__items {
-                    display: flex;
-                    flex-flow: row;
-                    // Icon in the first column
-                    .items__icon {
-                        margin-bottom: 2px;
-                        width: 70px;
-                        position: absolute;
-                        img {
-                            height: 40px;
-                            margin: 0 auto;
-                            @media #{$info-phone} {
-                                margin-right: 30px;
-                            }
-                        }
-                    }
-
-                    // Content in the second column
-                    .items__content {
-                        margin-left: 70px;
-                        h4 {
-                            margin-bottom: 20px;
-                            font-size: 20px;
-                            @media #{$info-phone} {
-                                font-size: 15px;
-                            }
-                        }
-                        p {
-                            font-size: 13px;
-                            @media #{$info-phone} {
-                                font-size: 10px;
-                            }
-                            opacity: 0.5;
-                        }
-                    }
-                }
-            } // End grid
-        }
-    } // Container end
-}  // Feature end
-
-// Work begin
-.works {
-    padding-top: 94px;
+      }
+    }
+  }
+  p {
+    max-width: 970px;
+    margin: 35px auto 0 auto;
+    opacity: 0.5;
+    font-size: 18px;
     @media #{$info-phone} {
-        padding-top: 50px;
+      font-size: 13px;
     }
-    .title {
-        margin-bottom: 55px;
-    }
-    .works__content {
-        .works__link {
-            margin-bottom: 40px;
-            text-align: center;
-            padding: 0 15px;
-            .works__link--item {
-                color: $black;
-                padding: 6px 12px;
-                font-weight: bold;
-                font-size: 14px;
-                @media #{$info-phone} {
-                    padding: 4px 10px;
-                    font-size: 11px;
-                    margin-bottom: 6px;
-                }
-                &:hover {
-                    color: $white;
-                    background-color: $color-tilte;
-                    border-radius: 10px;
-                }
-                &:not(:last-child) {
-                    margin-right: 8px;
-                }
-            }
-        }
-        // Work images in full screen
-        .works__images--space {
-            width: 100%;
-            display: grid;
-            grid-gap: 0;
-            grid-template-rows: 1fr 1fr;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            @media #{$info-phone} {
-                grid-template-rows: 1fr 1fr 1fr 1fr;
-                grid-template-columns: 1fr 1fr;
-            }
-            .works__image {
-                height: 300px;
-                @media #{$info-phone} {
-                    height: 200px;
-                }
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center;
-                position: relative;
-                overflow: hidden;
-                .image__hover {
-                    img {
-                        margin-bottom: 25px;
-                        padding-top: 94px;
-                        @media #{$info-phone} {
-                            padding-top: 34px;
-                        }
-                    }
-                    h5 {
-                        margin-bottom: 6px;
-                        font-size: 20px;
-                        @media #{$info-phone} {
-                            font-size: 16px;
-                        }
-                    }
-                    p {
-                        font-size: 20px;
-                        @media #{$info-phone} {
-                            font-size: 16px;
-                        }
-                    }
-                }
-                &:hover {
-                    .image__hover {
-                        height: 100%;
-                        bottom: 0;
-                    }
-                }
-            }
-        }
-    }
-} // Work end
+  }
+}  // End resolve
 
-// Team begin
-.team {
-    // Container
-    .container {
-        padding-bottom: 215px;
-        padding-top: 94px;
-        @media #{$info-phone} {
-            padding-bottom: 50px;
-            padding-top: 50px;
-        }
-        .title {
-            margin-bottom: 108px;
-            @media #{$info-phone} {
-                margin-bottom: 50px;
-            }
-        }
-        .team__slick {
-            // Position of dots
-            ul {
-                bottom: -105px;
-                @media #{$info-phone} {
-                    bottom: -60px;
-                }
-                &.slick-dots {
-                    // Attribute of dots
-                    li {
-                        button {
-                            &::before {
-                                border: 1px solid $color-border-dots;
-                            }
-                        }
-                        &.slick-active {
-                            button::before {
-                                background-color: $black;
-                            }
-                        }
-                    }
-                }
-            }
-            // Grid
-            .teammember__grid {
-                text-align: center;
-                display: grid;
-                gap: 30px;
-                grid-template-columns: 1fr 1fr 1fr 1fr;
-                @media #{$info-phone} {
-                    grid-template-columns: 1fr;
-                }
-                // Resolve member element
-                .teammember__card {
-                    background-position: center;
-                    position: relative;
-                    overflow: hidden;
-                    img {
-                        height: 300px;
-                        margin-bottom: 19px;
-                        display: block;
-                        @media #{$info-phone} {
-                            height: 200px;
-                            margin-left: auto;
-                            margin-right: auto;
-                        }
-                    }
-                    .teammember__info {
-                        h4 {
-                            font-size: 18px;
+// Resolve image when hover
+.image__hover {
+  width: 100%;
+  opacity: 0.8;
+  color: $white;
+  text-align: center;
+  background-color: $color-tilte;
+  position: absolute;
+  transition: bottom 400ms ease-in-out;
+  bottom: 100%;
+  @media #{$info-phone} {
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+  }
+}  // End resolve
 
-                            margin-bottom: 13px;
-                        }
-                        p {
-                            font-size: 14px;
-                            opacity: 0.5;
-                        }
-                    }
-                    .teammember__hover {
-                        height: 300px;
-                        padding: 20px;
-                        @media #{$info-phone} {
-                            padding-top: 16px;
-                        }
-                    }
-                    .image__hover {
-                        width: 230px;
-                        height: 260px;
-                        @media #{$info-phone} {
-                            width: 140px;
-                        }
-                        h5 {
-                            padding-top: 20px;
-                            font-size: 16px;
-                            margin-bottom: 14px;
-                            @media #{$info-phone} {
-                                padding-top: 100px;
-                                font-size: 12px;
-                                margin-bottom: 6px;
-                            }
-                        }
-                        p {
-                            font-size: 16px;
-                            @media #{$info-phone} {
-                                font-size: 12px;
-                            }
-                        }
-                        nav {
-                            display: flex;
-                            justify-content: space-between;
-                            width: 134px;
-                            margin: 45px auto 23px;
-                            @media #{$info-phone} {
-                                margin: 10px auto 0;
-                            }
-                            a {
-                                width: 42px;
-                                display: block;
-                                text-align: center;
-                                line-height: 42px;
-                                background: $color-background-icon;
-                                img {
-                                    height: 20px;
-                                    width: 20px;
-                                    margin: 11px auto;
-                                    @media #{$info-phone} {
-                                        height: 15px;
-                                        width: 15px;
-                                        margin: 14px auto;
-                                    }
-                                }
-                                &:hover {
-                                    color: $white;
-                                    opacity: 0.5;
-                                    img {
-                                        opacity: 0.5;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    &:hover {
-                        .image__hover {
-                            bottom: 69px;
-                        }
-                        .teammember__info {
-                            h4 {
-                                color: $color-tilte;
-                            }
-                        }
-                    }
-                } // End resolve
-            } // End grid
-        }
-    } // End container
-} // Team end
 
-// Fun fact begin
-.funfact {
-    position: relative;
-    background-size: cover ;
-    background-position: center;
-    height: 600px;
-    .container {
-        z-index: 1;
-        padding-bottom: 157px;
-        padding-top: 94px;
-        @media #{$info-phone}{
-            padding-bottom: 50px;
-            padding-top: 50px;
-        }
-        .title{
-            margin-bottom: 23px;
-        }
-        // Grid
-        .funfact__grid {
-            text-align: center;
-            display: grid;
-            gap: 30px;
-            width: 100%;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            @media #{$info-phone} {
-                grid-template-columns: 1fr 1fr;
-            }
-            // Resolve member element
-            .funfact__grid--item {
-                color: $white;
-                img {
-                    display: block;
-                    margin: 0 auto;
-                    width: 130px;
-                    margin-bottom: 40px;
-                    @media #{$info-phone} {
-                        width: 80px;
-                    }
-                }
-                .item__info {
-                    h2 {
-                        font-weight: 400;
-                        font-size: 54px;
-                        margin-bottom: 8px;
-                        @media #{$info-phone} {
-                            font-size: 40px;
-                        }
-                    }
-                    p {
-                        text-transform: uppercase;
-                        font-size: 18px;
-                        @media #{$info-phone} {
-                            font-size: 14px;
-                        }
-                    }
-                }
-            } // End resolve
-        }
-    }
-} // Fun fact end
 
-// Discuss begin
-.discuss {
-    // Container
-    .container {
-        padding-top: 94px;
-        @media #{$info-phone} {
-            padding-top: 50px;
-        }
-        .title {
-            margin-bottom: 80px;
-        }
 
-        // Grid
-        .discuss__grid {
-            display: grid;
-            gap: 30px;
-            width: 100%;
-            margin-bottom: 107px;
-            grid-template-columns: 3.86fr 11fr 1fr;
-            @media #{$info-phone} {
-                margin-bottom: 50px;
-                grid-template-columns: 1fr;
-                grid-template-rows: 200px 330px 30px;
-            }
-            .discuss__grid--address {
-                h4 {
-                    font-size: 24px;
-                    font-weight: 100;
-                    margin-bottom: 38px;
-                }
-                p {
-                    font-size: 13px;
-                    opacity: 0.8;
-                    max-width: 170px;
-                }
-            }
-            .discuss__grid--form {
-                h4 {
-                    color: $color-title-form;
-                    margin-bottom: 50px;
-                    font-size: 24px;
-                }
-                form {
-                    display: grid;
-                    gap: 30px;
-                    width: 100%;
-                    grid-template-columns: 1fr 1fr;
 
-                    input[type=text] {
-                        width: 100%;
-                        padding: 8px 20px 20px 20px;
-                        margin: 2px 0;
-                        box-sizing: border-box;
-                        border: none;
-                        border-bottom: 1px solid $color-text-form;
-                    }
-                    .discuss__grid--title {
-                        grid-column: 1/3;
-                        font-weight: 600;
-                        font-size: 24px;
-                    }
-                    .discuss__grid--name {
-                        grid-column: 1/2;
-                        @media #{$info-phone} {
-                            grid-column: 1/3;
-                        }
-                    }
 
-                    .discuss__grid--email {
-                        grid-column: 2/3;
-                        @media #{$info-phone} {
-                            grid-column: 1/3;
-                        }
-                    }
-                    .discuss__grid--message {
-                        grid-column: 1/3;
-                    }
-                    .discuss__grid--send {
-                        grid-column: 2/3;
-                        a {
-                            .social__icon{
-                                padding-top: 17px;
-                            }
-                            float: right;
-                            display: flex;
-                            align-items: center;
-                            color: $black;
-                                svg {
-                                color: $color-send-icon;
-                                margin-right: 12px;
-                                width: 23px;
-                            }
-                        }
-                    }
-                }
-            }
-            .socials__item {
-                display: grid;
-                grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-                @media #{$info-phone} {
-                    text-align: center;
-                    grid-template-rows: 1fr;
-                    grid-template-columns: 50px 50px 50px 50px 50px;
-                    margin: 0 auto;
-                }
-                a {
-                    height: 24px;
-                    @media #{$info-phone} {
-                        height: 20px;
-                    }
-                    text-align: center;
-                    padding: 0;
-                    margin-bottom: auto;
-                    margin-top: auto;
-                    svg {
-                        width: 26px;
-                        height: 100%;
-                        padding: 0;
-                        color: $color-icon;
-                    }
-                    img {
-                        height: 100%;
-                    }
-                    &:hover {
-                        opacity: 0.5;
-                    }
-                }
-            }
-        } // End grid
-    } // End container
-    // Map
-    iframe {
-        width: 100%;
-        height: 215px;
-    }
-    // Border between discuss section and footer
-    border-bottom: 5px solid $color-title-form;
-} // Discuss end
+
+
 

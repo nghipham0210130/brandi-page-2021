@@ -1,0 +1,87 @@
+// Work begin
+.works {
+  padding-top: 94px;
+  @media #{$info-phone} {
+    padding-top: 50px;
+  }
+  .title {
+    margin-bottom: 55px;
+  }
+  .works__content {
+    .works__link {
+      margin-bottom: 40px;
+      text-align: center;
+      padding: 0 15px;
+      .works__link--item {
+        color: $black;
+        padding: 6px 12px;
+        font-weight: bold;
+        font-size: 14px;
+        @media #{$info-phone} {
+          padding: 4px 10px;
+          font-size: 11px;
+          margin-bottom: 6px;
+        }
+        &:hover {
+          color: $white;
+          background-color: $color-tilte;
+          border-radius: 10px;
+        }
+        &:not(:last-child) {
+          margin-right: 8px;
+        }
+      }
+    }
+    // Work images in full screen
+    .works__images--space {
+      width: 100%;
+      display: grid;
+      grid-gap: 0;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      @media #{$info-phone} {
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+      }
+      .works__image {
+        height: 300px;
+        @media #{$info-phone} {
+          height: 200px;
+        }
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        overflow: hidden;
+        .image__hover {
+          img {
+            margin-bottom: 25px;
+            padding-top: 94px;
+            @media #{$info-phone} {
+              padding-top: 34px;
+            }
+          }
+          h5 {
+            margin-bottom: 6px;
+            font-size: 20px;
+            @media #{$info-phone} {
+              font-size: 16px;
+            }
+          }
+          p {
+            font-size: 20px;
+            @media #{$info-phone} {
+              font-size: 16px;
+            }
+          }
+        }
+        &:hover {
+          .image__hover {
+            height: 100%;
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }
+} // Work end

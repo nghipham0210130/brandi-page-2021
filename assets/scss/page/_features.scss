@@ -1,0 +1,97 @@
+// Feature begin
+.features {
+  background-color: $color-background-features;
+  height: 460px;
+  @media #{$info-phone} {
+    height: 600px;
+  }
+
+  // Container begin
+  .container {
+    padding-bottom: 54px;
+    padding-top: 94px;
+    @media #{$info-phone} {
+      padding-top: 50px;
+    }
+    .title {
+      margin-bottom: 35px;
+      @media #{$info-phone} {
+        margin-bottom: 10px;
+      }
+    }
+    .features__slick {
+      ul {
+        bottom: -110px;
+        @media #{$info-phone} {
+          bottom: -130px;
+        }
+        &.slick-dots {
+          li {
+            button {
+              &::before {
+                border: 1px solid $color-border-dots;
+              }
+            }
+            &.slick-active {
+              button::before {
+                background-color: $black;
+              }
+            }
+          }
+        }
+      }
+      // Grid
+      .features__grid {
+        width: 100%;
+        display: grid;
+        // Show feature follow column (desktop)
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 30px;
+        // Show feature follow row (device)
+        @media #{$info-phone} {
+          grid-template-columns: auto;
+          grid-template-rows: 1fr 1fr 1fr;
+          grid-gap: 30px;
+        }
+
+        // Resolve feature element
+        .grid__items {
+          display: flex;
+          flex-flow: row;
+          // Icon in the first column
+          .items__icon {
+            margin-bottom: 2px;
+            width: 70px;
+            position: absolute;
+            img {
+              height: 40px;
+              margin: 0 auto;
+              @media #{$info-phone} {
+                margin-right: 30px;
+              }
+            }
+          }
+
+          // Content in the second column
+          .items__content {
+            margin-left: 70px;
+            h4 {
+              margin-bottom: 20px;
+              font-size: 20px;
+              @media #{$info-phone} {
+                font-size: 15px;
+              }
+            }
+            p {
+              font-size: 13px;
+              @media #{$info-phone} {
+                font-size: 10px;
+              }
+              opacity: 0.5;
+            }
+          }
+        }
+      } // End grid
+    }
+  } // Container end
+}  // Feature end

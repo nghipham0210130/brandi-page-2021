@@ -1,0 +1,138 @@
+// Discuss begin
+.discuss {
+  // Container
+  .container {
+    padding-top: 94px;
+    @media #{$info-phone} {
+      padding-top: 50px;
+    }
+    .title {
+      margin-bottom: 80px;
+    }
+
+    // Grid
+    .discuss__grid {
+      display: grid;
+      gap: 30px;
+      width: 100%;
+      margin-bottom: 107px;
+      grid-template-columns: 3.86fr 11fr 1fr;
+      @media #{$info-phone} {
+        margin-bottom: 50px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 330px 30px;
+      }
+      .discuss__grid--address {
+        h4 {
+          font-size: 24px;
+          font-weight: 100;
+          margin-bottom: 38px;
+        }
+        p {
+          font-size: 13px;
+          opacity: 0.8;
+          max-width: 170px;
+        }
+      }
+      .discuss__grid--form {
+        h4 {
+          color: $color-title-form;
+          margin-bottom: 50px;
+          font-size: 24px;
+        }
+        form {
+          display: grid;
+          gap: 30px;
+          width: 100%;
+          grid-template-columns: 1fr 1fr;
+
+          input[type=text] {
+            width: 100%;
+            padding: 8px 20px 20px 20px;
+            margin: 2px 0;
+            box-sizing: border-box;
+            border: none;
+            border-bottom: 1px solid $color-text-form;
+          }
+          .discuss__grid--title {
+            grid-column: 1/3;
+            font-weight: 600;
+            font-size: 24px;
+          }
+          .discuss__grid--name {
+            grid-column: 1/2;
+            @media #{$info-phone} {
+              grid-column: 1/3;
+            }
+          }
+
+          .discuss__grid--email {
+            grid-column: 2/3;
+            @media #{$info-phone} {
+              grid-column: 1/3;
+            }
+          }
+          .discuss__grid--message {
+            grid-column: 1/3;
+          }
+          .discuss__grid--send {
+            grid-column: 2/3;
+            a {
+              .social__icon{
+                padding-top: 17px;
+              }
+              float: right;
+              display: flex;
+              align-items: center;
+              color: $black;
+              svg {
+                color: $color-send-icon;
+                margin-right: 12px;
+                width: 23px;
+              }
+            }
+          }
+        }
+      }
+      .socials__item {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        @media #{$info-phone} {
+          text-align: center;
+          grid-template-rows: 1fr;
+          grid-template-columns: 50px 50px 50px 50px 50px;
+          margin: 0 auto;
+        }
+        a {
+          height: 24px;
+          @media #{$info-phone} {
+            height: 20px;
+          }
+          text-align: center;
+          padding: 0;
+          margin-bottom: auto;
+          margin-top: auto;
+          svg {
+            width: 26px;
+            height: 100%;
+            padding: 0;
+            color: $color-icon;
+          }
+          img {
+            height: 100%;
+          }
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+    } // End grid
+  } // End container
+  // Map
+  iframe {
+    width: 100%;
+    height: 215px;
+  }
+  // Border between discuss section and footer
+  border-bottom: 5px solid $color-title-form;
+} // Discuss end

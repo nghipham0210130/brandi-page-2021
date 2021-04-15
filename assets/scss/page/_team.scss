@@ -1,0 +1,152 @@
+// Team begin
+.team {
+  // Container
+  .container {
+    padding-bottom: 215px;
+    padding-top: 94px;
+    @media #{$info-phone} {
+      padding-bottom: 50px;
+      padding-top: 50px;
+    }
+    .title {
+      margin-bottom: 108px;
+      @media #{$info-phone} {
+        margin-bottom: 50px;
+      }
+    }
+    .team__slick {
+      // Position of dots
+      ul {
+        bottom: -105px;
+        @media #{$info-phone} {
+          bottom: -60px;
+        }
+        &.slick-dots {
+          // Attribute of dots
+          li {
+            button {
+              &::before {
+                border: 1px solid $color-border-dots;
+              }
+            }
+            &.slick-active {
+              button::before {
+                background-color: $black;
+              }
+            }
+          }
+        }
+      }
+      // Grid
+      .teammember__grid {
+        text-align: center;
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        @media #{$info-phone} {
+          grid-template-columns: 1fr;
+        }
+        // Resolve member element
+        .teammember__card {
+          background-position: center;
+          position: relative;
+          overflow: hidden;
+          img {
+            height: 300px;
+            margin-bottom: 19px;
+            display: block;
+            @media #{$info-phone} {
+              height: 200px;
+              margin-left: auto;
+              margin-right: auto;
+            }
+          }
+          .teammember__info {
+            h4 {
+              font-size: 18px;
+
+              margin-bottom: 13px;
+            }
+            p {
+              font-size: 14px;
+              opacity: 0.5;
+            }
+          }
+          .teammember__hover {
+            height: 300px;
+            padding: 20px;
+            @media #{$info-phone} {
+              padding-top: 16px;
+            }
+          }
+          .image__hover {
+            width: 230px;
+            height: 260px;
+            @media #{$info-phone} {
+              width: 140px;
+            }
+            h5 {
+              padding-top: 20px;
+              font-size: 16px;
+              margin-bottom: 14px;
+              @media #{$info-phone} {
+                padding-top: 100px;
+                font-size: 12px;
+                margin-bottom: 6px;
+              }
+            }
+            p {
+              font-size: 16px;
+              @media #{$info-phone} {
+                font-size: 12px;
+              }
+            }
+            nav {
+              display: flex;
+              justify-content: space-between;
+              width: 134px;
+              margin: 45px auto 23px;
+              @media #{$info-phone} {
+                margin: 10px auto 0;
+              }
+              a {
+                width: 42px;
+                display: block;
+                text-align: center;
+                line-height: 42px;
+                background: $color-background-icon;
+                img {
+                  height: 20px;
+                  width: 20px;
+                  margin: 11px auto;
+                  @media #{$info-phone} {
+                    height: 15px;
+                    width: 15px;
+                    margin: 14px auto;
+                  }
+                }
+                &:hover {
+                  color: $white;
+                  opacity: 0.5;
+                  img {
+                    opacity: 0.5;
+                  }
+                }
+              }
+            }
+          }
+          &:hover {
+            .image__hover {
+              bottom: 69px;
+            }
+            .teammember__info {
+              h4 {
+                color: $color-tilte;
+              }
+            }
+          }
+        } // End resolve
+      } // End grid
+    }
+  } // End container
+} // Team end
