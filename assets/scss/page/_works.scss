@@ -8,11 +8,11 @@
     margin-bottom: 47px;
   }
   .works__content {
-    .works__link {
+    .links {
       margin-bottom: 40px;
       text-align: center;
       padding: 0 15px;
-      .works__link--item {
+      .links__item {
         color: $black;
         padding: 6px 12px;
         font-weight: bold;
@@ -33,7 +33,7 @@
       }
     }
     // Work images in full screen
-    .works__images--space {
+    .images {
       width: 100%;
       display: grid;
       grid-gap: 0;
@@ -43,7 +43,7 @@
         grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr;
       }
-      .works__image {
+      .images__item {
         height: 300px;
         @media #{$info-phone} {
           height: 200px;

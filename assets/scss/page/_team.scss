@@ -51,7 +51,7 @@
         @media #{$info-phone} {
           margin-right: 0;
         }
-        .teammember__image {
+        .card__image {
           position: relative;
           img {
             height: 300px;
@@ -63,7 +63,7 @@
               margin-right: auto;
             }
           }
-          .teammember__hover {
+          .card__hover {
             height: 280px;
             @media #{$info-phone} {
               height: 190px;
@@ -101,6 +101,7 @@
               margin: 45px auto 23px;
               @media #{$info-phone} {
                 margin: 10px auto 0;
+                bottom: 5px;
               }
               a {
                 width: 42px;
@@ -130,7 +131,7 @@
           }
         }
 
-        .teammember__info {
+        .card__info {
           h4 {
             font-size: 18px;
             margin-bottom: 7px;
@@ -142,7 +143,7 @@
         }
 
         &:hover {
-          .teammember__image {
+          .card__image {
             .image__hover {
               bottom: 0;
               @media #{$info-phone} {
@@ -150,7 +151,7 @@
               }
             }
           }
-          .teammember__info {
+          .card__info {
             h4 {
               color: $color-tilte;
             }

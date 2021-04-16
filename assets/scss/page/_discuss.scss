@@ -23,7 +23,7 @@
         grid-template-columns: 1fr;
         grid-template-rows: 200px 330px 30px;
       }
-      .discuss__grid--address {
+      .address {
         h4 {
           font-size: 24px;
           font-weight: 100;
@@ -35,7 +35,7 @@
           max-width: 170px;
         }
       }
-      .discuss__grid--form {
+      .form {
         h4 {
           color: $color-title-form;
           margin-bottom: 21px;
@@ -59,28 +59,28 @@
               border-bottom: 1px solid $color-background-header;
             }
           }
-          .discuss__grid--title {
+          .form__title {
             grid-column: 1/3;
             font-weight: 600;
             font-size: 24px;
           }
-          .discuss__grid--name {
+          .form__name {
             grid-column: 1/2;
             @media #{$info-phone} {
               grid-column: 1/3;
             }
           }
 
-          .discuss__grid--email {
+          .form__email {
             grid-column: 2/3;
             @media #{$info-phone} {
               grid-column: 1/3;
             }
           }
-          .discuss__grid--message {
+          .form__message {
             grid-column: 1/3;
           }
-          .discuss__grid--send {
+          .form__send {
             grid-column: 2/3;
             a {
               .social__icon{
@@ -100,7 +100,7 @@
           }
         }
       }
-      .socials__item {
+      .socials {
         display: grid;
         grid-template-rows: 44px 44px 44px 44px 44px;
         @media #{$info-phone} {

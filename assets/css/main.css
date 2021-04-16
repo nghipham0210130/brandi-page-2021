@@ -2407,33 +2407,33 @@ html {
 .works .title {
   margin-bottom: 47px;
 }
-.works .works__content .works__link {
+.works .works__content .links {
   margin-bottom: 40px;
   text-align: center;
   padding: 0 15px;
 }
-.works .works__content .works__link .works__link--item {
+.works .works__content .links .links__item {
   color: #000000;
   padding: 6px 12px;
   font-weight: bold;
   font-size: 14px;
 }
 @media only screen and (max-width : 767px) {
-  .works .works__content .works__link .works__link--item {
+  .works .works__content .links .links__item {
     padding: 4px 10px;
     font-size: 11px;
     margin-bottom: 6px;
   }
 }
-.works .works__content .works__link .works__link--item:hover {
+.works .works__content .links .links__item:hover {
   color: #f2f2f2;
   background-color: #0eb493;
   border-radius: 10px;
 }
-.works .works__content .works__link .works__link--item:not(:last-child) {
+.works .works__content .links .links__item:not(:last-child) {
   margin-right: 8px;
 }
-.works .works__content .works__images--space {
+.works .works__content .images {
   width: 100%;
   display: grid;
   grid-gap: 0;
@@ -2441,12 +2441,12 @@ html {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 @media only screen and (max-width : 767px) {
-  .works .works__content .works__images--space {
+  .works .works__content .images {
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
 }
-.works .works__content .works__images--space .works__image {
+.works .works__content .images .images__item {
   height: 300px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -2455,37 +2455,37 @@ html {
   overflow: hidden;
 }
 @media only screen and (max-width : 767px) {
-  .works .works__content .works__images--space .works__image {
+  .works .works__content .images .images__item {
     height: 200px;
   }
 }
-.works .works__content .works__images--space .works__image .image__hover img {
+.works .works__content .images .images__item .image__hover img {
   margin-bottom: 25px;
   padding-top: 94px;
 }
 @media only screen and (max-width : 767px) {
-  .works .works__content .works__images--space .works__image .image__hover img {
+  .works .works__content .images .images__item .image__hover img {
     padding-top: 34px;
   }
 }
-.works .works__content .works__images--space .works__image .image__hover h5 {
+.works .works__content .images .images__item .image__hover h5 {
   margin-bottom: 6px;
   font-size: 20px;
 }
 @media only screen and (max-width : 767px) {
-  .works .works__content .works__images--space .works__image .image__hover h5 {
+  .works .works__content .images .images__item .image__hover h5 {
     font-size: 16px;
   }
 }
-.works .works__content .works__images--space .works__image .image__hover p {
+.works .works__content .images .images__item .image__hover p {
   font-size: 20px;
 }
 @media only screen and (max-width : 767px) {
-  .works .works__content .works__images--space .works__image .image__hover p {
+  .works .works__content .images .images__item .image__hover p {
     font-size: 16px;
   }
 }
-.works .works__content .works__images--space .works__image:hover .image__hover {
+.works .works__content .images .images__item:hover .image__hover {
   width: 100%;
   height: 100%;
   bottom: 0;
@@ -2540,58 +2540,58 @@ html {
     margin-right: 0;
   }
 }
-.team .container .team__slick .teammember__card .teammember__image {
+.team .container .team__slick .teammember__card .card__image {
   position: relative;
 }
-.team .container .team__slick .teammember__card .teammember__image img {
+.team .container .team__slick .teammember__card .card__image img {
   height: 300px;
   margin-bottom: 17px;
   display: block;
 }
 @media only screen and (max-width : 767px) {
-  .team .container .team__slick .teammember__card .teammember__image img {
+  .team .container .team__slick .teammember__card .card__image img {
     height: 200px;
     margin-left: auto;
     margin-right: auto;
   }
 }
-.team .container .team__slick .teammember__card .teammember__image .teammember__hover {
+.team .container .team__slick .teammember__card .card__image .card__hover {
   height: 280px;
 }
 @media only screen and (max-width : 767px) {
-  .team .container .team__slick .teammember__card .teammember__image .teammember__hover {
+  .team .container .team__slick .teammember__card .card__image .card__hover {
     height: 190px;
   }
 }
-.team .container .team__slick .teammember__card .teammember__image .image__hover {
+.team .container .team__slick .teammember__card .card__image .image__hover {
   padding-top: 20px;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media only screen and (max-width : 767px) {
-  .team .container .team__slick .teammember__card .teammember__image .image__hover {
+  .team .container .team__slick .teammember__card .card__image .image__hover {
     padding-top: 10px;
   }
 }
-.team .container .team__slick .teammember__card .teammember__image .image__hover h5 {
+.team .container .team__slick .teammember__card .card__image .image__hover h5 {
   font-size: 16px;
   margin-bottom: 14px;
 }
 @media only screen and (max-width : 767px) {
-  .team .container .team__slick .teammember__card .teammember__image .image__hover h5 {
+  .team .container .team__slick .teammember__card .card__image .image__hover h5 {
     font-size: 12px;
     margin-bottom: 6px;
   }
 }
-.team .container .team__slick .teammember__card .teammember__image .image__hover p {
+.team .container .team__slick .teammember__card .card__image .image__hover p {
   font-size: 16px;
 }
 @media only screen and (max-width : 767px) {
-  .team .container .team__slick .teammember__card .teammember__image .image__hover p {
+  .team .container .team__slick .teammember__card .card__image .image__hover p {
     font-size: 12px;
   }
 }
-.team .container .team__slick .teammember__card .teammember__image .image__hover nav {
+.team .container .team__slick .teammember__card .card__image .image__hover nav {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -2602,53 +2602,54 @@ html {
   margin: 45px auto 23px;
 }
 @media only screen and (max-width : 767px) {
-  .team .container .team__slick .teammember__card .teammember__image .image__hover nav {
+  .team .container .team__slick .teammember__card .card__image .image__hover nav {
     margin: 10px auto 0;
+    bottom: 5px;
   }
 }
-.team .container .team__slick .teammember__card .teammember__image .image__hover nav a {
+.team .container .team__slick .teammember__card .card__image .image__hover nav a {
   width: 42px;
   display: block;
   text-align: center;
   line-height: 42px;
   background: #0a7e67;
 }
-.team .container .team__slick .teammember__card .teammember__image .image__hover nav a img {
+.team .container .team__slick .teammember__card .card__image .image__hover nav a img {
   height: 20px;
   width: 20px;
   margin: 11px auto;
 }
 @media only screen and (max-width : 767px) {
-  .team .container .team__slick .teammember__card .teammember__image .image__hover nav a img {
+  .team .container .team__slick .teammember__card .card__image .image__hover nav a img {
     height: 15px;
     width: 15px;
     margin: 14px auto;
   }
 }
-.team .container .team__slick .teammember__card .teammember__image .image__hover nav a:hover {
+.team .container .team__slick .teammember__card .card__image .image__hover nav a:hover {
   color: #f2f2f2;
   opacity: 0.5;
 }
-.team .container .team__slick .teammember__card .teammember__image .image__hover nav a:hover img {
+.team .container .team__slick .teammember__card .card__image .image__hover nav a:hover img {
   opacity: 0.5;
 }
-.team .container .team__slick .teammember__card .teammember__info h4 {
+.team .container .team__slick .teammember__card .card__info h4 {
   font-size: 18px;
   margin-bottom: 7px;
 }
-.team .container .team__slick .teammember__card .teammember__info p {
+.team .container .team__slick .teammember__card .card__info p {
   font-size: 14px;
   opacity: 0.5;
 }
-.team .container .team__slick .teammember__card:hover .teammember__image .image__hover {
+.team .container .team__slick .teammember__card:hover .card__image .image__hover {
   bottom: 0;
 }
 @media only screen and (max-width : 767px) {
-  .team .container .team__slick .teammember__card:hover .teammember__image .image__hover {
+  .team .container .team__slick .teammember__card:hover .card__image .image__hover {
     width: 150px;
   }
 }
-.team .container .team__slick .teammember__card:hover .teammember__info h4 {
+.team .container .team__slick .teammember__card:hover .card__info h4 {
   color: #0eb493;
 }
 
@@ -2684,37 +2685,37 @@ html {
     grid-template-columns: 1fr 1fr;
   }
 }
-.funfact .container .funfact__grid .funfact__grid--item {
+.funfact .container .funfact__grid .grid__item {
   color: #f2f2f2;
 }
-.funfact .container .funfact__grid .funfact__grid--item img {
+.funfact .container .funfact__grid .grid__item img {
   display: block;
   margin: 0 auto;
   width: 130px;
   margin-bottom: 39px;
 }
 @media only screen and (max-width : 767px) {
-  .funfact .container .funfact__grid .funfact__grid--item img {
+  .funfact .container .funfact__grid .grid__item img {
     width: 80px;
   }
 }
-.funfact .container .funfact__grid .funfact__grid--item .item__info h2 {
+.funfact .container .funfact__grid .grid__item .item__info h2 {
   font-weight: 400;
   font-size: 60px;
   margin-bottom: 4px;
   line-height: 100%;
 }
 @media only screen and (max-width : 767px) {
-  .funfact .container .funfact__grid .funfact__grid--item .item__info h2 {
+  .funfact .container .funfact__grid .grid__item .item__info h2 {
     font-size: 40px;
   }
 }
-.funfact .container .funfact__grid .funfact__grid--item .item__info p {
+.funfact .container .funfact__grid .grid__item .item__info p {
   text-transform: uppercase;
   font-size: 18px;
 }
 @media only screen and (max-width : 767px) {
-  .funfact .container .funfact__grid .funfact__grid--item .item__info p {
+  .funfact .container .funfact__grid .grid__item .item__info p {
     font-size: 14px;
   }
 }
@@ -2748,94 +2749,94 @@ html {
     grid-template-rows: 200px 330px 30px;
   }
 }
-.discuss .container .discuss__grid .discuss__grid--address h4 {
+.discuss .container .discuss__grid .address h4 {
   font-size: 24px;
   font-weight: 100;
   margin-bottom: 38px;
 }
-.discuss .container .discuss__grid .discuss__grid--address p {
+.discuss .container .discuss__grid .address p {
   font-size: 13px;
   opacity: 0.8;
   max-width: 170px;
 }
-.discuss .container .discuss__grid .discuss__grid--form h4 {
+.discuss .container .discuss__grid .form h4 {
   color: #062033;
   margin-bottom: 21px;
   font-size: 24px;
 }
-.discuss .container .discuss__grid .discuss__grid--form form {
+.discuss .container .discuss__grid .form form {
   display: grid;
   column-gap: 30px;
   row-gap: 15px;
   width: 100%;
   grid-template-columns: 1fr 1fr;
 }
-.discuss .container .discuss__grid .discuss__grid--form form input[type=text] {
+.discuss .container .discuss__grid .form form input[type=text] {
   width: 100%;
   padding: 19px 15px 19px 0;
   margin: 2px 0;
   border: none;
   border-bottom: 1px solid #cccccc;
 }
-.discuss .container .discuss__grid .discuss__grid--form form input[type=text]:focus {
+.discuss .container .discuss__grid .form form input[type=text]:focus {
   outline: none;
   border-bottom: 1px solid #1ea78d;
 }
-.discuss .container .discuss__grid .discuss__grid--form form .discuss__grid--title {
+.discuss .container .discuss__grid .form form .form__title {
   grid-column: 1/3;
   font-weight: 600;
   font-size: 24px;
 }
-.discuss .container .discuss__grid .discuss__grid--form form .discuss__grid--name {
+.discuss .container .discuss__grid .form form .form__name {
   grid-column: 1/2;
 }
 @media only screen and (max-width : 767px) {
-  .discuss .container .discuss__grid .discuss__grid--form form .discuss__grid--name {
+  .discuss .container .discuss__grid .form form .form__name {
     grid-column: 1/3;
   }
 }
-.discuss .container .discuss__grid .discuss__grid--form form .discuss__grid--email {
+.discuss .container .discuss__grid .form form .form__email {
   grid-column: 2/3;
 }
 @media only screen and (max-width : 767px) {
-  .discuss .container .discuss__grid .discuss__grid--form form .discuss__grid--email {
+  .discuss .container .discuss__grid .form form .form__email {
     grid-column: 1/3;
   }
 }
-.discuss .container .discuss__grid .discuss__grid--form form .discuss__grid--message {
+.discuss .container .discuss__grid .form form .form__message {
   grid-column: 1/3;
 }
-.discuss .container .discuss__grid .discuss__grid--form form .discuss__grid--send {
+.discuss .container .discuss__grid .form form .form__send {
   grid-column: 2/3;
 }
-.discuss .container .discuss__grid .discuss__grid--form form .discuss__grid--send a {
+.discuss .container .discuss__grid .form form .form__send a {
   padding-top: 17px;
   float: right;
   display: flex;
   align-items: center;
   color: #000000;
 }
-.discuss .container .discuss__grid .discuss__grid--form form .discuss__grid--send a .social__icon {
+.discuss .container .discuss__grid .form form .form__send a .social__icon {
   padding-top: 17px;
 }
-.discuss .container .discuss__grid .discuss__grid--form form .discuss__grid--send a svg {
+.discuss .container .discuss__grid .form form .form__send a svg {
   color: #0eb493;
   margin-right: 12px;
   width: 23px;
 }
-.discuss .container .discuss__grid .socials__item {
+.discuss .container .discuss__grid .socials {
   display: grid;
   grid-template-rows: 44px 44px 44px 44px 44px;
 }
 @media only screen and (max-width : 767px) {
-  .discuss .container .discuss__grid .socials__item {
+  .discuss .container .discuss__grid .socials {
     text-align: center;
     grid-template-rows: 1fr;
     grid-template-columns: 46px 46px 46px 46px 46px;
     margin: 0 auto;
   }
 }
-.discuss .container .discuss__grid .socials__item a {
+.discuss .container .discuss__grid .socials a {
   height: 24px;
   line-height: 100%;
   text-align: center;
@@ -2844,20 +2845,20 @@ html {
   margin-top: 10px;
 }
 @media only screen and (max-width : 767px) {
-  .discuss .container .discuss__grid .socials__item a {
+  .discuss .container .discuss__grid .socials a {
     height: 20px;
   }
 }
-.discuss .container .discuss__grid .socials__item a svg {
+.discuss .container .discuss__grid .socials a svg {
   width: 26px;
   height: 100%;
   padding: 0;
   color: #cdd2d6;
 }
-.discuss .container .discuss__grid .socials__item a img {
+.discuss .container .discuss__grid .socials a img {
   height: 100%;
 }
-.discuss .container .discuss__grid .socials__item a:hover {
+.discuss .container .discuss__grid .socials a:hover {
   opacity: 0.5;
 }
 .discuss iframe {
