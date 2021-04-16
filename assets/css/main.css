@@ -1714,10 +1714,10 @@ img {
   z-index: 3;
   height: 70px;
 }
-.navbar.color__index {
+.navbar.navbar--color__index {
   background-color: rgba(14, 44, 43, 0.5);
 }
-.navbar.change__color {
+.navbar.navbar--change__color {
   background-color: #1ea78d;
 }
 @media only screen and (max-width : 767px) {
@@ -1863,7 +1863,6 @@ html {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  height: 100%;
   position: relative;
   padding-left: 15px;
   padding-right: 15px;
@@ -1906,12 +1905,18 @@ html {
 
 .title {
   text-align: center;
+  margin-bottom: 50px;
+}
+@media only screen and (max-width : 767px) {
+  .title {
+    margin-bottom: 30px;
+  }
 }
 .title h3 {
   color: #0eb493;
   text-transform: uppercase;
   font-weight: 900;
-  margin-bottom: 17px;
+  margin-bottom: 25px;
   display: flex;
   flex-flow: column;
   font-size: 28px;
@@ -1955,9 +1960,10 @@ html {
   }
 }
 .title p {
+  display: inline-block;
   max-width: 970px;
-  margin: 35px auto 0 auto;
-  opacity: 0.5;
+  color: #384d5c;
+  font-weight: 600;
   font-size: 18px;
 }
 @media only screen and (max-width : 767px) {
@@ -1988,7 +1994,7 @@ html {
 }
 .footer .container {
   padding-top: 98px;
-  padding-bottom: 120px;
+  padding-bottom: 116px;
   display: grid;
   grid-gap: 30px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1996,7 +2002,7 @@ html {
 @media only screen and (max-width : 767px) {
   .footer .container {
     padding-top: 50px;
-    padding-bottom: 30px;
+    padding-bottom: 26px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 0.5fr;
   }
@@ -2085,7 +2091,7 @@ html {
 }
 @media only screen and (max-width : 767px) {
   .footer .container .footer__item .footer__item--explore {
-    column-gap: 50px;
+    column-gap: 100px;
     text-align: left;
   }
 }
@@ -2125,7 +2131,7 @@ html {
   color: #000000;
 }
 
-.banner__wrapper .item__content {
+.banner .banner__content {
   z-index: 1;
   position: absolute;
   text-align: center;
@@ -2136,44 +2142,44 @@ html {
   top: 460px;
 }
 @media only screen and (max-width : 767px) {
-  .banner__wrapper .item__content {
+  .banner .banner__content {
     top: 220px;
   }
 }
-.banner__wrapper .item__content h2 {
+.banner .banner__content h2 {
   font-weight: 300;
   font-size: 62px;
 }
 @media only screen and (max-width : 767px) {
-  .banner__wrapper .item__content h2 {
+  .banner .banner__content h2 {
     font-size: 36px;
   }
 }
-.banner__wrapper .item__content h2 span {
+.banner .banner__content h2 span {
   font-weight: 900;
 }
-.banner__wrapper .item__content h3 {
+.banner .banner__content h3 {
   font-weight: 300;
   font-size: 48px;
   margin-bottom: 18px;
 }
 @media only screen and (max-width : 767px) {
-  .banner__wrapper .item__content h3 {
+  .banner .banner__content h3 {
     font-size: 22px;
     margin-bottom: 5px;
   }
 }
-.banner__wrapper .item__content h3 span {
+.banner .banner__content h3 span {
   color: #0fda93;
 }
-.banner__wrapper .item__content p {
+.banner .banner__content p {
   position: absolute;
   font-weight: 300;
   font-size: 18px;
   left: 50%;
   transform: translateX(-50%);
 }
-.banner__wrapper .item__content p::before {
+.banner .banner__content p::before {
   content: "";
   width: 28px;
   height: 1px;
@@ -2182,7 +2188,7 @@ html {
   left: -58px;
   margin: 10px 0 9px 0;
 }
-.banner__wrapper .item__content p::after {
+.banner .banner__content p::after {
   content: "";
   width: 28px;
   height: 1px;
@@ -2192,10 +2198,10 @@ html {
   margin: 10px 0 9px 0;
 }
 @media only screen and (max-width : 767px) {
-  .banner__wrapper .item__content p {
+  .banner .banner__content p {
     font-size: 12px;
   }
-  .banner__wrapper .item__content p::before {
+  .banner .banner__content p::before {
     content: "";
     width: 15px;
     height: 1px;
@@ -2204,7 +2210,7 @@ html {
     left: -31px;
     margin: 8px 0 7px 0;
   }
-  .banner__wrapper .item__content p::after {
+  .banner .banner__content p::after {
     content: "";
     width: 15px;
     height: 1px;
@@ -2214,7 +2220,7 @@ html {
     margin: 8px 0 7px 0;
   }
 }
-.banner__wrapper nav {
+.banner nav {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -2224,33 +2230,36 @@ html {
   top: 730px;
 }
 @media only screen and (max-width : 767px) {
-  .banner__wrapper nav {
+  .banner nav {
     top: 370px;
   }
 }
-.banner__wrapper nav a {
+.banner nav a {
   opacity: 0.5;
 }
-.banner__wrapper nav a:hover {
+.banner nav a img {
+  padding-top: 4px;
+}
+.banner nav a:hover {
   opacity: 1;
   color: #f2f2f2;
 }
-.banner__wrapper nav a.social__icon:not(:last-child) {
+.banner nav a.social__icon:not(:last-child) {
   margin-right: 15px;
 }
-.banner__wrapper .banner {
+.banner .banner__background {
   margin-bottom: 0;
 }
-.banner__wrapper .banner ul {
+.banner .banner__background ul {
   padding-right: 63px;
   flex-flow: column;
 }
 @media only screen and (max-width : 767px) {
-  .banner__wrapper .banner ul {
+  .banner .banner__background ul {
     flex-flow: row;
   }
 }
-.banner__wrapper .banner ul.slick-dots {
+.banner .banner__background ul.slick-dots {
   top: 50%;
   transform: translateY(-30px);
   right: 0;
@@ -2258,7 +2267,7 @@ html {
   width: 0;
 }
 @media only screen and (max-width : 767px) {
-  .banner__wrapper .banner ul.slick-dots {
+  .banner .banner__background ul.slick-dots {
     top: 340px;
     right: 0;
     left: 50%;
@@ -2266,56 +2275,50 @@ html {
     width: 60px;
   }
 }
-.banner__wrapper .banner ul.slick-dots li {
+.banner .banner__background ul.slick-dots li {
   display: block;
   margin-bottom: 15px;
 }
 @media only screen and (max-width : 767px) {
-  .banner__wrapper .banner ul.slick-dots li {
+  .banner .banner__background ul.slick-dots li {
     display: inline-block;
   }
 }
-.banner__wrapper .banner ul.slick-dots li button {
+.banner .banner__background ul.slick-dots li button {
   width: 0;
   height: 0;
 }
-.banner__wrapper .banner ul.slick-dots li button::before {
+.banner .banner__background ul.slick-dots li button::before {
   border: 1px solid rgba(255, 255, 255, 0.604);
 }
-.banner__wrapper .banner ul.slick-dots li.slick-active button::before {
+.banner .banner__background ul.slick-dots li.slick-active button::before {
   background-color: #f2f2f2;
 }
 @media only screen and (max-width : 767px) {
-  .banner__wrapper .banner ul.slick-dots li.slick-active button::before {
+  .banner .banner__background ul.slick-dots li.slick-active button::before {
     background-color: rgba(255, 255, 255, 0.604);
   }
 }
-.banner__wrapper .banner.slick-slider {
+.banner .banner__background.slick-slider {
   margin-bottom: 0;
 }
-.banner__wrapper .banner .banner__item {
+.banner .banner__background .banner__background__item {
   background-size: cover;
   background-position: center;
   height: 800px;
 }
 @media only screen and (max-width : 767px) {
-  .banner__wrapper .banner .banner__item {
+  .banner .banner__background .banner__background__item {
     height: 400px;
   }
 }
 
 .features {
   background-color: rgba(235, 235, 235, 0.8);
-  height: 460px;
-}
-@media only screen and (max-width : 767px) {
-  .features {
-    height: 600px;
-  }
 }
 .features .container {
-  padding-bottom: 54px;
-  padding-top: 94px;
+  padding-bottom: 140px;
+  padding-top: 74px;
 }
 @media only screen and (max-width : 767px) {
   .features .container {
@@ -2323,22 +2326,22 @@ html {
     padding-top: 50px;
   }
 }
-.features .container .title {
-  margin-bottom: 35px;
+.features .container .features__slick ul {
+  bottom: -103px;
 }
 @media only screen and (max-width : 767px) {
-  .features .container .title {
-    margin-bottom: 10px;
+  .features .container .features__slick ul {
+    bottom: -50px;
   }
-}
-.features .container .features__slick ul {
-  bottom: -110px;
 }
 .features .container .features__slick ul.slick-dots li button::before {
   border: 1px solid #c7ced3;
 }
 .features .container .features__slick ul.slick-dots li.slick-active button::before {
   background-color: #000000;
+}
+.features .container .features__slick.slick-dotted.slick-slider {
+  margin-bottom: 0;
 }
 .features .container .features__slick .features__grid {
   width: 100%;
@@ -2398,12 +2401,11 @@ html {
 }
 @media only screen and (max-width : 767px) {
   .works {
-    padding-bottom: 50px;
     padding-top: 50px;
   }
 }
 .works .title {
-  margin-bottom: 55px;
+  margin-bottom: 47px;
 }
 .works .works__content .works__link {
   margin-bottom: 40px;
@@ -2507,12 +2509,15 @@ html {
     margin-bottom: 50px;
   }
 }
+.team .container .team__slick {
+  text-align: center;
+}
 .team .container .team__slick ul {
   bottom: -105px;
 }
 @media only screen and (max-width : 767px) {
   .team .container .team__slick ul {
-    bottom: -60px;
+    bottom: -50px;
   }
 }
 .team .container .team__slick ul.slick-dots li button::before {
@@ -2521,75 +2526,72 @@ html {
 .team .container .team__slick ul.slick-dots li.slick-active button::before {
   background-color: #000000;
 }
-.team .container .team__slick .teammember__grid {
-  text-align: center;
-  display: grid;
-  gap: 30px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+.team .container .team__slick.slick-dotted.slick-slider {
+  margin-bottom: 0;
 }
-@media only screen and (max-width : 767px) {
-  .team .container .team__slick .teammember__grid {
-    grid-template-columns: 0.5fr;
-  }
-}
-.team .container .team__slick .teammember__grid .teammember__card {
+.team .container .team__slick .teammember__card {
   background-position: center;
   position: relative;
   overflow: hidden;
+  margin-right: 30px;
 }
-.team .container .team__slick .teammember__grid .teammember__card img {
-  width: 100%;
+@media only screen and (max-width : 767px) {
+  .team .container .team__slick .teammember__card {
+    margin-right: 0;
+  }
+}
+.team .container .team__slick .teammember__card .teammember__image {
+  position: relative;
+}
+.team .container .team__slick .teammember__card .teammember__image img {
   height: 300px;
-  margin-bottom: 19px;
+  margin-bottom: 17px;
   display: block;
 }
 @media only screen and (max-width : 767px) {
-  .team .container .team__slick .teammember__grid .teammember__card img {
+  .team .container .team__slick .teammember__card .teammember__image img {
     height: 200px;
     margin-left: auto;
     margin-right: auto;
   }
 }
-.team .container .team__slick .teammember__grid .teammember__card .teammember__info h4 {
-  font-size: 18px;
-  margin-bottom: 13px;
-}
-.team .container .team__slick .teammember__grid .teammember__card .teammember__info p {
-  font-size: 14px;
-  opacity: 0.5;
-}
-.team .container .team__slick .teammember__grid .teammember__card .teammember__hover {
+.team .container .team__slick .teammember__card .teammember__image .teammember__hover {
   height: 280px;
 }
-.team .container .team__slick .teammember__grid .teammember__card .image__hover {
+@media only screen and (max-width : 767px) {
+  .team .container .team__slick .teammember__card .teammember__image .teammember__hover {
+    height: 190px;
+  }
+}
+.team .container .team__slick .teammember__card .teammember__image .image__hover {
   padding-top: 20px;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media only screen and (max-width : 767px) {
-  .team .container .team__slick .teammember__grid .teammember__card .image__hover {
-    padding-top: 16px;
+  .team .container .team__slick .teammember__card .teammember__image .image__hover {
+    padding-top: 10px;
   }
 }
-.team .container .team__slick .teammember__grid .teammember__card .image__hover h5 {
+.team .container .team__slick .teammember__card .teammember__image .image__hover h5 {
   font-size: 16px;
   margin-bottom: 14px;
 }
 @media only screen and (max-width : 767px) {
-  .team .container .team__slick .teammember__grid .teammember__card .image__hover h5 {
+  .team .container .team__slick .teammember__card .teammember__image .image__hover h5 {
     font-size: 12px;
     margin-bottom: 6px;
   }
 }
-.team .container .team__slick .teammember__grid .teammember__card .image__hover p {
+.team .container .team__slick .teammember__card .teammember__image .image__hover p {
   font-size: 16px;
 }
 @media only screen and (max-width : 767px) {
-  .team .container .team__slick .teammember__grid .teammember__card .image__hover p {
+  .team .container .team__slick .teammember__card .teammember__image .image__hover p {
     font-size: 12px;
   }
 }
-.team .container .team__slick .teammember__grid .teammember__card .image__hover nav {
+.team .container .team__slick .teammember__card .teammember__image .image__hover nav {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -2600,40 +2602,53 @@ html {
   margin: 45px auto 23px;
 }
 @media only screen and (max-width : 767px) {
-  .team .container .team__slick .teammember__grid .teammember__card .image__hover nav {
+  .team .container .team__slick .teammember__card .teammember__image .image__hover nav {
     margin: 10px auto 0;
   }
 }
-.team .container .team__slick .teammember__grid .teammember__card .image__hover nav a {
+.team .container .team__slick .teammember__card .teammember__image .image__hover nav a {
   width: 42px;
   display: block;
   text-align: center;
   line-height: 42px;
   background: #0a7e67;
 }
-.team .container .team__slick .teammember__grid .teammember__card .image__hover nav a img {
+.team .container .team__slick .teammember__card .teammember__image .image__hover nav a img {
   height: 20px;
   width: 20px;
   margin: 11px auto;
 }
 @media only screen and (max-width : 767px) {
-  .team .container .team__slick .teammember__grid .teammember__card .image__hover nav a img {
+  .team .container .team__slick .teammember__card .teammember__image .image__hover nav a img {
     height: 15px;
     width: 15px;
     margin: 14px auto;
   }
 }
-.team .container .team__slick .teammember__grid .teammember__card .image__hover nav a:hover {
+.team .container .team__slick .teammember__card .teammember__image .image__hover nav a:hover {
   color: #f2f2f2;
   opacity: 0.5;
 }
-.team .container .team__slick .teammember__grid .teammember__card .image__hover nav a:hover img {
+.team .container .team__slick .teammember__card .teammember__image .image__hover nav a:hover img {
   opacity: 0.5;
 }
-.team .container .team__slick .teammember__grid .teammember__card:hover .image__hover {
-  bottom: 75px;
+.team .container .team__slick .teammember__card .teammember__info h4 {
+  font-size: 18px;
+  margin-bottom: 7px;
 }
-.team .container .team__slick .teammember__grid .teammember__card:hover .teammember__info h4 {
+.team .container .team__slick .teammember__card .teammember__info p {
+  font-size: 14px;
+  opacity: 0.5;
+}
+.team .container .team__slick .teammember__card:hover .teammember__image .image__hover {
+  bottom: 0;
+}
+@media only screen and (max-width : 767px) {
+  .team .container .team__slick .teammember__card:hover .teammember__image .image__hover {
+    width: 150px;
+  }
+}
+.team .container .team__slick .teammember__card:hover .teammember__info h4 {
   color: #0eb493;
 }
 
@@ -2645,8 +2660,8 @@ html {
 }
 .funfact .container {
   z-index: 1;
-  padding-bottom: 157px;
-  padding-top: 94px;
+  padding-bottom: 155px;
+  padding-top: 89px;
 }
 @media only screen and (max-width : 767px) {
   .funfact .container {
@@ -2676,7 +2691,7 @@ html {
   display: block;
   margin: 0 auto;
   width: 130px;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 }
 @media only screen and (max-width : 767px) {
   .funfact .container .funfact__grid .funfact__grid--item img {
@@ -2685,8 +2700,9 @@ html {
 }
 .funfact .container .funfact__grid .funfact__grid--item .item__info h2 {
   font-weight: 400;
-  font-size: 54px;
-  margin-bottom: 8px;
+  font-size: 60px;
+  margin-bottom: 4px;
+  line-height: 100%;
 }
 @media only screen and (max-width : 767px) {
   .funfact .container .funfact__grid .funfact__grid--item .item__info h2 {
@@ -2716,18 +2732,18 @@ html {
   }
 }
 .discuss .container .title {
-  margin-bottom: 80px;
+  margin-bottom: 75px;
 }
 .discuss .container .discuss__grid {
   display: grid;
   gap: 30px;
   width: 100%;
-  margin-bottom: 107px;
+  margin-bottom: 106px;
   grid-template-columns: 3.86fr 11fr 1fr;
 }
 @media only screen and (max-width : 767px) {
   .discuss .container .discuss__grid {
-    margin-bottom: 50px;
+    margin-bottom: 0;
     grid-template-columns: 1fr;
     grid-template-rows: 200px 330px 30px;
   }
@@ -2744,18 +2760,19 @@ html {
 }
 .discuss .container .discuss__grid .discuss__grid--form h4 {
   color: #062033;
-  margin-bottom: 50px;
+  margin-bottom: 21px;
   font-size: 24px;
 }
 .discuss .container .discuss__grid .discuss__grid--form form {
   display: grid;
-  gap: 30px;
+  column-gap: 30px;
+  row-gap: 15px;
   width: 100%;
   grid-template-columns: 1fr 1fr;
 }
 .discuss .container .discuss__grid .discuss__grid--form form input[type=text] {
   width: 100%;
-  padding: 14px 15px 14px 0;
+  padding: 19px 15px 19px 0;
   margin: 2px 0;
   border: none;
   border-bottom: 1px solid #cccccc;
@@ -2792,6 +2809,7 @@ html {
   grid-column: 2/3;
 }
 .discuss .container .discuss__grid .discuss__grid--form form .discuss__grid--send a {
+  padding-top: 17px;
   float: right;
   display: flex;
   align-items: center;
@@ -2807,22 +2825,23 @@ html {
 }
 .discuss .container .discuss__grid .socials__item {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 44px 44px 44px 44px 44px;
 }
 @media only screen and (max-width : 767px) {
   .discuss .container .discuss__grid .socials__item {
     text-align: center;
     grid-template-rows: 1fr;
-    grid-template-columns: 50px 50px 50px 50px 50px;
+    grid-template-columns: 46px 46px 46px 46px 46px;
     margin: 0 auto;
   }
 }
 .discuss .container .discuss__grid .socials__item a {
   height: 24px;
+  line-height: 100%;
   text-align: center;
   padding: 0;
-  margin-bottom: auto;
-  margin-top: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 @media only screen and (max-width : 767px) {
   .discuss .container .discuss__grid .socials__item a {
@@ -2844,4 +2863,9 @@ html {
 .discuss iframe {
   width: 100%;
   height: 215px;
+  margin: 0;
+  display: block;
+}
+.discuss iframe:focus {
+  outline: 0;
 }

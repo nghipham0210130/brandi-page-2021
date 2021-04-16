@@ -60,9 +60,9 @@
     <!-- Main -->
     <main>
         <!-- Banner Section Start -->
-        <section id="sec1" class="banner__wrapper">
+        <section id="sec1" class="banner">
             <!-- Banner Title-->
-            <div class="item__content">
+            <div class="banner__content">
                 <h2>Meet <span>Brandi</span>!</h2>
                 <h3><span>/creative</span> one page template.</h3>
                 <p> We are a team of professionals</p>
@@ -75,13 +75,13 @@
                 <a class="social__icon" target="_blank"><i class="fab fa-dribbble"></i></a>
             </nav>
             <!-- Banner background -->
-            <div class="banner">
+            <div class="banner__background">
                 <!-- Background image -->
-                <div class="banner__item" style="background-image: url('assets/img/banners-img/banner-img-01.png')"></div>
+                <div class="banner__background__item" style="background-image: url('assets/img/banners-img/banner-img-01.png')"></div>
 
-                <div class="banner__item" style="background-image: url('assets/img/banners-img/banner-img-02.png')"></div>
+                <div class="banner__background__item" style="background-image: url('assets/img/banners-img/banner-img-02.png')"></div>
 
-                <div class="banner__item" style="background-image: url('assets/img/banners-img/banner-img-03.png')"></div>
+                <div class="banner__background__item" style="background-image: url('assets/img/banners-img/banner-img-03.png')"></div>
             </div>
         </section>
         <!-- Banner Section End -->
@@ -264,8 +264,8 @@
                 </div>
                 <!-- Grid Team -->
                 <div class="team__slick">
-                    <div class="teammember__grid">
-                        <div class="teammember__card">
+                    <div class="teammember__card">
+                        <div class="teammember__image">
                             <img src="assets/img/teams-img/John.png" alt="Avatar">
                             <div class="teammember__hover image__hover">
                                 <h5>Nemo enim ipsam voluptatem quia voluptas</h5>
@@ -279,12 +279,14 @@
                                     <a class="social__icon" target="_blank"><img src="assets/img/social-icon-img/google-plus-white.png" alt=""></a>
                                 </nav>
                             </div>
-                            <div class="teammember__info">
-                                <h4><b>John Filmr Doe</b></h4>
-                                <p>Managing Director</p>
-                            </div>
                         </div>
-                        <div class="teammember__card">
+                        <div class="teammember__info">
+                            <h4><b>John Filmr Doe</b></h4>
+                            <p>Managing Director</p>
+                        </div>
+                    </div>
+                    <div class="teammember__card">
+                        <div class="teammember__image">
                             <img src="assets/img/teams-img/Chystine.png" alt="Avatar">
                             <div class="teammember__hover image__hover">
                                 <h5>Nemo enim ipsam voluptatem quia voluptas</h5>
@@ -298,12 +300,15 @@
                                     <a class="social__icon" target="_blank"><img src="assets/img/social-icon-img/google-plus-white.png"  alt=""></a>
                                 </nav>
                             </div>
-                            <div class="teammember__info">
-                                <h4><b>Chystine Hineu</b></h4>
-                                <p>Lead Designer</p>
-                            </div>
                         </div>
-                        <div class="teammember__card">
+
+                        <div class="teammember__info">
+                            <h4><b>Chystine Hineu</b></h4>
+                            <p>Lead Designer</p>
+                        </div>
+                    </div>
+                    <div class="teammember__card">
+                        <div class="teammember__image">
                             <img src="assets/img/teams-img/Martin.png" alt="Avatar">
                             <div class="teammember__hover image__hover">
                                 <h5>Nemo enim ipsam voluptatem quia voluptas</h5>
@@ -317,12 +322,14 @@
                                     <a class="social__icon" target="_blank"><img src="assets/img/social-icon-img/google-plus-white.png" alt=""></a>
                                 </nav>
                             </div>
-                            <div class="teammember__info">
-                                <h4><b>Martin Matrone</b></h4>
-                                <p>Lead Developer</p>
-                            </div>
                         </div>
-                        <div class="teammember__card">
+                        <div class="teammember__info">
+                            <h4><b>Martin Matrone</b></h4>
+                            <p>Lead Developer</p>
+                        </div>
+                    </div>
+                    <div class="teammember__card">
+                        <div class="teammember__image">
                             <img src="assets/img/teams-img/Steve.png" alt="Avatar">
                             <div class="teammember__hover image__hover">
                                 <h5>Nemo enim ipsam voluptatem quia voluptas</h5>
@@ -336,14 +343,36 @@
                                     <a class="social__icon" target="_blank"><img src="assets/img/social-icon-img/google-plus-white.png" alt=""></a>
                                 </nav>
                             </div>
-                            <div class="teammember__info">
-                                <h4><b>Steve Flaulkin</b></h4>
-                                <p>Sr. UI Designer</p>
-                            </div>
+                        </div>
+
+                        <div class="teammember__info">
+                            <h4><b>Steve Flaulkin</b></h4>
+                            <p>Sr. UI Designer</p>
                         </div>
                     </div>
-                    <div class="teammember__grid">
-                        <div class="teammember__card">
+                    <div class="teammember__card">
+                        <div class="teammember__image">
+                            <img src="assets/img/teams-img/John.png" alt="Avatar">
+                            <div class="teammember__hover image__hover">
+                                <h5>Nemo enim ipsam voluptatem quia voluptas</h5>
+                                <p>
+                                    it aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+                                </p>
+                                <!-- Social icon -->
+                                <nav>
+                                    <a class="social__icon" target="_blank"><i class="fab fa-twitter"></i></a>
+                                    <a class="social__icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="social__icon" target="_blank"><img src="assets/img/social-icon-img/google-plus-white.png" alt=""></a>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="teammember__info">
+                            <h4><b>John Filmr Doe</b></h4>
+                            <p>Managing Director</p>
+                        </div>
+                    </div>
+                    <div class="teammember__card">
+                        <div class="teammember__image">
                             <img src="assets/img/teams-img/Chystine.png" alt="Avatar">
                             <div class="teammember__hover image__hover">
                                 <h5>Nemo enim ipsam voluptatem quia voluptas</h5>
@@ -357,148 +386,14 @@
                                     <a class="social__icon" target="_blank"><img src="assets/img/social-icon-img/google-plus-white.png"  alt=""></a>
                                 </nav>
                             </div>
-                            <div class="teammember__info">
-                                <h4><b>Chystine Hineu</b></h4>
-                                <p>Lead Designer</p>
-                            </div>
                         </div>
-                        <div class="teammember__card">
-                            <img src="assets/img/teams-img/Martin.png" alt="Avatar">
-                            <div class="teammember__hover image__hover">
-                                <h5>Nemo enim ipsam voluptatem quia voluptas</h5>
-                                <p>
-                                    it aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-                                </p>
-                                <!-- Social icon -->
-                                <nav>
-                                    <a class="social__icon" target="_blank"><i class="fab fa-twitter"></i></a>
-                                    <a class="social__icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="social__icon" target="_blank"><img src="assets/img/social-icon-img/google-plus-white.png" alt=""></a>
-                                </nav>
-                            </div>
-                            <div class="teammember__info">
-                                <h4><b>Martin Matrone</b></h4>
-                                <p>Lead Developer</p>
-                            </div>
-                        </div>
-                        <div class="teammember__card">
-                            <img src="assets/img/teams-img/Steve.png" alt="Avatar">
-                            <div class="teammember__hover image__hover">
-                                <h5>Nemo enim ipsam voluptatem quia voluptas</h5>
-                                <p>
-                                    it aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-                                </p>
-                                <!-- Social icon -->
-                                <nav>
-                                    <a class="social__icon" target="_blank"><i class="fab fa-twitter"></i></a>
-                                    <a class="social__icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="social__icon" target="_blank"><img src="assets/img/social-icon-img/google-plus-white.png" alt=""></a>
-                                </nav>
-                            </div>
-                            <div class="teammember__info">
-                                <h4><b>Steve Flaulkin</b></h4>
-                                <p>Sr. UI Designer</p>
-                            </div>
-                        </div>
-                        <div class="teammember__card">
-                            <img src="assets/img/teams-img/John.png" alt="Avatar">
-                            <div class="teammember__hover image__hover">
-                                <h5>Nemo enim ipsam voluptatem quia voluptas</h5>
-                                <p>
-                                    it aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-                                </p>
-                                <!-- Social icon -->
-                                <nav>
-                                    <a class="social__icon" target="_blank"><i class="fab fa-twitter"></i></a>
-                                    <a class="social__icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="social__icon" target="_blank"><img src="assets/img/social-icon-img/google-plus-white.png" alt=""></a>
-                                </nav>
-                            </div>
-                            <div class="teammember__info">
-                                <h4><b>John Filmr Doe</b></h4>
-                                <p>Managing Director</p>
-                            </div>
+
+                        <div class="teammember__info">
+                            <h4><b>Chystine Hineu</b></h4>
+                            <p>Lead Designer</p>
                         </div>
                     </div>
-                    <div class="teammember__grid">
-                        <div class="teammember__card">
-                            <img src="assets/img/teams-img/Martin.png" alt="Avatar">
-                            <div class="teammember__hover image__hover">
-                                <h5>Nemo enim ipsam voluptatem quia voluptas</h5>
-                                <p>
-                                    it aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-                                </p>
-                                <!-- Social icon -->
-                                <nav>
-                                    <a class="social__icon" target="_blank"><i class="fab fa-twitter"></i></a>
-                                    <a class="social__icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="social__icon" target="_blank"><img src="assets/img/social-icon-img/google-plus-white.png" alt=""></a>
-                                </nav>
-                            </div>
-                            <div class="teammember__info">
-                                <h4><b>Martin Matrone</b></h4>
-                                <p>Lead Developer</p>
-                            </div>
-                        </div>
-                        <div class="teammember__card">
-                            <img src="assets/img/teams-img/Steve.png" alt="Avatar">
-                            <div class="teammember__hover image__hover">
-                                <h5>Nemo enim ipsam voluptatem quia voluptas</h5>
-                                <p>
-                                    it aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-                                </p>
-                                <!-- Social icon -->
-                                <nav>
-                                    <a class="social__icon" target="_blank"><i class="fab fa-twitter"></i></a>
-                                    <a class="social__icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="social__icon" target="_blank"><img src="assets/img/social-icon-img/google-plus-white.png" alt=""></a>
-                                </nav>
-                            </div>
-                            <div class="teammember__info">
-                                <h4><b>Steve Flaulkin</b></h4>
-                                <p>Sr. UI Designer</p>
-                            </div>
-                        </div>
-                        <div class="teammember__card">
-                            <img src="assets/img/teams-img/John.png" alt="Avatar">
-                            <div class="teammember__hover image__hover">
-                                <h5>Nemo enim ipsam voluptatem quia voluptas</h5>
-                                <p>
-                                    it aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-                                </p>
-                                <!-- Social icon -->
-                                <nav>
-                                    <a class="social__icon" target="_blank"><i class="fab fa-twitter"></i></a>
-                                    <a class="social__icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="social__icon" target="_blank"><img src="assets/img/social-icon-img/google-plus-white.png" alt=""></a>
-                                </nav>
-                            </div>
-                            <div class="teammember__info">
-                                <h4><b>John Filmr Doe</b></h4>
-                                <p>Managing Director</p>
-                            </div>
-                        </div>
-                        <div class="teammember__card">
-                            <img src="assets/img/teams-img/Chystine.png" alt="Avatar">
-                            <div class="teammember__hover image__hover">
-                                <h5>Nemo enim ipsam voluptatem quia voluptas</h5>
-                                <p>
-                                    it aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-                                </p>
-                                <!-- Social icon -->
-                                <nav>
-                                    <a class="social__icon" target="_blank"><i class="fab fa-twitter"></i></a>
-                                    <a class="social__icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="social__icon" target="_blank"><img src="assets/img/social-icon-img/google-plus-white.png" alt=""></a>
-                                </nav>
-                            </div>
-                            <div class="teammember__info">
-                                <h4><b>Chystine Hineu</b></h4>
-                                <p>Lead Designer</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                  </div>
             </div>
         </section>
         <!-- Team Section End-->
@@ -589,7 +484,6 @@
                 </div>
             </div>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.470217313305!2d106.6859930154032!3d10.775252562160388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3b34b87435%3A0xb6acb4fbd0e336ae!2zMzkgTmd1eeG7hW4gVGjhu4sgRGnhu4d1LCBQaMaw4budbmcgNiwgUXXhuq1uIDMsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1617700082658!5m2!1svi!2s" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            <hr>
         </section>
         <!-- Discuss Section End -->
     </main>

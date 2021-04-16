@@ -1,28 +1,21 @@
 // Feature begin
 .features {
   background-color: $color-background-features;
-  height: 460px;
-  @media #{$info-phone} {
-    height: 600px;
-  }
 
   // Container begin
   .container {
-    padding-bottom: 54px;
-    padding-top: 94px;
+    padding-bottom: 140px;
+    padding-top: 74px;
     @media #{$info-phone} {
       padding-bottom: 50px;
       padding-top: 50px;
     }
-    .title {
-      margin-bottom: 35px;
-      @media #{$info-phone} {
-        margin-bottom: 10px;
-      }
-    }
     .features__slick {
       ul {
-        bottom: -110px;
+        bottom: -103px;
+        @media #{$info-phone} {
+          bottom: -50px;
+        }
         &.slick-dots {
           li {
             button {
@@ -36,6 +29,11 @@
               }
             }
           }
+        }
+      }
+      &.slick-dotted {
+        &.slick-slider {
+          margin-bottom: 0;
         }
       }
       // Grid

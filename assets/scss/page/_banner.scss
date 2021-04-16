@@ -1,6 +1,6 @@
-.banner__wrapper {
+.banner {
     // Content of banner section
-    .item__content {
+    .banner__content {
     z-index: 1;
     position: absolute;
     text-align: center;
@@ -84,6 +84,9 @@
       }
       a {
         opacity: 0.5;
+        img {
+          padding-top: 4px;
+        }
         &:hover {
           opacity: 1;
           color: $white;
@@ -95,7 +98,7 @@
     } // End resolve
 
     // Resolve background for banner section by slick
-    .banner {
+    .banner__background {
       margin-bottom: 0;
       ul{
         padding-right: 63px;
@@ -148,7 +151,7 @@
         margin-bottom: 0;
       }
 
-      .banner__item {
+      .banner__background__item {
         background-size: cover ;
         background-position: center;
         height: 800px;

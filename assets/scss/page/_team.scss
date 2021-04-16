@@ -15,11 +15,12 @@
       }
     }
     .team__slick {
+      text-align: center;
       // Position of dots
       ul {
         bottom: -105px;
         @media #{$info-phone} {
-          bottom: -60px;
+          bottom: -50px;
         }
         &.slick-dots {
           // Attribute of dots
@@ -37,24 +38,24 @@
           }
         }
       }
-      // Grid
-      .teammember__grid {
-        text-align: center;
-        display: grid;
-        gap: 30px;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        @media #{$info-phone} {
-          grid-template-columns: 0.5fr;
+      &.slick-dotted {
+        &.slick-slider {
+          margin-bottom: 0;
         }
-        // Resolve member element
-        .teammember__card {
-          background-position: center;
+      }
+      .teammember__card {
+        background-position: center;
+        position: relative;
+        overflow: hidden;
+        margin-right: 30px;
+        @media #{$info-phone} {
+          margin-right: 0;
+        }
+        .teammember__image {
           position: relative;
-          overflow: hidden;
           img {
-            width: 100%;
             height: 300px;
-            margin-bottom: 19px;
+            margin-bottom: 17px;
             display: block;
             @media #{$info-phone} {
               height: 200px;
@@ -62,26 +63,18 @@
               margin-right: auto;
             }
           }
-          .teammember__info {
-            h4 {
-              font-size: 18px;
-
-              margin-bottom: 13px;
-            }
-            p {
-              font-size: 14px;
-              opacity: 0.5;
-            }
-          }
           .teammember__hover {
             height: 280px;
+            @media #{$info-phone} {
+              height: 190px;
+            }
           }
           .image__hover {
             padding-top: 20px;
             padding-left: 15px;
             padding-right: 15px;
             @media #{$info-phone} {
-              padding-top: 16px;
+              padding-top: 10px;
             }
             h5 {
               font-size: 16px;
@@ -135,18 +128,35 @@
               }
             }
           }
-          &:hover {
+        }
+
+        .teammember__info {
+          h4 {
+            font-size: 18px;
+            margin-bottom: 7px;
+          }
+          p {
+            font-size: 14px;
+            opacity: 0.5;
+          }
+        }
+
+        &:hover {
+          .teammember__image {
             .image__hover {
-              bottom: 75px;
-            }
-            .teammember__info {
-              h4 {
-                color: $color-tilte;
+              bottom: 0;
+              @media #{$info-phone} {
+                width: 150px;
               }
             }
           }
-        } // End resolve
-      } // End grid
+          .teammember__info {
+            h4 {
+              color: $color-tilte;
+            }
+          }
+        }
+      } // End resolve
     }
   } // End container
 } // Team end

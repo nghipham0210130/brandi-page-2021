@@ -6,13 +6,13 @@
   // Div elements follow column in device
   .container {
     padding-top: 98px;
-    padding-bottom: 120px;
+    padding-bottom: 116px;
     display: grid;
     grid-gap: 30px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     @media #{$info-phone} {
       padding-top: 50px;
-      padding-bottom: 30px;
+      padding-bottom: 26px;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr 1fr 0.5fr;
     }
@@ -96,7 +96,7 @@
         row-gap: 7px;
         column-gap: 25px;
         @media #{$info-phone} {
-          column-gap: 50px;
+          column-gap: 100px;
           text-align: left;
         }
       } // End resolve

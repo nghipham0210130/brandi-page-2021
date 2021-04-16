@@ -6,8 +6,8 @@
   height: 600px;
   .container {
     z-index: 1;
-    padding-bottom: 157px;
-    padding-top: 94px;
+    padding-bottom: 155px;
+    padding-top: 89px;
     @media #{$info-phone} {
       padding-bottom: 50px;
       padding-top: 50px;
@@ -32,7 +32,7 @@
           display: block;
           margin: 0 auto;
           width: 130px;
-          margin-bottom: 40px;
+          margin-bottom: 39px;
           @media #{$info-phone} {
             width: 80px;
           }
@@ -40,8 +40,9 @@
         .item__info {
           h2 {
             font-weight: 400;
-            font-size: 54px;
-            margin-bottom: 8px;
+            font-size: 60px;
+            margin-bottom: 4px;
+            line-height: 100%;
             @media #{$info-phone} {
               font-size: 40px;
             }

@@ -73,9 +73,9 @@ $(function() {
     }
 
     /**
-     * Slick for Banner
+     * Slick
      */
-    $('.banner, .features__slick, .team__slick').slick({
+    $('.banner__background, .features__slick').slick({
         dots: true,
         infinite: true,
         speed: 500,
@@ -83,13 +83,43 @@ $(function() {
         arrows: false,
         cssEase: 'linear'
     });
+
+    $('.team__slick').slick({
+        dots: true,
+        infinite: false,
+        arrows: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 979,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
 });
 
 /**
- * Count to for Fun Fact
+ * Function when window load resize scroll
  */
-$(window).on("load resize sroll",function() {
-
+$(window).on("load resize",function() {
+    //Count to for Fun Fact
     var counters = $(".timer");
     var countersQuantity = counters.length;
     var counter = [];
@@ -117,14 +147,14 @@ $(window).on("load resize sroll",function() {
  * Change color navigation,Add/remove class active when scroll down
  */
 $(window).on("scroll", function() {
-    if($(window).scrollTop() >= 730)
+    if($(window).scrollTop() >= 100)
     {
-        $("#nav").removeClass('color__index');
-        $("#nav").addClass('change__color');
+        $("#nav").removeClass('navbar--color__index');
+        $("#nav").addClass('navbar--change__color');
     }
     else {
         // Remove the background property so it comes transparent again (defined in your css)
-        $("#nav").removeClass('change__color');
-        $("#nav").addClass('color__index');
+        $("#nav").removeClass('navbar--change__color');
+        $("#nav").addClass('navbar--color__index');
     }
 });
