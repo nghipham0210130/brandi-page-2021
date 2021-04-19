@@ -1747,14 +1747,11 @@ img {
   z-index: 1;
 }
 .navbar .container .inner__brand a {
-  padding: 2px 12px 12px 12px;
   text-decoration: none;
-  margin-right: 38px;
-}
-.navbar .container .inner__brand a img {
-  padding: 0;
+  margin: 24px 50px auto 12px;
 }
 .navbar .container .inner__brand p {
+  margin-top: 24px;
   color: rgba(255, 255, 255, 0.604);
   position: relative;
   font-weight: 300;
@@ -1770,8 +1767,7 @@ img {
 }
 @media only screen and (max-width : 767px) {
   .navbar .container .inner__brand a {
-    margin: 0;
-    padding: 0;
+    margin-top: 12px;
   }
   .navbar .container .inner__brand p {
     display: none;
@@ -2019,7 +2015,6 @@ html {
 .footer .container .footer__item h4 {
   padding-top: 15px;
   font-size: 14px;
-  font-weight: 700;
   margin-bottom: 38px;
 }
 @media only screen and (max-width : 767px) {
@@ -2073,6 +2068,9 @@ html {
   border: 2px solid #f2f2f2;
   background-color: inherit;
   border-radius: 5px;
+}
+.footer .container .footer__item.footer__item--subscribe form input[type=text]:focus {
+  outline: none;
 }
 .footer .container .footer__item.footer__item--subscribe form a {
   position: absolute;
@@ -2231,7 +2229,7 @@ html {
 }
 @media only screen and (max-width : 767px) {
   .banner nav {
-    top: 370px;
+    top: 340px;
   }
 }
 .banner nav a {
@@ -2239,6 +2237,12 @@ html {
 }
 .banner nav a img {
   padding-top: 4px;
+}
+@media only screen and (max-width : 767px) {
+  .banner nav a img {
+    padding-top: 4px;
+    width: 12px;
+  }
 }
 .banner nav a:hover {
   opacity: 1;
@@ -2268,7 +2272,7 @@ html {
 }
 @media only screen and (max-width : 767px) {
   .banner .banner__background ul.slick-dots {
-    top: 340px;
+    top: 365px;
     right: 0;
     left: 50%;
     transform: translateX(-30px);
@@ -2571,6 +2575,7 @@ html {
 @media only screen and (max-width : 767px) {
   .team .container .team__slick .teammember__card .card__image .image__hover {
     padding-top: 10px;
+    width: 150px;
   }
 }
 .team .container .team__slick .teammember__card .card__image .image__hover h5 {
@@ -2643,11 +2648,6 @@ html {
 }
 .team .container .team__slick .teammember__card:hover .card__image .image__hover {
   bottom: 0;
-}
-@media only screen and (max-width : 767px) {
-  .team .container .team__slick .teammember__card:hover .card__image .image__hover {
-    width: 150px;
-  }
 }
 .team .container .team__slick .teammember__card:hover .card__info h4 {
   color: #0eb493;
@@ -2746,12 +2746,12 @@ html {
   .discuss .container .discuss__grid {
     margin-bottom: 0;
     grid-template-columns: 1fr;
-    grid-template-rows: 200px 330px 30px;
+    grid-template-rows: 200px 310px 40px;
   }
 }
 .discuss .container .discuss__grid .address h4 {
   font-size: 24px;
-  font-weight: 100;
+  font-weight: 400;
   margin-bottom: 38px;
 }
 .discuss .container .discuss__grid .address p {

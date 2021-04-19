@@ -75,6 +75,7 @@
             padding-right: 15px;
             @media #{$info-phone} {
               padding-top: 10px;
+              width: 150px;
             }
             h5 {
               font-size: 16px;
@@ -146,9 +147,6 @@
           .card__image {
             .image__hover {
               bottom: 0;
-              @media #{$info-phone} {
-                width: 150px;
-              }
             }
           }
           .card__info {

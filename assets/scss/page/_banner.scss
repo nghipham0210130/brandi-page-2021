@@ -80,12 +80,16 @@
       z-index: 1;
       top: 730px;
       @media #{$info-phone}{
-        top: 370px;
+        top: 340px;
       }
       a {
         opacity: 0.5;
         img {
           padding-top: 4px;
+          @media #{$info-phone} {
+            padding-top: 4px;
+            width: 12px;
+          }
         }
         &:hover {
           opacity: 1;
@@ -113,7 +117,7 @@
           left: auto;
           width: 0;
           @media #{$info-phone}{
-            top: 340px;
+            top: 365px;
             right: 0;
             left: 50%;
             transform: translateX(-30px);

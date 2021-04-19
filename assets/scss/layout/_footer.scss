@@ -26,7 +26,6 @@
       h4 {
         padding-top: 15px;
         font-size: 14px;
-        font-weight: 700;
         margin-bottom: 38px;
         @media #{$info-phone} {
           padding-top: 0;
@@ -54,7 +53,6 @@
       }
       // Resolve footer__item--subscribe with title and form
       &.footer__item--subscribe {
-
         h4 {
           margin-bottom: 40px;
           @media #{$info-phone} {
@@ -76,6 +74,9 @@
               border: 2px solid $white;
               background-color: inherit;
               border-radius: 5px;
+              &:focus {
+                outline: none;
+              }
           }
           a {
             position: absolute;
