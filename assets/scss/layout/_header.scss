@@ -1,10 +1,10 @@
 .navbar {
     // Color background index for home page (banner section)
-    &.navbar--color__index {
+    &.navbar--color-index {
         background-color: rgba(14, 44, 43, 0.5);
     }
     // Color background for sections without banner section
-    &.navbar--change__color {
+    &.navbar--change-color {
         background-color: $color-background-header;
     }
     position: fixed;

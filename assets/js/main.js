@@ -29,7 +29,6 @@ $(function() {
 
             var refElement = $($(this).attr("href"));
             event.preventDefault();
-            console.log("this.hash", this.hash);
 
             // Store hash
             var hash = this.hash;
@@ -60,7 +59,6 @@ $(function() {
         var scrollPos = $(document).scrollTop();
         $("#my__navbar a").each(function () {
             var currLink = $(this);
-            console.log(currLink);
             var refElement = $(currLink.attr("href"));
             if ((refElement.position().top - navHeight) <= scrollPos && (refElement.position().top - navHeight + refElement.height()) > scrollPos) {
                 $("#my__navbar a").removeClass("active");
@@ -108,9 +106,6 @@ $(function() {
                     slidesToScroll: 1
                 }
             }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
         ]
     });
 });
@@ -149,12 +144,12 @@ $(window).on("load resize",function() {
 $(window).on("scroll", function() {
     if($(window).scrollTop() >= 100)
     {
-        $("#nav").removeClass('navbar--color__index');
-        $("#nav").addClass('navbar--change__color');
+        $("#nav").removeClass('navbar--color-index');
+        $("#nav").addClass('navbar--change-color');
     }
     else {
         // Remove the background property so it comes transparent again (defined in your css)
-        $("#nav").removeClass('navbar--change__color');
-        $("#nav").addClass('navbar--color__index');
+        $("#nav").removeClass('navbar--change-color');
+        $("#nav").addClass('navbar--color-index');
     }
 });

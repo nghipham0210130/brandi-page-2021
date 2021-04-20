@@ -7291,10 +7291,10 @@ img {
   z-index: 3;
   height: 70px;
 }
-.navbar.navbar--color__index {
+.navbar.navbar--color-index {
   background-color: rgba(14, 44, 43, 0.5);
 }
-.navbar.navbar--change__color {
+.navbar.navbar--change-color {
   background-color: #1ea78d;
 }
 @media only screen and (max-width : 767px) {
@@ -7602,7 +7602,7 @@ html {
 }
 .footer .container .footer__item p, .footer .container .footer__item a {
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 24px;
 }
 .footer .container .footer__item p img, .footer .container .footer__item a img {
@@ -8041,6 +8041,9 @@ html {
     height: 200px;
   }
 }
+.works .works__content .images .images__item .image__hover {
+  width: 100%;
+}
 .works .works__content .images .images__item .image__hover img {
   margin-bottom: 25px;
   padding-top: 94px;
@@ -8068,7 +8071,6 @@ html {
   }
 }
 .works .works__content .images .images__item:hover .image__hover {
-  width: 100%;
   height: 100%;
   bottom: 0;
 }
