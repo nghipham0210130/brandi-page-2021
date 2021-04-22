@@ -7221,13 +7221,55 @@ readers do not read off random characters that represent icons */
   src: url("../fonts/fa-solid-900.eot");
   src: url("../fonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../fonts/fa-solid-900.woff2") format("woff2"), url("../fonts/fa-solid-900.woff") format("woff"), url("../fonts/fa-solid-900.ttf") format("truetype"), url("../fonts/fa-solid-900.svg#fontawesome") format("svg");
 }
-/* OpenSans-Bold */
+/* open-sans-300 - latin */
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 300;
-  src: url("Open-sans/OpenSans-Bold.ttf") format("truetype");
-  /* Safari, Android, iOS */
+  src: url("Open-sans/open-sans-v18-latin-300.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("Open-sans/open-sans-v18-latin-300.eot?#iefix") format("embedded-opentype"), url("Open-sans/open-sans-v18-latin-300.woff2") format("woff2"), url("Open-sans/open-sans-v18-latin-300.woff") format("woff"), url("Open-sans/open-sans-v18-latin-300.ttf") format("truetype"), url("Open-sans/open-sans-v18-latin-300.svg#OpenSans") format("svg");
+  /* Legacy iOS */
+}
+/* open-sans-regular - latin */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("Open-sans/open-sans-v18-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("Open-sans/open-sans-v18-latin-regular.eot?#iefix") format("embedded-opentype"), url("Open-sans/open-sans-v18-latin-regular.woff2") format("woff2"), url("Open-sans/open-sans-v18-latin-regular.woff") format("woff"), url("Open-sans/open-sans-v18-latin-regular.ttf") format("truetype"), url("Open-sans/open-sans-v18-latin-regular.svg#OpenSans") format("svg");
+  /* Legacy iOS */
+}
+/* open-sans-600 - latin */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url("Open-sans/open-sans-v18-latin-600.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("Open-sans/open-sans-v18-latin-600.eot?#iefix") format("embedded-opentype"), url("Open-sans/open-sans-v18-latin-600.woff2") format("woff2"), url("Open-sans/open-sans-v18-latin-600.woff") format("woff"), url("Open-sans/open-sans-v18-latin-600.ttf") format("truetype"), url("Open-sans/open-sans-v18-latin-600.svg#OpenSans") format("svg");
+  /* Legacy iOS */
+}
+/* open-sans-700 - latin */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("Open-sans/open-sans-v18-latin-700.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("Open-sans/open-sans-v18-latin-700.eot?#iefix") format("embedded-opentype"), url("Open-sans/open-sans-v18-latin-700.woff2") format("woff2"), url("Open-sans/open-sans-v18-latin-700.woff") format("woff"), url("Open-sans/open-sans-v18-latin-700.ttf") format("truetype"), url("Open-sans/open-sans-v18-latin-700.svg#OpenSans") format("svg");
+  /* Legacy iOS */
+}
+/* open-sans-800 - latin */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url("Open-sans/open-sans-v18-latin-800.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("Open-sans/open-sans-v18-latin-800.eot?#iefix") format("embedded-opentype"), url("Open-sans/open-sans-v18-latin-800.woff2") format("woff2"), url("Open-sans/open-sans-v18-latin-800.woff") format("woff"), url("Open-sans/open-sans-v18-latin-800.ttf") format("truetype"), url("Open-sans/open-sans-v18-latin-800.svg#OpenSans") format("svg");
+  /* Legacy iOS */
 }
 .fa,
 .fas {
@@ -7238,6 +7280,7 @@ readers do not read off random characters that represent icons */
 html, body {
   font-size: 16px;
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300;
   -webkit-font-smoothing: antialiased;
 }
 @media only screen and (max-width : 1160px) {
@@ -7496,7 +7539,7 @@ html {
 .title h3 {
   color: #0eb493;
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 800;
   margin-bottom: 25px;
   display: flex;
   flex-flow: column;
@@ -7601,6 +7644,7 @@ html {
   padding-top: 15px;
   font-size: 14px;
   margin-bottom: 38px;
+  font-weight: 600;
 }
 @media only screen and (max-width : 767px) {
   .footer .container .footer__item h4 {
@@ -8229,6 +8273,7 @@ html {
 .team .container .team__slick .teammember__card .card__info h4 {
   font-size: 18px;
   margin-bottom: 7px;
+  font-weight: 600;
 }
 .team .container .team__slick .teammember__card .card__info p {
   font-size: 14px;
@@ -8351,6 +8396,7 @@ html {
   color: #062033;
   margin-bottom: 21px;
   font-size: 24px;
+  font-weight: 700;
 }
 .discuss .container .discuss__grid .form form {
   display: grid;
