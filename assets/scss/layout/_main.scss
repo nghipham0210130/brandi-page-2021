@@ -83,7 +83,7 @@ html {
       &::before {
         @include line($color-heart-item, 90px);
         left: 28px;
-        margin: 18px 0 7px 0;
+        margin: 22px 0 7px 0;
         @media #{$info-phone} {
           margin-top: 10px;
         }
@@ -91,7 +91,7 @@ html {
       &::after {
         @include line($color-heart-item, 90px);
         right: 28px;
-        margin: 18px 0 7px 0;
+        margin: 22px 0 7px 0;
         @media #{$info-phone} {
           margin-top: 10px;
         }
@@ -117,7 +117,7 @@ html {
   text-align: center;
   background-color: $color-tilte;
   position: absolute;
-  transition: bottom 400ms ease-in-out;
+  transition: bottom 400ms ease-in;
   bottom: 100%;
   @media #{$info-phone} {
     left: 50%;

@@ -81,10 +81,11 @@
             }
             p {
               font-size: 13px;
+              line-height: 24px;
+              opacity: 0.8;
               @media #{$info-phone} {
                 font-size: 10px;
               }
-              opacity: 0.5;
             }
           }
         }
