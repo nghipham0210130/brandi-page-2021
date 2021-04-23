@@ -27,7 +27,7 @@
         padding-top: 15px;
         font-size: 14px;
         margin-bottom: 38px;
-        font-weight: 600;
+        font-weight: 700;
         @media #{$info-phone} {
           padding-top: 0;
           margin-bottom: 28px;
@@ -46,7 +46,7 @@
       }
       &.footer__item--description {
         img {
-          margin-bottom: 38px;
+          margin-bottom: 34px;
           @media #{$info-phone} {
             margin-bottom: 28px;
           }
@@ -61,7 +61,7 @@
           }
         }
         form {
-          margin-bottom: 18px;
+          margin-bottom: 15px;
           @media #{$info-phone} {
             margin-bottom: 14px;
           }
