@@ -33,6 +33,7 @@
             &.slick-active {
               button::before {
                 background-color: $black;
+                border-color: $black;
               }
             }
           }
@@ -99,7 +100,6 @@
               display: flex;
               justify-content: space-between;
               width: 134px;
-              margin: 45px auto 23px;
               @media #{$info-phone} {
                 margin: 10px auto 0;
                 bottom: 5px;

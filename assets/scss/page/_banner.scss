@@ -44,13 +44,13 @@
       &::before{
         @include line($color-creative, 28px);
         left: -58px;
-        margin: 10px 0 9px 0;
+        margin-top: 13px;
 
       }
       &::after {
         @include line($color-creative, 28px);;
         right: -58px;
-        margin: 10px 0 9px 0;
+        margin-top: 13px;
       }
 
       @media #{$info-phone}{
@@ -58,13 +58,13 @@
         &::before{
           @include line($color-creative, 15px);
           left: -31px;
-          margin: 8px 0 7px 0;
+          margin-top: 9px;
 
         }
         &::after {
           @include line($color-creative, 15px);
           right: -31px;
-          margin: 8px 0 7px 0;
+          margin-top: 9px;
         }
       }
     }
@@ -133,7 +133,6 @@
               width: 0;
               height: 0;
               &::before {
-                //background-color: $black;
                 border: 1px solid $grey;
               }
             }

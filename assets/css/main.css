@@ -7540,8 +7540,8 @@ html {
 .slick-slider ul.slick-dots li button::before {
   font-size: 0;
   opacity: 0.8;
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   margin: 0;
 }
@@ -7559,10 +7559,10 @@ html {
   color: #0eb493;
   text-transform: uppercase;
   font-weight: 800;
-  margin-bottom: 25px;
   display: flex;
   flex-flow: column;
   font-size: 28px;
+  margin-bottom: 21px;
 }
 @media only screen and (max-width : 767px) {
   .title h3 {
@@ -7832,7 +7832,7 @@ html {
   background-color: #0fda93;
   position: absolute;
   left: -58px;
-  margin: 10px 0 9px 0;
+  margin-top: 13px;
 }
 .banner .banner__content p::after {
   content: "";
@@ -7841,7 +7841,7 @@ html {
   background-color: #0fda93;
   position: absolute;
   right: -58px;
-  margin: 10px 0 9px 0;
+  margin-top: 13px;
 }
 @media only screen and (max-width : 767px) {
   .banner .banner__content p {
@@ -7854,7 +7854,7 @@ html {
     background-color: #0fda93;
     position: absolute;
     left: -31px;
-    margin: 8px 0 7px 0;
+    margin-top: 9px;
   }
   .banner .banner__content p::after {
     content: "";
@@ -7863,7 +7863,7 @@ html {
     background-color: #0fda93;
     position: absolute;
     right: -31px;
-    margin: 8px 0 7px 0;
+    margin-top: 9px;
   }
 }
 .banner nav {
@@ -7978,6 +7978,9 @@ html {
     padding-top: 50px;
   }
 }
+.features .container .title {
+  margin-bottom: 52px;
+}
 .features .container .features__slick ul {
   bottom: -103px;
 }
@@ -7991,6 +7994,7 @@ html {
 }
 .features .container .features__slick ul.slick-dots li.slick-active button::before {
   background-color: #000000;
+  border-color: #000000;
 }
 .features .container .features__slick.slick-dotted.slick-slider {
   margin-bottom: 0;
@@ -8028,11 +8032,12 @@ html {
 }
 .features .container .features__slick .features__grid .grid__items .items__content {
   margin-left: 70px;
+  color: #062033;
 }
 .features .container .features__slick .features__grid .grid__items .items__content h4 {
   margin-bottom: 20px;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
 }
 @media only screen and (max-width : 767px) {
   .features .container .features__slick .features__grid .grid__items .items__content h4 {
@@ -8042,7 +8047,6 @@ html {
 .features .container .features__slick .features__grid .grid__items .items__content p {
   font-size: 13px;
   line-height: 24px;
-  opacity: 0.8;
 }
 @media only screen and (max-width : 767px) {
   .features .container .features__slick .features__grid .grid__items .items__content p {
@@ -8067,9 +8071,9 @@ html {
   padding: 0 15px;
 }
 .works .works__content .links .links__item {
-  color: #000000;
-  padding: 6px 12px;
-  font-weight: bold;
+  color: #062033;
+  padding: 6px 18px;
+  font-weight: 700;
   font-size: 14px;
 }
 @media only screen and (max-width : 767px) {
@@ -8079,13 +8083,13 @@ html {
     margin-bottom: 6px;
   }
 }
-.works .works__content .links .links__item:hover {
+.works .works__content .links .links__item:hover, .works .works__content .links .links__item.active {
   color: #f2f2f2;
   background-color: #0eb493;
   border-radius: 10px;
 }
 .works .works__content .links .links__item:not(:last-child) {
-  margin-right: 8px;
+  margin-right: 6px;
 }
 .works .works__content .images {
   width: 100%;
@@ -8127,7 +8131,8 @@ html {
 }
 .works .works__content .images .images__item .image__hover h5 {
   margin-bottom: 6px;
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 700;
 }
 @media only screen and (max-width : 767px) {
   .works .works__content .images .images__item .image__hover h5 {
@@ -8135,8 +8140,9 @@ html {
   }
 }
 .works .works__content .images .images__item .image__hover p {
-  font-size: 20px;
-  padding-bottom: 76px;
+  font-size: 14px;
+  font-weight: 400;
+  padding-bottom: 87px;
 }
 @media only screen and (max-width : 767px) {
   .works .works__content .images .images__item .image__hover p {
@@ -8182,6 +8188,7 @@ html {
 }
 .team .container .team__slick ul.slick-dots li.slick-active button::before {
   background-color: #000000;
+  border-color: #000000;
 }
 .team .container .team__slick.slick-dotted.slick-slider {
   margin-bottom: 0;
@@ -8257,7 +8264,6 @@ html {
   display: flex;
   justify-content: space-between;
   width: 134px;
-  margin: 45px auto 23px;
 }
 @media only screen and (max-width : 767px) {
   .team .container .team__slick .teammember__card .card__image .image__hover nav {
@@ -8311,7 +8317,6 @@ html {
   position: relative;
   background-size: cover;
   background-position: center;
-  height: 600px;
 }
 .funfact .container {
   z-index: 1;
@@ -8416,9 +8421,14 @@ html {
 }
 .discuss .container .discuss__grid .form h4 {
   color: #062033;
-  margin-bottom: 25px;
+  margin-bottom: 29px;
   font-size: 24px;
   font-weight: 700;
+}
+@media only screen and (max-width : 767px) {
+  .discuss .container .discuss__grid .form h4 {
+    text-align: center;
+  }
 }
 .discuss .container .discuss__grid .form form {
   display: grid;
@@ -8478,7 +8488,7 @@ html {
 .discuss .container .discuss__grid .form form .form__send a svg {
   color: #0eb493;
   margin-right: 12px;
-  width: 23px;
+  font-size: 24px;
 }
 .discuss .container .discuss__grid .socials {
   display: grid;

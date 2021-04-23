@@ -10,6 +10,9 @@
       padding-bottom: 50px;
       padding-top: 50px;
     }
+    .title {
+      margin-bottom: 52px;
+    }
     .features__slick {
       ul {
         bottom: -103px;
@@ -26,6 +29,7 @@
             &.slick-active {
               button::before {
                 background-color: $black;
+                border-color: $black;
               }
             }
           }
@@ -71,10 +75,11 @@
           // Content in the second column
           .items__content {
             margin-left: 70px;
+            color: $color-dark-navy;
             h4 {
               margin-bottom: 20px;
               font-size: 20px;
-              font-weight: 600;
+              font-weight: 400;
               @media #{$info-phone} {
                 font-size: 15px;
               }
@@ -82,7 +87,6 @@
             p {
               font-size: 13px;
               line-height: 24px;
-              opacity: 0.8;
               @media #{$info-phone} {
                 font-size: 10px;
               }

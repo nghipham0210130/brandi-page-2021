@@ -13,22 +13,22 @@
       text-align: center;
       padding: 0 15px;
       .links__item {
-        color: $black;
-        padding: 6px 12px;
-        font-weight: bold;
+        color: $color-dark-navy;
+        padding: 6px 18px;
+        font-weight: 700;
         font-size: 14px;
         @media #{$info-phone} {
           padding: 4px 10px;
           font-size: 11px;
           margin-bottom: 6px;
         }
-        &:hover {
+        &:hover, &.active {
           color: $white;
           background-color: $color-tilte;
           border-radius: 10px;
         }
         &:not(:last-child) {
-          margin-right: 8px;
+          margin-right: 6px;
         }
       }
     }
@@ -64,14 +64,16 @@
           }
           h5 {
             margin-bottom: 6px;
-            font-size: 20px;
+            font-size: 18px;
+            font-weight: 700;
             @media #{$info-phone} {
               font-size: 16px;
             }
           }
           p {
-            font-size: 20px;
-            padding-bottom: 76px;
+            font-size: 14px;
+            font-weight: 400;
+            padding-bottom: 87px;
             @media #{$info-phone} {
               font-size: 16px;
             }
